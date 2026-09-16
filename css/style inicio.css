@@ -1,176 +1,441 @@
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0; 
-  background: white;
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+* {
+  box-sizing: border-box;
 }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
 header {
-  background: #B0D7F9; /* azul claro */
+  width: 100%;
+  height: 70px;
+
+  background: #B0D7F9;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 10px 20px;
+
+  position: relative;
+  z-index: 10;
 }
+
 .logo {
   display: flex;
   align-items: center;
 }
+
+/* Círculo del logo */
 .logo-circle {
   width: 40px;
   height: 40px;
-  background: #0B64C6; /* azul montaña */
+
+  background: #0B64C6;
   border-radius: 50%;
+
   color: white;
   font-weight: bold;
   font-size: 18px;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   margin-right: 10px;
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/* Botón iniciar sesión */
+
 .login-btn {
-  background: #27272E; 
+  background: #27272E;
   color: white;
+
   padding: 8px 16px;
+
   border-radius: 6px;
-  cursor: pointer;
   border: none;
+
+  cursor: pointer;
+
   font-weight: 600;
 }
-main {
-  display: flex;
-  padding: 15px 30px;
+
+.login-btn:hover {
+  background: #111118;
 }
+
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+   ===================================================== */
+
+main {
+  width: 100%;
+
+  /* Ocupa exactamente el espacio debajo del header */
+  height: calc(100vh - 70px);
+
+  display: flex;
+
+  padding: 15px 30px;
+
+  gap: 30px;
+
+  position: relative;
+  z-index: 2;
+
+  overflow: hidden;
+}
+
+
+/* =====================================================
+   COLUMNA IZQUIERDA
+   ===================================================== */
+
 .left-column {
-  max-width: 320px;
-  margin-right: 30px;
+  width: 320px;
+  min-width: 320px;
+
   display: flex;
   flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 }
+
+
+/* Título */
 
 .title-section {
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-bottom: 25px;
+
   font-size: 24px;
   font-weight: 700;
+
   color: black;
 }
+
 .title-section svg {
   margin-left: 10px;
+
   width: 24px;
   height: 24px;
+
   fill: #FF9B03;
 }
 
+
+/* =====================================================
+   BUSCADOR Y LEYENDA
+   ===================================================== */
+
 .search-legend {
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   margin-bottom: 25px;
 }
 
 .search-bar {
   flex-grow: 1;
+
   display: flex;
-  background: #f7f7f7;
-  border-radius: 8px;
-  padding: 8px 12px;
-  max-width: 300px;
   align-items: center;
+
+  background: #f7f7f7;
+
+  border-radius: 8px;
+
+  padding: 8px 12px;
+
+  max-width: 300px;
 }
+
 .search-bar input {
   border: none;
+
   background: transparent;
+
   flex-grow: 1;
+
   font-size: 14px;
+
   outline: none;
 }
+
 .search-bar svg {
   width: 18px;
   height: 18px;
+
   fill: #8b8b8b;
 }
 
+
+/* =====================================================
+   ESTADOS
+   ===================================================== */
+
 .status-legend {
   display: flex;
+
   gap: 18px;
+
   margin-left: 20px;
+
   font-weight: 600;
   font-size: 14px;
+
   user-select: none;
 }
+
 .legend-dot {
   width: 14px;
   height: 14px;
+
   border-radius: 50%;
+
   display: inline-block;
+
   margin-right: 6px;
+
   vertical-align: middle;
 }
-.legend-active { background: #04AA02; }
-.legend-delay { background: #FFD129; }
+
+.legend-active {
+  background: #04AA02;
+}
+
+.legend-delay {
+  background: #FFD129;
+}
+
+
+/* =====================================================
+   LISTA DE RUTAS
+   ===================================================== */
 
 .route-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 14px;
 }
+
 .route-card {
   background: #e1e1e1;
+
   border-radius: 16px;
+
   padding: 14px 20px;
+
   font-size: 13px;
   font-weight: 700;
+
   color: #1f1f1f;
+
   display: flex;
+
   justify-content: space-between;
   align-items: center;
+
   cursor: pointer;
+
+  transition: 0.2s;
 }
+
+.route-card:hover {
+  background: #d3d3d3;
+}
+
 .route-status {
   width: 14px;
   height: 14px;
+
+  min-width: 14px;
+
   border-radius: 50%;
 }
-.route-active { background: #04AA02; }
-.route-delay { background: #FFD129; }
+
+.route-active {
+  background: #04AA02;
+}
+
+.route-delay {
+  background: #FFD129;
+}
+
+
+/* =====================================================
+   ÁREA DEL MAPA
+   ===================================================== */
 
 .map-area {
-  flex-grow: 1;
+  flex: 1;
+
+  min-width: 0;
+  min-height: 0;
+
+  height: 100%;
+
   position: relative;
+
   background: #d3e4f3;
+
   border-radius: 24px 0 0 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  overflow: hidden;
 }
-.map-placeholder {
+
+
+/* =====================================================
+   IFRAME DEL MAPA
+   ===================================================== */
+
+.map-frame {
   width: 100%;
-  height: 500px;
-  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Map_of_Manizales_with_labels.svg/1200px-Map_of_Manizales_with_labels.svg.png') no-repeat center;
-  background-size: contain;
-  border-radius: 24px 0 0 24px;
+  height: 100%;
+
+  display: block;
+
+  border: none;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
 }
+
+
+/* =====================================================
+   FORMA NARANJA INFERIOR
+   ===================================================== */
 
 .bottom-shape {
   position: fixed;
+
   bottom: 0;
   left: 0;
+
   width: 100vw;
   height: 150px;
+
   background: #FF9B03;
+
   border-radius: 80% 80% 0 0 / 100% 100% 0 0;
-  z-index: -1;
+
+  z-index: 1;
+
+  pointer-events: none;
 }
+
+
+/* =====================================================
+   FLECHA VOLVER
+   ===================================================== */
 
 .back-arrow {
   position: fixed;
+
   bottom: 20px;
   left: 20px;
-  cursor: pointer;
+
   width: 30px;
   height: 30px;
+
+  cursor: pointer;
+
   fill: #1f1f1f;
+
+  z-index: 20;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+  main {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .left-column {
+    width: 280px;
+    min-width: 280px;
+  }
+
+  .title-section {
+    font-size: 20px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  body {
+    overflow: auto;
+  }
+
+  main {
+    height: auto;
+    min-height: calc(100vh - 70px);
+
+    flex-direction: column;
+
+    overflow: visible;
+  }
+
+  .left-column {
+    width: 100%;
+    min-width: 0;
+
+    overflow: visible;
+  }
+
+  .map-area {
+    width: 100%;
+    height: 500px;
+
+    min-height: 500px;
+
+    border-radius: 24px;
+  }
+
+  .bottom-shape {
+    height: 100px;
+  }
 }
