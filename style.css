@@ -1,0 +1,176 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0; 
+  background: white;
+}
+header {
+  background: #B0D7F9; /* azul claro */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background: #0B64C6; /* azul montaña */
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.login-btn {
+  background: #27272E; 
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-weight: 600;
+}
+main {
+  display: flex;
+  padding: 15px 30px;
+}
+.left-column {
+  max-width: 320px;
+  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+}
+.title-section svg {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: #FF9B03;
+}
+
+.search-legend {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  background: #f7f7f7;
+  border-radius: 8px;
+  padding: 8px 12px;
+  max-width: 300px;
+  align-items: center;
+}
+.search-bar input {
+  border: none;
+  background: transparent;
+  flex-grow: 1;
+  font-size: 14px;
+  outline: none;
+}
+.search-bar svg {
+  width: 18px;
+  height: 18px;
+  fill: #8b8b8b;
+}
+
+.status-legend {
+  display: flex;
+  gap: 18px;
+  margin-left: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  user-select: none;
+}
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.legend-active { background: #04AA02; }
+.legend-delay { background: #FFD129; }
+
+.route-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.route-card {
+  background: #e1e1e1;
+  border-radius: 16px;
+  padding: 14px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f1f1f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.route-status {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.route-active { background: #04AA02; }
+.route-delay { background: #FFD129; }
+
+.map-area {
+  flex-grow: 1;
+  position: relative;
+  background: #d3e4f3;
+  border-radius: 24px 0 0 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.map-placeholder {
+  width: 100%;
+  height: 500px;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Map_of_Manizales_with_labels.svg/1200px-Map_of_Manizales_with_labels.svg.png') no-repeat center;
+  background-size: contain;
+  border-radius: 24px 0 0 24px;
+}
+
+.bottom-shape {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 150px;
+  background: #FF9B03;
+  border-radius: 80% 80% 0 0 / 100% 100% 0 0;
+  z-index: -1;
+}
+
+.back-arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  fill: #1f1f1f;
+}
