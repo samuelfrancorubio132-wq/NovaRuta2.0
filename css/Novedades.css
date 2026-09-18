@@ -120,14 +120,19 @@ body {
    CONTENIDO
    ========================= */
 
-.contenido {
+.contenido1 {
     position: absolute;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
     top: 77px;
     left: 0;
 
     width: 552px;
-    height: 258px;
+    height: 100vh;
 
     background: #ffffff;
 }
@@ -234,7 +239,7 @@ body {
     left: 0;
     bottom: 0;
 
-    width: 552px;
+    width: 100%;
     height: 54px;
 
     background: #62c4d8;
