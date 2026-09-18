@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NovaRuta - Conductor</title>
+
+    <link rel="stylesheet" href="../css/ruta_asignada.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         PÁGINA PRINCIPAL
+    ========================================== -->
+
+    <div class="pagina">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="header">
+
+
+            <!-- Círculo naranja detrás del logo -->
+
+            <div class="circulo-logo"></div>
+
+
+            <!-- Logo -->
+
+            <div class="logo">
+
+                <img
+                    src="../img/Shape Set.png"
+                    alt="Logo NovaRuta"
+                >
+
+            </div>
+
+
+            <!-- Título -->
+
+            <h1>
+                Bienvenido
+            </h1>
+
+
+            <!-- Botón cerrar sesión -->
+
+            <button class="cerrar">
+                Cerrar Sesion
+            </button>
+
+
+        </header>
+
+
+
+        <!-- =====================================
+             CONTENIDO PRINCIPAL
+        ====================================== -->
+
+        <main class="contenido">
+
+
+            <!-- =================================
+                 PANEL DE RUTAS
+            ================================== -->
+
+            <section class="panel-rutas">
+
+
+                <h2>
+                    Rutas asignadas
+                </h2>
+
+
+
+                <!-- =============================
+                     RUTA 510
+                ============================== -->
+
+                <div class="ruta">
+
+
+                    <!-- Horario -->
+
+                    <div class="hora">
+                        8:00 AM - 10:00 AM
+                    </div>
+
+
+                    <!-- Información -->
+
+                    <div class="datos">
+
+                        <span class="nombre-ruta">
+                            Ruta 510
+                        </span>
+
+                        <span class="recorrido">
+                            ARENAZUL - BANCA DEL<br>
+                            FERROCARRIL - LIBORIO
+                        </span>
+
+                    </div>
+
+
+                    <!-- Aceptar -->
+
+                    <button class="btn aceptar">
+                        ✓
+                    </button>
+
+
+                    <!-- Esperar -->
+
+                    <button class="btn esperar">
+
+                        <span></span>
+
+                    </button>
+
+
+                    <!-- Cancelar -->
+
+                    <button class="btn cancelar">
+                        ×
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =============================
+                     RUTA 515
+                ============================== -->
+
+                <div class="ruta">
+
+
+                    <!-- Horario -->
+
+                    <div class="hora">
+                        12:00 PM - 2:00 PM
+                    </div>
+
+
+                    <!-- Información -->
+
+                    <div class="datos">
+
+                        <span class="nombre-ruta">
+                            Ruta 515
+                        </span>
+
+                        <span class="recorrido">
+                            LA PRADERA - PANAMERICANA -<br>
+                            LIBORIO
+                        </span>
+
+                    </div>
+
+
+                    <!-- Aceptar -->
+
+                    <button class="btn aceptar">
+                        ✓
+                    </button>
+
+
+                    <!-- Esperar -->
+
+                    <button class="btn esperar">
+
+                        <span></span>
+
+                    </button>
+
+
+                    <!-- Cancelar -->
+
+                    <button class="btn cancelar">
+                        ×
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =============================
+                     RUTA 522
+                ============================== -->
+
+                <div class="ruta">
+
+
+                    <!-- Horario -->
+
+                    <div class="hora">
+                        4:00 PM - 6:00 PM
+                    </div>
+
+
+                    <!-- Información -->
+
+                    <div class="datos">
+
+                        <span class="nombre-ruta">
+                            Ruta 522
+                        </span>
+
+                        <span class="recorrido">
+                            LAS COLINAS - FATIMA - ZONA<br>
+                            INDUSTRIAL
+                        </span>
+
+                    </div>
+
+
+                    <!-- Aceptar -->
+
+                    <button class="btn aceptar">
+                        ✓
+                    </button>
+
+
+                    <!-- Esperar -->
+
+                    <button class="btn esperar">
+
+                        <span></span>
+
+                    </button>
+
+
+                    <!-- Cancelar -->
+
+                    <button class="btn cancelar">
+                        ×
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 PANEL DERECHO
+            ================================== -->
+
+            <section class="panel-derecho">
+
+
+                <!-- Caja de novedades -->
+
+                <div class="novedad">
+
+
+                    <!-- Icono -->
+
+                    <div class="alarma">
+                        🔊
+                    </div>
+
+
+                    <!-- Título -->
+
+                    <div class="titulo-novedad">
+                        Reportar Novedad
+                    </div>
+
+
+                    <!-- Campo -->
+
+                    <textarea
+                        placeholder="..."
+                    ></textarea>
+
+
+                    <!-- Botón -->
+
+                    <button class="enviar">
+                        Enviar
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+
+        <!-- =====================================
+             FOOTER
+        ====================================== -->
+
+        <footer class="footer">
+
+
+            <!-- Texto -->
+
+            <h2>
+                Conductor
+            </h2>
+
+
+            <!-- Círculo naranja izquierdo -->
+
+            <div class="naranja-izquierda"></div>
+
+
+            <!-- Círculo naranja derecho -->
+
+            <div class="naranja-derecha"></div>
+
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         SCRIPT PARA ESCALAR LA PÁGINA
+    ========================================== -->
+
+    <script>
+
+        function ajustarPagina() {
+
+            const pagina =
+                document.querySelector(".pagina");
+
+
+            /*
+             * Tamaño original del diseño.
+             *
+             * Todo el CSS está diseñado
+             * originalmente para estas medidas.
+             */
+
+            const anchoBase = 650;
+
+            const altoBase = 460;
+
+
+            /*
+             * Tamaño actual de la ventana.
+             */
+
+            const anchoPantalla =
+                window.innerWidth;
+
+            const altoPantalla =
+                window.innerHeight;
+
+
+            /*
+             * Calculamos cuánto podemos
+             * ampliar o reducir.
+             */
+
+            const escalaX =
+                anchoPantalla / anchoBase;
+
+            const escalaY =
+                altoPantalla / altoBase;
+
+
+            /*
+             * Utilizamos la escala menor
+             * para mantener las proporciones.
+             */
+
+            const escala =
+                Math.min(escalaX, escalaY);
+
+
+            /*
+             * Aplicamos la escala.
+             */
+
+            pagina.style.transform =
+                `scale(${escala})`;
+
+
+            /*
+             * Calculamos la posición
+             * horizontal.
+             */
+
+            const anchoFinal =
+                anchoBase * escala;
+
+            const altoFinal =
+                altoBase * escala;
+
+
+            const izquierda =
+                (anchoPantalla - anchoFinal) / 2;
+
+            const arriba =
+                (altoPantalla - altoFinal) / 2;
+
+
+            /*
+             * Centramos la página.
+             */
+
+            pagina.style.left =
+                `${izquierda}px`;
+
+            pagina.style.top =
+                `${arriba}px`;
+
+        }
+
+
+        /*
+         * Ejecutar cuando carga.
+         */
+
+        window.addEventListener(
+            "load",
+            ajustarPagina
+        );
+
+
+        /*
+         * Ejecutar cuando cambia
+         * el tamaño de la ventana.
+         */
+
+        window.addEventListener(
+            "resize",
+            ajustarPagina
+        );
+
+    </script>
+
+
+</body>
+
+</html>

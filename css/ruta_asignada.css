@@ -1,0 +1,805 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+
+html,
+body {
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+body {
+
+    background: #000;
+
+    overflow: hidden;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    position: relative;
+
+}
+
+
+
+/* =====================================================
+   PÁGINA
+===================================================== */
+
+.pagina {
+
+    width: 650px;
+
+    height: 475px;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    background: #fff;
+
+    overflow: hidden;
+
+    border-radius: 8px;
+
+    transform-origin: top left;
+
+}
+
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    width: 650px;
+
+    height: 108px;
+
+    position: relative;
+
+    background: #79cfde;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =====================================================
+   CÍRCULO NARANJA DEL LOGO
+===================================================== */
+
+.circulo-logo {
+
+    position: absolute;
+
+    width: 150px;
+
+    height: 150px;
+
+    left: -71px;
+
+    top: -48px;
+
+    background: #ff8627;
+
+    border-radius: 50%;
+
+    z-index: 1;
+
+}
+
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    position: absolute;
+
+    left: 12px;
+
+    top: 8px;
+
+    width: 100px;
+
+    height: 90px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 5;
+
+}
+
+
+.logo img {
+
+    width: 88px;
+
+    height: 88px;
+
+    object-fit: contain;
+
+}
+
+
+
+/* =====================================================
+   TÍTULO BIENVENIDO
+===================================================== */
+
+.header h1 {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 31px;
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: normal;
+
+    color: #000;
+
+    z-index: 5;
+
+}
+
+
+
+/* =====================================================
+   BOTÓN CERRAR SESIÓN
+===================================================== */
+
+.cerrar {
+
+    position: absolute;
+
+    right: 23px;
+
+    top: 25px;
+
+    width: 106px;
+
+    height: 29px;
+
+    background: #292929;
+
+    border: none;
+
+    border-radius: 4px;
+
+    color: white;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+}
+
+
+.cerrar:hover {
+
+    background: #444;
+
+}
+
+
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+.contenido {
+
+    width: 650px;
+
+    height: 303px;
+
+    display: flex;
+
+}
+
+
+
+/* =====================================================
+   PANEL GRIS
+===================================================== */
+
+.panel-rutas {
+
+    width: 459px;
+
+    height: 303px;
+
+    background: #808080;
+
+    padding-left: 20px;
+
+    padding-top: 12px;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =====================================================
+   TÍTULO RUTAS
+===================================================== */
+
+.panel-rutas h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    line-height: 35px;
+
+    margin-bottom: 26px;
+
+    color: #000;
+
+}
+
+
+
+/* =====================================================
+   FILA DE RUTA
+===================================================== */
+
+.ruta {
+
+    width: 100%;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 11px;
+
+}
+
+
+
+/* =====================================================
+   HORARIO
+===================================================== */
+
+.hora {
+
+    width: 106px;
+
+    height: 28px;
+
+    background: #292929;
+
+    color: white;
+
+    border-radius: 4px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    flex-shrink: 0;
+
+}
+
+
+
+/* =====================================================
+   DATOS DE LA RUTA
+===================================================== */
+
+.datos {
+
+    width: 135px;
+
+    height: 45px;
+
+    margin-left: 15px;
+
+    padding-left: 8px;
+
+    padding-top: 7px;
+
+    background: #d3d3d3;
+
+    border-radius: 3px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    flex-shrink: 0;
+
+}
+
+
+
+/* =====================================================
+   NOMBRE RUTA
+===================================================== */
+
+.nombre-ruta {
+
+    font-size: 8px;
+
+    line-height: 10px;
+
+    color: #000;
+
+    margin-bottom: 1px;
+
+}
+
+
+
+/* =====================================================
+   RECORRIDO
+===================================================== */
+
+.recorrido {
+
+    font-size: 7px;
+
+    line-height: 9px;
+
+    color: #222;
+
+}
+
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.btn {
+
+    width: 39px;
+
+    height: 37px;
+
+    margin-left: 8px;
+
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-shrink: 0;
+
+}
+
+
+
+/* =====================================================
+   BOTÓN VERDE
+===================================================== */
+
+.aceptar {
+
+    background: #28ff00;
+
+    color: #000;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+}
+
+
+
+/* =====================================================
+   BOTÓN AMARILLO
+===================================================== */
+
+.esperar {
+
+    background: #ffff00;
+
+    position: relative;
+
+}
+
+
+.esperar span {
+
+    width: 22px;
+
+    height: 22px;
+
+    background: #000;
+
+    border-radius: 50%;
+
+    position: relative;
+
+    display: block;
+
+}
+
+
+/* Aguja vertical */
+
+.esperar span::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+
+    height: 7px;
+
+    background: #ffff00;
+
+    left: 10px;
+
+    top: 4px;
+
+}
+
+
+/* Aguja horizontal */
+
+.esperar span::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+
+    height: 2px;
+
+    background: #ffff00;
+
+    left: 10px;
+
+    top: 11px;
+
+}
+
+
+
+/* =====================================================
+   BOTÓN ROJO
+===================================================== */
+
+.cancelar {
+
+    background: #ff0000;
+
+    color: #000;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    line-height: 1;
+
+}
+
+
+
+/* =====================================================
+   PANEL DERECHO
+===================================================== */
+
+.panel-derecho {
+
+    width: 191px;
+
+    height: 303px;
+
+    background: #fff;
+
+    position: relative;
+
+}
+
+
+
+/* =====================================================
+   CAJA NOVEDAD
+===================================================== */
+
+.novedad {
+
+    position: absolute;
+
+    width: 177px;
+
+    height: 116px;
+
+    left: 7px;
+
+    top: 57px;
+
+    background: #bdbdbd;
+
+    border-radius: 4px;
+
+}
+
+
+
+/* =====================================================
+   ICONO
+===================================================== */
+
+.alarma {
+
+    position: absolute;
+
+    right: 8px;
+
+    top: 5px;
+
+    font-size: 25px;
+
+}
+
+
+
+/* =====================================================
+   TÍTULO NOVEDAD
+===================================================== */
+
+.titulo-novedad {
+
+    position: absolute;
+
+    left: 8px;
+
+    top: 40px;
+
+    font-size: 15px;
+
+    color: #333;
+
+}
+
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.novedad textarea {
+
+    position: absolute;
+
+    left: 8px;
+
+    top: 61px;
+
+    width: 160px;
+
+    height: 30px;
+
+    border: none;
+
+    outline: none;
+
+    resize: none;
+
+    background: transparent;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 14px;
+
+    color: #333;
+
+}
+
+
+
+/* =====================================================
+   BOTÓN ENVIAR
+===================================================== */
+
+.enviar {
+
+    position: absolute;
+
+    right: 7px;
+
+    bottom: 5px;
+
+    width: 106px;
+
+    height: 21px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #292929;
+
+    color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+}
+
+
+.enviar:hover {
+
+    background: #444;
+
+}
+
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    width: 650px;
+
+    height: 64px;
+
+    position: relative;
+
+    background: #61c7d8;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =====================================================
+   CONDUCTOR
+===================================================== */
+
+.footer h2 {
+
+    position: absolute;
+
+    left: 19px;
+
+    top: 13px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    color: #000;
+
+    z-index: 10;
+
+}
+
+
+
+/* =====================================================
+   CÍRCULO NARANJA IZQUIERDO
+===================================================== */
+
+.naranja-izquierda {
+
+    position: absolute;
+
+    width: 225px;
+
+    height: 225px;
+
+    left: 280px;
+
+    top: -10px;
+
+    background: #ff8627;
+
+    border-radius: 50%;
+
+    z-index: 2;
+
+}
+
+
+
+/* =====================================================
+   CÍRCULO NARANJA DERECHO
+===================================================== */
+
+.naranja-derecha {
+
+    position: absolute;
+
+    width: 225px;
+
+    height: 225px;
+
+    right: -40px;
+
+    top: -63px;
+
+    background: #ff8627;
+
+    border-radius: 50%;
+
+    z-index: 3;
+
+}
