@@ -44,12 +44,20 @@ header {
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
+
+.logo img {
+  width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
+}
+
 
 /* Círculo del logo */
 .logo-circle {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 
   background: #0B64C6;
   border-radius: 50%;
@@ -117,6 +125,7 @@ main {
    ===================================================== */
 
 .left-column {
+  flex: 0 0 320px;
   width: 320px;
   min-width: 320px;
 
@@ -125,7 +134,11 @@ main {
 
   overflow-y: auto;
   overflow-x: hidden;
+
+  position: relative;
+  z-index: 10;
 }
+
 
 
 /* Título */
@@ -159,15 +172,16 @@ main {
 
 .search-legend {
   display: flex;
+  flex-direction: column;
 
-  justify-content: space-between;
-  align-items: center;
+  width: 100%;
 
   margin-bottom: 25px;
 }
 
 .search-bar {
-  flex-grow: 1;
+  width: 100%;
+  max-width: none;
 
   display: flex;
   align-items: center;
@@ -177,9 +191,8 @@ main {
   border-radius: 8px;
 
   padding: 8px 12px;
-
-  max-width: 300px;
 }
+
 
 .search-bar input {
   border: none;
@@ -208,15 +221,20 @@ main {
 .status-legend {
   display: flex;
 
+  justify-content: flex-start;
+  align-items: center;
+
   gap: 18px;
 
-  margin-left: 20px;
+  margin-left: 0;
+  margin-top: 10px;
 
   font-weight: 600;
   font-size: 14px;
 
   user-select: none;
 }
+
 
 .legend-dot {
   width: 14px;
@@ -315,7 +333,10 @@ main {
   border-radius: 24px 0 0 24px;
 
   overflow: hidden;
+
+  z-index: 2;
 }
+
 
 
 /* =====================================================
@@ -393,9 +414,19 @@ main {
   }
 
   .left-column {
-    width: 280px;
-    min-width: 280px;
-  }
+  width: 320px;
+  min-width: 320px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  position: relative;
+  z-index: 5;
+}
+
 
   .title-section {
     font-size: 20px;
@@ -410,14 +441,22 @@ main {
     overflow: auto;
   }
 
-  main {
-    height: auto;
-    min-height: calc(100vh - 70px);
+ main {
+  width: 100%;
+  height: calc(100vh - 70px);
 
-    flex-direction: column;
+  display: flex;
 
-    overflow: visible;
-  }
+  padding: 15px 30px;
+
+  gap: 30px;
+
+  position: relative;
+  z-index: 2;
+
+  overflow: hidden;
+}
+
 
   .left-column {
     width: 100%;

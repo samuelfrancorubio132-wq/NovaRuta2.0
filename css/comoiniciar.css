@@ -60,6 +60,18 @@ body {
    CÍRCULO DEL LOGO
 ========================================= */
 
+.logo {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.logo img {
+  width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
+}
+
 .logo-circle {
     position: absolute;
 
