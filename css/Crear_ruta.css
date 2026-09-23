@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    height: 100px;
+
+    background-color: #65c5d3;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    width: 165px;
+    height: 75px;
+
+    background-color: #ff8525;
+
+    border-radius: 0 0 75px 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+}
+
+.logo img {
+    width: 105px;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   CONTENIDO PRINCIPAL
+========================= */
+
+main {
+    flex: 1;
+
+    position: relative;
+
+    background-color: white;
+
+    width: 100%;
+
+    min-height: 0;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario {
+    position: absolute;
+
+    width: 630px;
+
+    left: 50%;
+
+    top: 45px;
+
+    transform: translateX(-50%);
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.formulario h1 {
+    width: 100%;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 52px;
+
+    font-weight: normal;
+
+    color: #111827;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.campo {
+    width: 100%;
+
+    margin-bottom: 19px;
+}
+
+
+.campo label {
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+
+    color: #222;
+}
+
+
+.campo input {
+    width: 100%;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #a6a6a6;
+
+    padding: 0 18px;
+
+    font-size: 17px;
+
+    color: white;
+
+    outline: none;
+}
+
+
+.campo input::placeholder {
+    color: white;
+
+    opacity: 1;
+}
+
+
+.campo input:focus {
+    box-shadow: 0 0 0 3px #65c5d3;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.formulario button {
+    display: block;
+
+    margin: 27px auto 0;
+
+    width: 150px;
+
+    height: 50px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #292d35;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.formulario button:hover {
+    background-color: #65c5d3;
+
+    color: #111;
+}
+
+
+/* =========================
+   BUS
+========================= */
+
+.bus {
+    position: absolute;
+
+    left: calc(50% + 360px);
+
+    top: 135px;
+
+    width: 250px;
+
+    height: 280px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.bus img {
+    width: 230px;
+
+    height: 250px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+    height: 115px;
+
+    background-color: #65c5d3;
+
+    position: relative;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   CÍRCULOS NARANJAS
+========================= */
+
+.decoracion {
+    position: absolute;
+
+    width: 260px;
+
+    height: 260px;
+
+    background-color: #ff8525;
+
+    border-radius: 50%;
+
+    left: 63%;
+
+    top: -45px;
+}
+
+
+.decoracion.derecha {
+    width: 285px;
+
+    height: 285px;
+
+    left: auto;
+
+    right: -45px;
+
+    top: -120px;
+}
+
+
+/* =========================
+   FLECHA
+========================= */
+
+.volver {
+    position: absolute;
+
+    left: 25px;
+
+    top: 35px;
+
+    width: 45px;
+
+    height: 35px;
+
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+
+/* Línea */
+
+.volver::before {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+
+    top: 16px;
+
+    width: 35px;
+
+    height: 2px;
+
+    background-color: #111;
+}
+
+
+/* Punta */
+
+.volver::after {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+
+    top: 8px;
+
+    width: 15px;
+
+    height: 15px;
+
+    border-left: 2px solid #111;
+
+    border-bottom: 2px solid #111;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .formulario {
+        width: 500px;
+
+        left: 45%;
+    }
+
+    .bus {
+        left: calc(50% + 250px);
+
+        transform: scale(0.85);
+    }
+}
+
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    main {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        padding: 30px;
+    }
+
+    .formulario {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        transform: none;
+
+        width: 90%;
+
+        max-width: 550px;
+    }
+
+    .formulario h1 {
+        font-size: 45px;
+    }
+
+    .bus {
+        position: relative;
+
+        left: auto;
+        top: auto;
+
+        margin-top: 20px;
+    }
+}
