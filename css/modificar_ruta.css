@@ -1,0 +1,425 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+
+/* =========================
+   PÁGINA
+========================= */
+
+.pagina {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.header {
+    width: 100%;
+    height: 105px;
+    background: #62c7da;
+    position: relative;
+}
+
+
+/* LOGO */
+
+.logo {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+h1 {
+    position: absolute;
+
+    top: 120px;
+    left: 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 31px;
+    font-weight: normal;
+
+    color: #111;
+}
+
+
+/* =========================
+   RUTAS
+========================= */
+
+.rutas {
+    position: absolute;
+
+    top: 175px;
+    left: 28px;
+
+    width: 425px;
+}
+
+
+.ruta {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        42px
+        42px;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+/* TARJETA */
+
+.ruta-info {
+    min-height: 62px;
+
+    padding: 8px 12px;
+
+    background: #dddddd;
+
+    border: 1px solid #c8c8c8;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    color: #111;
+
+    font-size: 10px;
+
+    line-height: 13px;
+}
+
+
+.ruta-info b {
+    font-size: 11px;
+
+    margin-bottom: 2px;
+}
+
+
+/* BOTONES */
+
+.ruta button {
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #111;
+}
+
+
+/* CONFIGURACIÓN */
+
+.config {
+    font-size: 24px;
+}
+
+
+/* EDITAR */
+
+.editar {
+    font-size: 28px;
+
+    transform: rotate(-20deg);
+}
+
+
+/* =========================
+   ICONO GRANDE
+========================= */
+
+.icono-editar {
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: 140px;
+    top: 170px;
+}
+
+
+/* CUADRO */
+
+.cuadro {
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    left: 8px;
+    top: 10px;
+
+    border: 10px solid #050505;
+
+    border-radius: 24px;
+}
+
+
+/* PARTE DEL LÁPIZ */
+
+.lapiz {
+
+    position: absolute;
+
+    width: 95px;
+    height: 27px;
+
+    right: 5px;
+    top: 35px;
+
+    background: white;
+
+    border: 10px solid #050505;
+
+    border-radius: 20px;
+
+    transform: rotate(-45deg);
+}
+
+
+/* PUNTA DEL LÁPIZ */
+
+.lapiz::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 0;
+
+    left: -25px;
+    top: -5px;
+
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+
+    border-right: 25px solid #050505;
+}
+
+
+/* =========================
+   PIE DE PÁGINA
+========================= */
+
+footer {
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 88px;
+
+    background: #62c7da;
+
+    overflow: hidden;
+}
+
+
+/* FLECHA */
+
+.flecha {
+
+    position: absolute;
+
+    left: 20px;
+    top: 15px;
+
+    font-size: 35px;
+
+    font-weight: 300;
+
+    color: #111;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   FORMAS NARANJAS
+========================= */
+
+.forma-naranja {
+
+    position: absolute;
+
+    background: #ff7c1b;
+
+    border-radius: 50% 50% 0 0;
+}
+
+
+/* FORMA IZQUIERDA */
+
+.naranja1 {
+
+    width: 240px;
+    height: 120px;
+
+    left: 45%;
+
+    bottom: -65px;
+}
+
+
+/* FORMA DERECHA */
+
+.naranja2 {
+
+    width: 270px;
+    height: 145px;
+
+    right: -35px;
+
+    bottom: -75px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .rutas {
+        width: 48%;
+    }
+
+    .icono-editar {
+        right: 5%;
+        transform: scale(.8);
+        transform-origin: top right;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .header {
+        height: 75px;
+    }
+
+    .logo {
+        width: 55px;
+        height: 55px;
+
+        left: 15px;
+        top: 9px;
+    }
+
+    h1 {
+        top: 90px;
+        font-size: 23px;
+    }
+
+    .rutas {
+        top: 135px;
+        left: 12px;
+        width: 58%;
+    }
+
+    .ruta {
+        grid-template-columns:
+            1fr
+            28px
+            28px;
+
+        margin-bottom: 10px;
+    }
+
+    .ruta-info {
+        min-height: 50px;
+
+        padding: 6px;
+
+        font-size: 8px;
+
+        line-height: 10px;
+    }
+
+    .ruta-info b {
+        font-size: 9px;
+    }
+
+    .config {
+        font-size: 18px;
+    }
+
+    .editar {
+        font-size: 20px;
+    }
+
+    .icono-editar {
+        right: -15px;
+        top: 140px;
+
+        transform: scale(.55);
+    }
+
+    footer {
+        height: 70px;
+    }
+
+}
