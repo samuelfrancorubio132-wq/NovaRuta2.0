@@ -1,0 +1,371 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+    overflow: hidden;
+}
+
+
+
+
+.pagina {
+    position: relative;
+
+    width: 100vw;
+    height: 100vh;
+
+    min-width: 600px;
+    min-height: 550px;
+
+    background-color: white;
+
+    overflow: hidden;
+}
+
+
+
+
+.header {
+    position: relative;
+
+    width: 100%;
+    height: 78px;
+
+    background-color: #7bd3e4;
+
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
+
+.logo {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 112px;
+    height: 78px;
+
+    background-color: #ff8527;
+
+    border-bottom-right-radius: 70px;
+
+    overflow: visible;
+}
+
+.logo img {
+    position: absolute;
+
+    width: 96px;
+    height: auto;
+
+    left: 5px;
+    top: -4px;
+
+    z-index: 5;
+}
+
+
+
+.contenido {
+    position: relative;
+
+    width: 100%;
+    height: calc(100vh - 135px);
+
+    background-color: white;
+}
+
+
+
+
+h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 27px;
+    font-weight: normal;
+
+    line-height: 1.25;
+
+    color: #111111;
+
+    text-align: center;
+}
+
+
+
+.rutas {
+    position: absolute;
+
+    left: 0;
+    top: 5px;
+
+    width: 175px;
+    height: 100%;
+}
+
+.rutas h1 {
+    margin-bottom: 5px;
+}
+
+
+/* Lista */
+
+.lista-rutas {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+
+
+
+.ruta {
+    width: 117px;
+    min-height: 35px;
+
+    padding: 5px 7px;
+
+    background-color: #bdbdbd;
+
+    border-radius: 3px;
+
+    color: #222222;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ruta strong {
+    display: block;
+
+    font-size: 7px;
+    font-weight: normal;
+
+    margin-bottom: 2px;
+}
+
+.ruta span {
+    display: block;
+
+    font-size: 6px;
+    line-height: 1.35;
+}
+
+
+
+
+.conductores {
+    position: absolute;
+
+    left: 185px;
+    top: 5px;
+
+    width: 410px;
+    height: 100%;
+}
+
+.conductores h1 {
+    position: relative;
+
+    margin-left: 0;
+
+    text-align: center;
+}
+
+
+.conductor {
+    position: absolute;
+
+    display: flex;
+    align-items: flex-start;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+.conductor img {
+    flex-shrink: 0;
+
+    width: 39px;
+    height: 39px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    background-color: #eeeeee;
+}
+
+
+
+.datos {
+    margin-left: 7px;
+
+    color: #aaaaaa;
+}
+
+.datos h2 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    color: #777777;
+
+    margin: 0 0 1px 0;
+}
+
+.datos p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.12;
+
+    color: #b0b0b0;
+
+    margin: 0;
+}
+
+.conductor-1 {
+    top: 90px;
+    left: 17px;
+}
+
+
+/* Samuel */
+
+.conductor-2 {
+    top: 170px;
+    left: 185px;
+}
+
+
+/* Jeyder */
+
+.conductor-3 {
+    top: 267px;
+    left: 17px;
+}
+
+
+
+.footer {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 58px;
+
+    background-color: #61c8dc;
+
+    overflow: hidden;
+}
+
+
+
+.circulo {
+    position: absolute;
+
+    background-color: #ff8527;
+
+    border-radius: 50%;
+}
+
+
+.circulo-1 {
+    width: 220px;
+    height: 220px;
+
+    left: 260px;
+    top: -17px;
+}
+
+
+.circulo-2 {
+    width: 235px;
+    height: 235px;
+
+    right: -70px;
+    top: -60px;
+}
+
+
+.volver {
+    position: absolute;
+
+    left: 10px;
+    top: 21px;
+
+    width: 25px;
+    height: 20px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+
+
+.volver::before {
+    content: "";
+
+    position: absolute;
+
+    left: 1px;
+    top: 9px;
+
+    width: 23px;
+    height: 2px;
+
+    background-color: #111111;
+}
+
+
+
+.volver::after {
+    content: "";
+
+    position: absolute;
+
+    left: 1px;
+    top: 3px;
+
+    width: 12px;
+    height: 12px;
+
+    border-left: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+
+    transform: rotate(45deg);
+}
