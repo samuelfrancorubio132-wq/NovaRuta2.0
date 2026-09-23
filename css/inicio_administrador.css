@@ -42,11 +42,16 @@ header {
 }
 
 .logo span {
-    font-size: 30px;
+    font-size: 1%;
 }
 
 .logo strong {
-    font-size: 24px;
+    font-size: 10px;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
 }
 
 
