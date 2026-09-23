@@ -1,0 +1,356 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+}
+
+
+/* =========================================
+   PÁGINA COMPLETA
+========================================= */
+
+.pagina {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.header {
+    width: 100%;
+    height: 16vh;
+    min-height: 90px;
+
+    background: #63c9d9;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    width: 13%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 8px;
+}
+
+.logo img {
+    width: 75px;
+    height: 75px;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.titulo-header {
+    flex: 1;
+
+    text-align: center;
+
+    padding: 0 120px 0 20px;
+}
+
+.titulo-header h1 {
+    margin: 0;
+
+    color: #111;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(25px, 3vw, 45px);
+
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+.titulo-header p {
+    margin: 10px 0 0;
+
+    color: #111;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(11px, 1.2vw, 18px);
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.btn-login {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 120px;
+    height: 35px;
+
+    border: none;
+    border-radius: 3px;
+
+    background: #292929;
+    color: white;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #111;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenido {
+    flex: 1;
+
+    width: 100%;
+
+    background: white;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   TÍTULO EMPRESAS
+========================================= */
+
+.contenido h2 {
+    margin: 0;
+
+    padding-top: 8px;
+
+    text-align: center;
+
+    color: #222;
+
+    font-size: clamp(22px, 2.5vw, 38px);
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   EMPRESA
+========================================= */
+
+.empresa {
+    width: 150px;
+
+    margin-top: 25px;
+    margin-left: 35px;
+
+    text-align: center;
+}
+
+.empresa img {
+    width: 150px;
+    height: 90px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+.empresa p {
+    margin: 6px 0 0;
+
+    font-size: 10px;
+
+    color: #222;
+}
+
+
+/* =========================================
+   PARTE INFERIOR
+========================================= */
+
+.footer {
+    width: 100%;
+
+    height: 14vh;
+    min-height: 80px;
+
+    position: relative;
+
+    background: #63c9d9;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CÍRCULOS NARANJAS
+========================================= */
+
+.circulo {
+    position: absolute;
+
+    background: #ff8828;
+
+    border-radius: 50%;
+}
+
+
+/* CÍRCULO IZQUIERDO */
+
+.circulo-1 {
+    width: 180px;
+    height: 180px;
+
+    left: 42%;
+
+    top: 35px;
+}
+
+
+/* CÍRCULO DERECHO */
+
+.circulo-2 {
+    width: 230px;
+    height: 230px;
+
+    right: -30px;
+
+    top: -80px;
+}
+
+
+/* =========================================
+   PANTALLAS PEQUEÑAS
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        height: 18vh;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .titulo-header {
+        padding: 0 75px 0 5px;
+    }
+
+    .titulo-header h1 {
+        font-size: 23px;
+    }
+
+    .titulo-header p {
+        font-size: 9px;
+        margin-top: 5px;
+    }
+
+    .btn-login {
+        width: 75px;
+        height: 27px;
+
+        top: 8px;
+        right: 8px;
+
+        font-size: 8px;
+    }
+
+    .contenido h2 {
+        font-size: 22px;
+    }
+
+    .empresa {
+        margin-left: 15px;
+        margin-top: 15px;
+    }
+
+    .empresa img {
+        width: 110px;
+        height: 70px;
+    }
+
+    .footer {
+        height: 14vh;
+    }
+
+    .circulo-1 {
+        width: 130px;
+        height: 130px;
+
+        left: 35%;
+        top: 35px;
+    }
+
+    .circulo-2 {
+        width: 160px;
+        height: 160px;
+
+        right: -30px;
+        top: -55px;
+    }
+}
