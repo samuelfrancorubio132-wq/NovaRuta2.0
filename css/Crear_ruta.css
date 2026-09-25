@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-=======
+
+
 /* =========================================
    CONFIGURACIÓN GENERAL
 ========================================= */
 
->>>>>>> SamuelEmanuel
+
 * {
     margin: 0;
     padding: 0;
@@ -14,11 +14,11 @@
 html,
 body {
     width: 100%;
-<<<<<<< HEAD
+
     height: 100%;
-=======
+
     min-height: 100%;
->>>>>>> SamuelEmanuel
+
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 
     font-family: Arial, sans-serif;
 
-<<<<<<< HEAD
+
     background-color: white;
 
     display: flex;
@@ -47,7 +47,7 @@ header {
 
     position: relative;
 
-=======
+
     background-color: #ffffff;
 
     overflow-x: hidden;
@@ -72,13 +72,12 @@ header {
 }
 
 
-<<<<<<< HEAD
+
 /* =========================
    LOGO
 ========================= */
 
 .logo {
-=======
 /* =========================================
    LOGO
 ========================================= */
@@ -89,7 +88,7 @@ header {
     left: 0;
     top: 0;
 
->>>>>>> SamuelEmanuel
+
     width: 165px;
     height: 75px;
 
@@ -102,31 +101,30 @@ header {
     align-items: center;
     justify-content: center;
 
-<<<<<<< HEAD
+
     position: absolute;
 
     left: 0;
     top: 0;
-=======
+
     overflow: hidden;
 
     z-index: 5;
->>>>>>> SamuelEmanuel
+
 }
 
 .logo img {
     width: 105px;
-<<<<<<< HEAD
 
-=======
->>>>>>> SamuelEmanuel
+
+
     height: auto;
 
     object-fit: contain;
 }
 
 
-<<<<<<< HEAD
+
 /* =========================
    CONTENIDO PRINCIPAL
 ========================= */
@@ -164,7 +162,6 @@ main {
 /* =========================
    TÍTULO
 ========================= */
-=======
 /* =========================================
    CONTENIDO PRINCIPAL
 ========================================= */
@@ -208,21 +205,19 @@ main {
 /* =========================================
    TÍTULO
 ========================================= */
->>>>>>> SamuelEmanuel
+
 
 .formulario h1 {
     width: 100%;
 
-<<<<<<< HEAD
-=======
+
     margin-bottom: 28px;
 
->>>>>>> SamuelEmanuel
     text-align: center;
 
     font-family: Georgia, "Times New Roman", serif;
 
-<<<<<<< HEAD
+
     font-size: 52px;
 
     font-weight: normal;
@@ -236,7 +231,7 @@ main {
 /* =========================
    CAMPOS
 ========================= */
-=======
+
     font-size: clamp(36px, 4vw, 52px);
 
     font-weight: normal;
@@ -250,7 +245,7 @@ main {
 /* =========================================
    CAMPOS
 ========================================= */
->>>>>>> SamuelEmanuel
+
 
 .campo {
     width: 100%;
@@ -262,29 +257,28 @@ main {
 .campo label {
     display: block;
 
-<<<<<<< HEAD
+
     font-size: 18px;
 
     margin-bottom: 7px;
 
     color: #222;
-=======
-    margin-bottom: 7px;
+   margin-bottom: 7px;
 
     font-size: clamp(15px, 1.5vw, 18px);
 
     color: #222222;
->>>>>>> SamuelEmanuel
+
 }
 
 
 .campo input {
-<<<<<<< HEAD
+
     width: 100%;
 
     height: 50px;
 
-=======
+
     display: block;
 
     width: 100%;
@@ -292,36 +286,34 @@ main {
 
     padding: 0 18px;
 
->>>>>>> SamuelEmanuel
+
     border: none;
 
     border-radius: 6px;
 
     background-color: #a6a6a6;
 
-<<<<<<< HEAD
+
     padding: 0 18px;
 
     font-size: 17px;
 
     color: white;
 
-=======
+
     color: #ffffff;
 
     font-size: 17px;
 
->>>>>>> SamuelEmanuel
+
     outline: none;
 }
 
 
 .campo input::placeholder {
-<<<<<<< HEAD
-    color: white;
-=======
+
     color: #ffffff;
->>>>>>> SamuelEmanuel
+
 
     opacity: 1;
 }
@@ -332,64 +324,60 @@ main {
 }
 
 
-<<<<<<< HEAD
+
 /* =========================
    BOTÓN
 ========================= */
-=======
 /* =========================================
    BOTÓN CONTINUAR
 ========================================= */
->>>>>>> SamuelEmanuel
+
 
 .formulario button {
     display: block;
 
-<<<<<<< HEAD
+
     margin: 27px auto 0;
 
     width: 150px;
 
     height: 50px;
-
-=======
     width: 150px;
     height: 50px;
 
     margin: 27px auto 0;
 
->>>>>>> SamuelEmanuel
+
     border: none;
 
     border-radius: 7px;
 
     background-color: #292d35;
 
-<<<<<<< HEAD
+
     color: white;
-=======
     color: #ffffff;
->>>>>>> SamuelEmanuel
+
 
     font-size: 17px;
 
     font-weight: bold;
 
     cursor: pointer;
-<<<<<<< HEAD
-=======
+
+
 
     transition:
         background-color 0.2s ease,
         color 0.2s ease;
->>>>>>> SamuelEmanuel
+
 }
 
 
 .formulario button:hover {
     background-color: #65c5d3;
 
-<<<<<<< HEAD
+
     color: #111;
 }
 
@@ -414,7 +402,6 @@ main {
     align-items: center;
 
     justify-content: center;
-=======
     color: #111111;
 }
 
@@ -436,26 +423,26 @@ main {
     justify-content: center;
 
     flex-shrink: 1;
->>>>>>> SamuelEmanuel
+
 }
 
 
 .bus img {
-<<<<<<< HEAD
+
     width: 230px;
 
-=======
+
     display: block;
 
     width: min(230px, 100%);
->>>>>>> SamuelEmanuel
+
     height: 250px;
 
     object-fit: contain;
 }
 
 
-<<<<<<< HEAD
+
 /* =========================
    PIE DE PÁGINA
 ========================= */
@@ -467,7 +454,7 @@ footer {
 
     position: relative;
 
-=======
+
 /* =========================================
    PIE DE PÁGINA
 ========================================= */
@@ -481,55 +468,48 @@ footer {
 
     background-color: #65c5d3;
 
->>>>>>> SamuelEmanuel
+
     overflow: hidden;
 
     flex-shrink: 0;
 }
 
 
-<<<<<<< HEAD
+
 /* =========================
    CÍRCULOS NARANJAS
 ========================= */
-=======
+
 /* =========================================
    DECORACIONES
 ========================================= */
->>>>>>> SamuelEmanuel
+
 
 .decoracion {
     position: absolute;
 
     width: 260px;
-<<<<<<< HEAD
 
     height: 260px;
 
-=======
     height: 260px;
 
     left: 63%;
     top: -45px;
 
->>>>>>> SamuelEmanuel
     background-color: #ff8525;
 
     border-radius: 50%;
 
-<<<<<<< HEAD
     left: 63%;
 
     top: -45px;
-=======
     pointer-events: none;
->>>>>>> SamuelEmanuel
 }
 
 
 .decoracion.derecha {
     width: 285px;
-<<<<<<< HEAD
 
     height: 285px;
 
@@ -537,31 +517,25 @@ footer {
 
     right: -45px;
 
-=======
     height: 285px;
 
     left: auto;
     right: -45px;
->>>>>>> SamuelEmanuel
     top: -120px;
 }
 
 
-<<<<<<< HEAD
 /* =========================
    FLECHA
 ========================= */
-=======
 /* =========================================
    BOTÓN VOLVER
 ========================================= */
->>>>>>> SamuelEmanuel
 
 .volver {
     position: absolute;
 
     left: 25px;
-<<<<<<< HEAD
 
     top: 35px;
 
@@ -571,14 +545,12 @@ footer {
 
     margin: 0;
 
-=======
     top: 50%;
 
     width: 45px;
     height: 35px;
 
     margin: 0;
->>>>>>> SamuelEmanuel
     padding: 0;
 
     border: none;
@@ -587,22 +559,16 @@ footer {
 
     cursor: pointer;
 
-<<<<<<< HEAD
-=======
     transform: translateY(-50%);
 
->>>>>>> SamuelEmanuel
     z-index: 10;
 }
 
 
-<<<<<<< HEAD
 /* Línea */
-=======
 /* =========================================
    LÍNEA DE LA FLECHA
 ========================================= */
->>>>>>> SamuelEmanuel
 
 .volver::before {
     content: "";
@@ -610,7 +576,6 @@ footer {
     position: absolute;
 
     left: 2px;
-<<<<<<< HEAD
 
     top: 16px;
 
@@ -623,7 +588,6 @@ footer {
 
 
 /* Punta */
-=======
     top: 16px;
 
     width: 35px;
@@ -636,7 +600,6 @@ footer {
 /* =========================================
    PUNTA DE LA FLECHA
 ========================================= */
->>>>>>> SamuelEmanuel
 
 .volver::after {
     content: "";
@@ -644,7 +607,6 @@ footer {
     position: absolute;
 
     left: 2px;
-<<<<<<< HEAD
 
     top: 8px;
 
@@ -655,7 +617,6 @@ footer {
     border-left: 2px solid #111;
 
     border-bottom: 2px solid #111;
-=======
     top: 8px;
 
     width: 15px;
@@ -663,13 +624,11 @@ footer {
 
     border-left: 2px solid #111111;
     border-bottom: 2px solid #111111;
->>>>>>> SamuelEmanuel
 
     transform: rotate(45deg);
 }
 
 
-<<<<<<< HEAD
 /* =========================
    RESPONSIVE
 ========================= */
@@ -686,7 +645,6 @@ footer {
         left: calc(50% + 250px);
 
         transform: scale(0.85);
-=======
 /* =========================================
    TABLET
 ========================================= */
@@ -727,7 +685,6 @@ footer {
 }
 
 
-<<<<<<< HEAD
 @media (max-width: 900px) {
 
     body {
@@ -735,7 +692,7 @@ footer {
     }
 
     main {
-=======
+    
 /* =========================================
    TABLET PEQUEÑA
 ========================================= */
