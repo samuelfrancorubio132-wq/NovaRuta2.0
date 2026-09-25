@@ -1,3 +1,6 @@
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -5,15 +8,13 @@
     padding: 0;
 }
 
-
-html,
-body {
+html {
     width: 100%;
     min-height: 100%;
 }
 
-
 body {
+    width: 100%;
     min-height: 100vh;
 
     background: #ffffff;
@@ -25,20 +26,17 @@ body {
 
 
 /* =========================================================
-   PÁGINA PRINCIPAL
-   ========================================================= */
+   PÁGINA
+========================================================= */
 
 .pagina {
-
     position: relative;
 
     width: 100%;
-
     min-height: 100vh;
 
-    height: 100vh;
-
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 
     background: #ffffff;
 }
@@ -46,17 +44,14 @@ body {
 
 /* =========================================================
    ENCABEZADO
-   ========================================================= */
+========================================================= */
 
 .encabezado {
-
     position: relative;
 
     width: 100%;
-
-    height: 20%;
-
-    min-height: 80px;
+    height: 150px;
+    min-height: 150px;
 
     background: #70c9da;
 }
@@ -64,28 +59,20 @@ body {
 
 /* =========================================================
    LOGO
-   ========================================================= */
+========================================================= */
 
 .zona-logo {
-
     position: absolute;
 
     left: 0;
-
     top: 0;
 
-    width: 2%;
-
-    height: 24.2%;
-
-    min-width: 100px;
-
-    min-height: 97px;
+    width: 125px;
+    height: 100px;
 
     background: #ff8828;
 
     border-right: 3px solid #7835f0;
-
     border-bottom: 3px solid #7835f0;
 
     overflow: hidden;
@@ -93,40 +80,30 @@ body {
     z-index: 5;
 }
 
-
 .zona-logo img {
-
     display: block;
 
-    width: 82%;
-
-    height: 83%;
+    width: 103px;
+    height: 84px;
 
     object-fit: cover;
-
     object-position: left top;
 }
 
 
 /* =========================================================
-   TÍTULO BIENVENIDO
-   ========================================================= */
+   TÍTULO
+========================================================= */
 
 .encabezado h1 {
-
     position: absolute;
 
-    top: 3.6%;
-
     left: 50%;
+    top: 25px;
 
     transform: translateX(-50%);
 
-    font-size: clamp(
-        25px,
-        4.8vw,
-        34px
-    );
+    font-size: clamp(26px, 3vw, 36px);
 
     font-weight: 400;
 
@@ -138,81 +115,66 @@ body {
 
 /* =========================================================
    BOTÓN CERRAR SESIÓN
-   ========================================================= */
+========================================================= */
 
 .btn-cerrar {
-
     position: absolute;
 
-    top: 2%;
+    top: 15px;
+    right: 3%;
 
-    right: 3.25%;
-
-    width: clamp(
-        105px,
-        16.4vw,
-        116px
-    );
-
-    height: clamp(
-        29px,
-        4.4vw,
-        31px
-    );
+    width: 120px;
+    height: 32px;
 
     border: none;
-
     border-radius: 4px;
 
     background: #303030;
 
-    color: white;
+    color: #ffffff;
 
     font-family: Arial, sans-serif;
 
-    font-size: clamp(
-        10px,
-        1.7vw,
-        12px
-    );
+    font-size: 12px;
 
     cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.btn-cerrar:hover {
+    background: #1c1c1c;
 }
 
 
 /* =========================================================
    CONTENIDO
-   ========================================================= */
+========================================================= */
 
 .contenido {
-
     position: relative;
 
     width: 100%;
 
-    height: 66.6%;
+    min-height: 500px;
 
-    background: white;
+    flex: 1;
+
+    background: #ffffff;
 }
 
 
 /* =========================================================
-   TÍTULO RUTAS ASIGNADAS
-   ========================================================= */
+   TÍTULO RUTAS
+========================================================= */
 
 .contenido h2 {
-
     position: absolute;
 
-    left: 0.85%;
+    left: 2%;
+    top: 35px;
 
-    top: 3.9%;
-
-    font-size: clamp(
-        25px,
-        4.8vw,
-        34px
-    );
+    font-size: clamp(27px, 3vw, 36px);
 
     font-weight: 400;
 
@@ -224,97 +186,75 @@ body {
 
 /* =========================================================
    CONTENEDOR DE RUTAS
-   ========================================================= */
+========================================================= */
 
 .rutas {
-
     position: absolute;
 
-    left: 3.96%;
+    left: 4%;
+    top: 120px;
 
-    top: 24%;
-
-    width: 48%;
+    width: min(570px, 52vw);
 }
 
 
 /* =========================================================
-   FILA DE CADA RUTA
-   ========================================================= */
+   FILA
+========================================================= */
 
 .fila-ruta {
+    width: 100%;
+
+    min-height: 70px;
 
     display: flex;
 
     align-items: center;
-
-    width: 100%;
-
-    height: clamp(
-        54px,
-        12.8vh,
-        64px
-    );
 }
 
 
 /* =========================================================
-   HORARIOS
-   ========================================================= */
+   HORARIO
+========================================================= */
 
 .hora {
+    flex: 0 0 34%;
 
-    flex: 0 0 34.2%;
-
-    height: clamp(
-        29px,
-        6.2vh,
-        31px
-    );
+    min-height: 32px;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
-    padding: 0 3px;
+    padding: 0 5px;
 
     background: #303030;
 
-    color: white;
+    color: #ffffff;
 
     border-radius: 4px;
 
     font-family: Arial, sans-serif;
 
-    font-size: clamp(
-        9px,
-        1.7vw,
-        12px
-    );
+    font-size: clamp(9px, 1.2vw, 12px);
 
     white-space: nowrap;
 }
 
 
 /* =========================================================
-   TARJETAS DE LAS RUTAS
-   ========================================================= */
+   TARJETA
+========================================================= */
 
 .tarjeta {
+    flex: 0 0 43%;
 
-    flex: 0 0 43.7%;
+    min-height: 52px;
 
-    height: clamp(
-        47px,
-        10.2vh,
-        51px
-    );
+    margin-left: 4%;
 
-    margin-left: 4.7%;
-
-    padding: 6px 7px 4px;
+    padding: 7px;
 
     background: #bdbdbd;
 
@@ -329,59 +269,41 @@ body {
     overflow: hidden;
 }
 
-
 .tarjeta strong {
-
     display: block;
 
     margin-bottom: 3px;
 
-    font-size: clamp(
-        8px,
-        1.25vw,
-        9px
-    );
+    font-size: clamp(8px, 1vw, 10px);
 
     font-weight: 400;
+
+    line-height: 11px;
+}
+
+.tarjeta span {
+    display: block;
+
+    font-size: clamp(7px, 0.9vw, 9px);
 
     line-height: 10px;
 }
 
 
-.tarjeta span {
-
-    display: block;
-
-    font-size: clamp(
-        7px,
-        1.1vw,
-        8px
-    );
-
-    line-height: 9px;
-}
-
-
 /* =========================================================
-   ESTADOS
-   ========================================================= */
+   ESTADO
+========================================================= */
 
 .estado {
+    flex: 0 0 12%;
 
-    flex: 0 0 12.7%;
+    min-height: 40px;
 
-    height: clamp(
-        37px,
-        8vh,
-        40px
-    );
-
-    margin-left: 4.7%;
+    margin-left: 4%;
 
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     font-family: Arial, sans-serif;
@@ -389,100 +311,69 @@ body {
 
 
 /* =========================================================
-   ESTADO ACEPTADO
-   ========================================================= */
+   ACEPTADA
+========================================================= */
 
 .aceptada {
-
     background: #29f300;
 
-    font-size: clamp(
-        26px,
-        4.4vw,
-        31px
-    );
+    font-size: clamp(26px, 3vw, 32px);
 
     line-height: 1;
 
     padding-bottom: 5px;
 }
 
-
 .aceptada span {
-
     transform: scaleX(1.15);
 }
 
 
 /* =========================================================
-   ESTADO PENDIENTE
-   ========================================================= */
+   PENDIENTE
+========================================================= */
 
 .pendiente {
-
     background: #fff500;
 }
 
-
 .reloj {
-
     position: relative;
 
-    width: clamp(
-        20px,
-        3.3vw,
-        23px
-    );
+    width: 23px;
+    height: 23px;
 
-    height: clamp(
-        20px,
-        3.3vw,
-        23px
-    );
-
-    border: 4px solid black;
+    border: 4px solid #000000;
 
     border-radius: 50%;
 }
 
-
-/* Aguja vertical */
-
 .reloj::before {
-
     content: "";
 
     position: absolute;
 
     width: 3px;
-
     height: 7px;
 
     left: 6px;
-
     top: 3px;
 
-    background: black;
+    background: #000000;
 }
 
-
-/* Aguja horizontal */
-
 .reloj::after {
-
     content: "";
 
     position: absolute;
 
     width: 7px;
-
     height: 3px;
 
     left: 7px;
-
     top: 10px;
 
-    background: black;
+    background: #000000;
 
     transform: rotate(28deg);
 
@@ -491,18 +382,13 @@ body {
 
 
 /* =========================================================
-   ESTADO RECHAZADO
-   ========================================================= */
+   RECHAZADA
+========================================================= */
 
 .rechazada {
-
     background: #ff0000;
 
-    font-size: clamp(
-        29px,
-        5vw,
-        35px
-    );
+    font-size: clamp(29px, 3.5vw, 35px);
 
     line-height: 1;
 
@@ -511,52 +397,37 @@ body {
 
 
 /* =========================================================
-   ICONO DEL MAPA
-   ========================================================= */
+   ICONO MAPA
+========================================================= */
 
 .mapa-icono {
-
     position: absolute;
 
-    width: min(
-        27vw,
-        190px
-    );
+    width: clamp(130px, 20vw, 190px);
+    height: clamp(130px, 20vw, 190px);
 
-    height: min(
-        27vw,
-        190px
-    );
-
-    left: 62.9%;
-
-    top: 11.5%;
+    left: 68%;
+    top: 70px;
 }
 
-
 .mapa-icono svg {
-
     display: block;
 
     width: 100%;
-
     height: 100%;
 }
 
 
 /* =========================================================
-   PIE DE PÁGINA
-   ========================================================= */
+   FOOTER
+========================================================= */
 
 .pie {
-
     position: relative;
 
     width: 100%;
-
-    height: 13.4%;
-
-    min-height: 67px;
+    height: 110px;
+    min-height: 110px;
 
     background: #5fc5d8;
 
@@ -566,33 +437,23 @@ body {
 
 /* =========================================================
    ADMINISTRADOR
-   ========================================================= */
+========================================================= */
 
 .volver {
-
     position: absolute;
 
-    left: 2.3%;
-
-    top: 18%;
+    left: 2.5%;
+    top: 25px;
 
     display: flex;
 
     align-items: center;
 
-    gap: clamp(
-        18px,
-        4.1vw,
-        29px
-    );
+    gap: 28px;
 
     z-index: 4;
 
-    font-size: clamp(
-        27px,
-        4.95vw,
-        35px
-    );
+    font-size: clamp(27px, 3vw, 36px);
 
     line-height: 1;
 
@@ -602,17 +463,12 @@ body {
 
 /* =========================================================
    FLECHA
-   ========================================================= */
+========================================================= */
 
 .flecha {
-
     font-family: Arial, sans-serif;
 
-    font-size: clamp(
-        34px,
-        6.1vw,
-        43px
-    );
+    font-size: clamp(35px, 4vw, 45px);
 
     font-weight: 300;
 
@@ -621,11 +477,10 @@ body {
 
 
 /* =========================================================
-   CÍRCULOS NARANJAS
-   ========================================================= */
+   CÍRCULOS
+========================================================= */
 
 .circulo {
-
     position: absolute;
 
     z-index: 3;
@@ -636,157 +491,188 @@ body {
 }
 
 
-/* Círculo de la derecha */
+/* Círculo derecho */
 
 .circulo-1 {
+    width: 155px;
+    height: 155px;
 
-    width: min(
-        21.5vw,
-        152px
-    );
-
-    height: min(
-        21.5vw,
-        152px
-    );
-
-    right: -2.5%;
-
-    top: -103%;
+    right: -35px;
+    top: -105px;
 }
 
 
 /* Círculo central */
 
 .circulo-2 {
+    width: 155px;
+    height: 155px;
 
-    width: min(
-        22.1vw,
-        156px
-    );
-
-    height: min(
-        22.1vw,
-        156px
-    );
-
-    left: 43.6%;
-
-    top: -18%;
+    left: 43.5%;
+    top: -25px;
 }
 
 
 /* =========================================================
-   TABLETS Y PORTÁTILES PEQUEÑOS
-   ========================================================= */
+   TABLET
+========================================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
-    .pagina {
+    .encabezado {
+        height: 135px;
+        min-height: 135px;
+    }
 
-        height: 100vh;
-
+    .contenido {
         min-height: 500px;
     }
 
-
-    .zona-logo {
-
-        min-width: 92px;
-
-        min-height: 86px;
-    }
-
-
     .rutas {
-
-        width: 53%;
+        width: 58%;
     }
-
 
     .mapa-icono {
-
-        left: 61%;
+        left: 66%;
+        top: 90px;
     }
-
 }
 
 
 /* =========================================================
-   CELULARES
-   ========================================================= */
+   TABLET PEQUEÑA
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        height: 120px;
+        min-height: 120px;
+    }
+
+    .zona-logo {
+        width: 110px;
+        height: 90px;
+    }
+
+    .zona-logo img {
+        width: 91px;
+        height: 75px;
+    }
+
+    .encabezado h1 {
+        top: 27px;
+        font-size: 29px;
+    }
+
+    .btn-cerrar {
+        width: 108px;
+        height: 30px;
+
+        right: 15px;
+    }
+
+    .contenido {
+        min-height: 530px;
+    }
+
+    .contenido h2 {
+        left: 15px;
+        top: 25px;
+
+        font-size: 30px;
+    }
+
+    .rutas {
+        left: 20px;
+        top: 100px;
+
+        width: 57%;
+    }
+
+    .mapa-icono {
+        width: 145px;
+        height: 145px;
+
+        left: auto;
+        right: 6%;
+        top: 120px;
+    }
+
+    .pie {
+        height: 90px;
+        min-height: 90px;
+    }
+
+    .volver {
+        left: 15px;
+        top: 23px;
+
+        gap: 20px;
+
+        font-size: 29px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
 
 @media (max-width: 560px) {
 
     body {
-
+        overflow-x: hidden;
         overflow-y: auto;
     }
 
-
     .pagina {
-
+        min-height: 100vh;
         height: auto;
 
-        min-height: 100vh;
-
-        overflow: hidden;
+        display: flex;
+        flex-direction: column;
     }
 
 
     /* -------------------------
-       ENCABEZADO
+       HEADER
     -------------------------- */
 
     .encabezado {
-
         height: 112px;
+        min-height: 112px;
     }
-
 
     .zona-logo {
-
-        width: 125px;
-
-        height: 101px;
-
-        min-width: 0;
-
-        min-height: 0;
+        width: 115px;
+        height: 92px;
     }
-
 
     .zona-logo img {
-
-        width: 103px;
-
-        height: 84px;
+        width: 95px;
+        height: 77px;
     }
-
 
     .encabezado h1 {
+        left: auto;
+        right: 15px;
 
-        left: 55%;
+        transform: none;
 
-        top: 25px;
+        top: 48px;
 
-        font-size: clamp(
-            24px,
-            8vw,
-            31px
-        );
+        font-size: 27px;
     }
 
-
     .btn-cerrar {
-
+        top: 8px;
         right: 12px;
 
-        top: 8px;
+        width: 105px;
+        height: 29px;
 
-        width: 104px;
-
-        height: 30px;
+        font-size: 10px;
     }
 
 
@@ -795,22 +681,18 @@ body {
     -------------------------- */
 
     .contenido {
+        min-height: 555px;
 
-        height: 540px;
+        height: 555px;
+
+        flex: none;
     }
 
-
     .contenido h2 {
-
         left: 12px;
+        top: 18px;
 
-        top: 15px;
-
-        font-size: clamp(
-            27px,
-            8vw,
-            34px
-        );
+        font-size: 29px;
     }
 
 
@@ -819,46 +701,67 @@ body {
     -------------------------- */
 
     .rutas {
+        position: absolute;
 
-        left: 14px;
+        left: 12px;
+        top: 75px;
 
-        top: 78px;
+        width: calc(100% - 24px);
 
-        width: calc(100% - 28px);
-
-        max-width: 390px;
+        max-width: none;
     }
-
 
     .fila-ruta {
+        width: 100%;
 
         height: 70px;
+        min-height: 70px;
     }
-
 
     .hora {
+        flex: 0 0 31%;
 
-        flex-basis: 31%;
+        min-height: 30px;
 
-        font-size: 10px;
+        font-size: 9px;
     }
-
 
     .tarjeta {
+        flex: 1;
 
-        flex-basis: 43%;
+        min-width: 0;
+
+        height: 50px;
+        min-height: 50px;
 
         margin-left: 4%;
 
-        padding-left: 6px;
+        padding: 6px;
     }
 
+    .tarjeta strong {
+        font-size: 8px;
+        line-height: 10px;
+    }
+
+    .tarjeta span {
+        font-size: 7px;
+        line-height: 9px;
+    }
 
     .estado {
+        flex: 0 0 12%;
 
-        flex-basis: 12%;
+        min-height: 38px;
 
         margin-left: 4%;
+    }
+
+    .reloj {
+        width: 21px;
+        height: 21px;
+
+        border-width: 3px;
     }
 
 
@@ -867,156 +770,266 @@ body {
     -------------------------- */
 
     .mapa-icono {
-
-        width: 145px;
-
-        height: 145px;
+        width: 135px;
+        height: 135px;
 
         left: auto;
-
-        right: 6px;
-
-        top: 280px;
-    }
-
-
-    /* -------------------------
-       PIE
-    -------------------------- */
-
-    .pie {
-
-        height: 82px;
-
-        min-height: 82px;
-    }
-
-
-    .volver {
-
-        left: 14px;
-
-        top: 21px;
-
-        gap: 20px;
-
-        font-size: 29px;
-    }
-
-
-    .flecha {
-
-        font-size: 37px;
-    }
-
-
-    .circulo-1 {
-
-        width: 145px;
-
-        height: 145px;
-
-        right: -42px;
-
-        top: -73px;
-    }
-
-
-    .circulo-2 {
-
-        width: 145px;
-
-        height: 145px;
-
-        left: 43%;
-
-        top: -17px;
-    }
-
-}
-
-
-/* =========================================================
-   CELULARES MUY PEQUEÑOS
-   ========================================================= */
-
-@media (max-width: 390px) {
-
-    .encabezado h1 {
-
-        left: 58%;
-
-        font-size: 25px;
-    }
-
-
-    .btn-cerrar {
-
-        width: 94px;
-
-        font-size: 10px;
-    }
-
-
-    .rutas {
-
-        left: 10px;
-
-        width: calc(100% - 20px);
-    }
-
-
-    .hora {
-
-        flex-basis: 30%;
-
-        font-size: 8.5px;
-    }
-
-
-    .tarjeta {
-
-        flex-basis: 45%;
-
-        margin-left: 3%;
-    }
-
-
-    .tarjeta strong {
-
-        font-size: 8px;
-    }
-
-
-    .tarjeta span {
-
-        font-size: 7px;
-    }
-
-
-    .estado {
-
-        flex-basis: 12%;
-
-        margin-left: 3%;
-    }
-
-
-    .mapa-icono {
-
-        width: 500px;
-
-        height: 500px;
-
-        right: 200px;
+        right: 8px;
 
         top: 300px;
     }
 
 
-    .volver {
+    /* -------------------------
+       FOOTER
+    -------------------------- */
 
-        font-size: 26px;
+    .pie {
+        height: 82px;
+        min-height: 82px;
     }
 
+    .volver {
+        left: 13px;
+        top: 21px;
+
+        gap: 18px;
+
+        font-size: 27px;
+    }
+
+    .flecha {
+        font-size: 36px;
+    }
+
+    .circulo-1 {
+        width: 140px;
+        height: 140px;
+
+        right: -45px;
+        top: -70px;
+    }
+
+    .circulo-2 {
+        width: 140px;
+        height: 140px;
+
+        left: 43%;
+        top: -18px;
+    }
+}
+
+
+/* =========================================================
+   CELULAR PEQUEÑO
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .encabezado {
+        height: 105px;
+        min-height: 105px;
+    }
+
+    .zona-logo {
+        width: 105px;
+        height: 85px;
+    }
+
+    .zona-logo img {
+        width: 87px;
+        height: 70px;
+    }
+
+    .encabezado h1 {
+        right: 10px;
+        top: 45px;
+
+        font-size: 24px;
+    }
+
+    .btn-cerrar {
+        right: 8px;
+
+        width: 92px;
+        height: 28px;
+
+        font-size: 9px;
+    }
+
+
+    /* -------------------------
+       CONTENIDO
+    -------------------------- */
+
+    .contenido {
+        height: 550px;
+        min-height: 550px;
+    }
+
+    .contenido h2 {
+        left: 10px;
+        top: 17px;
+
+        font-size: 27px;
+    }
+
+
+    /* -------------------------
+       RUTAS
+    -------------------------- */
+
+    .rutas {
+        left: 10px;
+        width: calc(100% - 20px);
+
+        top: 73px;
+    }
+
+    .fila-ruta {
+        height: 68px;
+        min-height: 68px;
+    }
+
+    .hora {
+        flex: 0 0 30%;
+
+        font-size: 8px;
+    }
+
+    .tarjeta {
+        flex: 1;
+
+        margin-left: 3%;
+
+        height: 48px;
+        min-height: 48px;
+
+        padding: 5px;
+    }
+
+    .tarjeta strong {
+        font-size: 7.5px;
+    }
+
+    .tarjeta span {
+        font-size: 6.5px;
+    }
+
+    .estado {
+        flex: 0 0 12%;
+
+        margin-left: 3%;
+    }
+
+    .aceptada {
+        font-size: 25px;
+    }
+
+    .rechazada {
+        font-size: 28px;
+    }
+
+    .reloj {
+        width: 19px;
+        height: 19px;
+
+        border-width: 3px;
+    }
+
+
+    /* -------------------------
+       MAPA
+    -------------------------- */
+
+    .mapa-icono {
+        width: 120px;
+        height: 120px;
+
+        right: 5px;
+        top: 315px;
+    }
+
+
+    /* -------------------------
+       FOOTER
+    -------------------------- */
+
+    .pie {
+        height: 78px;
+        min-height: 78px;
+    }
+
+    .volver {
+        left: 10px;
+        top: 20px;
+
+        gap: 15px;
+
+        font-size: 24px;
+    }
+
+    .flecha {
+        font-size: 32px;
+    }
+
+    .circulo-1 {
+        width: 125px;
+        height: 125px;
+
+        right: -42px;
+        top: -65px;
+    }
+
+    .circulo-2 {
+        width: 125px;
+        height: 125px;
+
+        left: 43%;
+        top: -16px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES EXTREMADAMENTE PEQUEÑOS
+========================================================= */
+
+@media (max-width: 330px) {
+
+    .encabezado h1 {
+        font-size: 21px;
+    }
+
+    .btn-cerrar {
+        width: 85px;
+        font-size: 8px;
+    }
+
+    .contenido h2 {
+        font-size: 24px;
+    }
+
+    .hora {
+        font-size: 7px;
+    }
+
+    .tarjeta strong {
+        font-size: 7px;
+    }
+
+    .tarjeta span {
+        font-size: 6px;
+    }
+
+    .mapa-icono {
+        width: 105px;
+        height: 105px;
+
+        top: 320px;
+    }
+
+    .volver {
+        font-size: 22px;
+    }
 }
