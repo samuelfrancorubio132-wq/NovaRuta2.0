@@ -1,0 +1,837 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #ffffff;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+header {
+    position: relative;
+
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
+
+    background-color: #65c5d3;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 165px;
+    height: 75px;
+
+    background-color: #ff8525;
+
+    border-radius: 0 0 75px 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+.logo img {
+    width: 105px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+main {
+    position: relative;
+
+    width: 100%;
+
+    min-height: calc(100vh - 215px);
+
+    background-color: #ffffff;
+
+    padding: 45px 30px 40px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 70px;
+}
+
+
+/* =========================================
+   FORMULARIO
+========================================= */
+
+.formulario {
+    width: min(630px, 100%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex-shrink: 1;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.formulario h1 {
+    width: 100%;
+
+    margin-bottom: 28px;
+
+    text-align: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(36px, 4vw, 52px);
+
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    color: #111827;
+}
+
+
+/* =========================================
+   CAMPOS
+========================================= */
+
+.campo {
+    width: 100%;
+
+    margin-bottom: 19px;
+}
+
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: clamp(15px, 1.5vw, 18px);
+
+    color: #222222;
+}
+
+
+.campo input {
+    display: block;
+
+    width: 100%;
+    height: 50px;
+
+    padding: 0 18px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #a6a6a6;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    outline: none;
+}
+
+
+.campo input::placeholder {
+    color: #ffffff;
+
+    opacity: 1;
+}
+
+
+.campo input:focus {
+    box-shadow: 0 0 0 3px #65c5d3;
+}
+
+
+/* =========================================
+   BOTÓN CONTINUAR
+========================================= */
+
+.formulario button {
+    display: block;
+
+    width: 150px;
+    height: 50px;
+
+    margin: 27px auto 0;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #292d35;
+
+    color: #ffffff;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.formulario button:hover {
+    background-color: #65c5d3;
+
+    color: #111111;
+}
+
+
+/* =========================================
+   BUS
+========================================= */
+
+.bus {
+    width: 250px;
+    min-width: 190px;
+    height: 280px;
+
+    margin-top: 90px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 1;
+}
+
+
+.bus img {
+    display: block;
+
+    width: min(230px, 100%);
+    height: 250px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+    position: relative;
+
+    width: 100%;
+    height: 115px;
+    min-height: 115px;
+
+    background-color: #65c5d3;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   DECORACIONES
+========================================= */
+
+.decoracion {
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    left: 63%;
+    top: -45px;
+
+    background-color: #ff8525;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.decoracion.derecha {
+    width: 285px;
+    height: 285px;
+
+    left: auto;
+    right: -45px;
+    top: -120px;
+}
+
+
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
+
+.volver {
+    position: absolute;
+
+    left: 25px;
+    top: 50%;
+
+    width: 45px;
+    height: 35px;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   LÍNEA DE LA FLECHA
+========================================= */
+
+.volver::before {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+    top: 16px;
+
+    width: 35px;
+    height: 2px;
+
+    background-color: #111111;
+}
+
+
+/* =========================================
+   PUNTA DE LA FLECHA
+========================================= */
+
+.volver::after {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+    top: 8px;
+
+    width: 15px;
+    height: 15px;
+
+    border-left: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    main {
+        gap: 30px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+    .formulario {
+        width: min(560px, 65%);
+    }
+
+
+    .bus {
+        width: 190px;
+        min-width: 160px;
+
+        margin-top: 100px;
+    }
+
+
+    .bus img {
+        width: 180px;
+        height: 210px;
+    }
+
+
+    .decoracion {
+        left: 55%;
+    }
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+========================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        height: 85px;
+        min-height: 85px;
+    }
+
+
+    .logo {
+        width: 130px;
+        height: 68px;
+
+        border-radius: 0 0 65px 65px;
+    }
+
+
+    .logo img {
+        width: 90px;
+    }
+
+
+    main {
+        min-height: calc(100vh - 190px);
+
+        padding: 30px 20px;
+
+        gap: 20px;
+    }
+
+
+    .formulario {
+        width: min(500px, 68%);
+    }
+
+
+    .formulario h1 {
+        font-size: 40px;
+
+        margin-bottom: 23px;
+    }
+
+
+    .campo {
+        margin-bottom: 15px;
+    }
+
+
+    .campo input {
+        height: 45px;
+
+        font-size: 15px;
+    }
+
+
+    .bus {
+        width: 150px;
+        min-width: 130px;
+
+        height: 220px;
+
+        margin-top: 90px;
+    }
+
+
+    .bus img {
+        width: 140px;
+        height: 190px;
+    }
+
+
+    footer {
+        height: 105px;
+        min-height: 105px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+
+    header {
+        height: 75px;
+        min-height: 75px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        width: 105px;
+        height: 60px;
+
+        border-radius: 0 0 55px 55px;
+    }
+
+
+    .logo img {
+        width: 75px;
+    }
+
+
+    /* =====================================
+       MAIN
+    ===================================== */
+
+    main {
+        min-height: auto;
+
+        padding: 25px 18px 30px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        justify-content: flex-start;
+
+        gap: 0;
+    }
+
+
+    /* =====================================
+       FORMULARIO
+    ===================================== */
+
+    .formulario {
+        width: 100%;
+        max-width: 420px;
+    }
+
+
+    .formulario h1 {
+        font-size: 34px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .campo {
+        margin-bottom: 17px;
+    }
+
+
+    .campo label {
+        font-size: 15px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .campo input {
+        width: 100%;
+
+        height: 45px;
+
+        padding: 0 14px;
+
+        font-size: 15px;
+    }
+
+
+    .formulario button {
+        width: 135px;
+        height: 45px;
+
+        margin-top: 22px;
+
+        font-size: 15px;
+    }
+
+
+    /* =====================================
+       BUS
+    ===================================== */
+
+    .bus {
+        width: 150px;
+        height: 160px;
+
+        min-width: 0;
+
+        margin-top: 25px;
+    }
+
+
+    .bus img {
+        width: 135px;
+        height: 150px;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    footer {
+        height: 75px;
+        min-height: 75px;
+    }
+
+
+    .volver {
+        left: 15px;
+
+        width: 40px;
+        height: 30px;
+    }
+
+
+    .decoracion {
+        width: 155px;
+        height: 155px;
+
+        left: 42%;
+
+        top: 15px;
+    }
+
+
+    .decoracion.derecha {
+        width: 165px;
+        height: 165px;
+
+        right: -45px;
+
+        top: -75px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+========================================= */
+
+@media (max-width: 390px) {
+
+    header {
+        height: 68px;
+        min-height: 68px;
+    }
+
+
+    .logo {
+        width: 92px;
+        height: 55px;
+
+        border-radius: 0 0 48px 48px;
+    }
+
+
+    .logo img {
+        width: 67px;
+    }
+
+
+    main {
+        padding: 22px 14px 25px;
+    }
+
+
+    .formulario h1 {
+        font-size: 30px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .campo label {
+        font-size: 14px;
+    }
+
+
+    .campo input {
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+
+    .formulario button {
+        width: 125px;
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+
+    .bus {
+        width: 125px;
+        height: 135px;
+
+        margin-top: 20px;
+    }
+
+
+    .bus img {
+        width: 115px;
+        height: 125px;
+    }
+
+
+    footer {
+        height: 68px;
+        min-height: 68px;
+    }
+
+
+    .decoracion {
+        width: 135px;
+        height: 135px;
+
+        left: 40%;
+
+        top: 18px;
+    }
+
+
+    .decoracion.derecha {
+        width: 145px;
+        height: 145px;
+
+        right: -42px;
+
+        top: -68px;
+    }
+}
+
+
+/* =========================================
+   CELULAR MUY PEQUEÑO
+========================================= */
+
+@media (max-width: 330px) {
+
+    .logo {
+        width: 82px;
+        height: 50px;
+    }
+
+
+    .logo img {
+        width: 60px;
+    }
+
+
+    main {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .formulario h1 {
+        font-size: 27px;
+    }
+
+
+    .campo label {
+        font-size: 13px;
+    }
+
+
+    .campo input {
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    .formulario button {
+        width: 115px;
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    .bus {
+        width: 110px;
+        height: 120px;
+    }
+
+
+    .bus img {
+        width: 100px;
+        height: 110px;
+    }
+
+
+    footer {
+        height: 62px;
+        min-height: 62px;
+    }
+
+
+    .volver {
+        left: 10px;
+    }
+}

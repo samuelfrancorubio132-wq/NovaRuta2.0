@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+header {
+    height: 100px;
+    background-color: #65c5d3;
+
+    position: relative;
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+
+    background-color: #ff8525;
+
+    border-radius: 0 0 80px 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 20px;
+}
+
+.logo span {
+    font-size: 30px;
+}
+
+.logo strong {
+    font-size: 24px;
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+main {
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 100px;
+
+    padding: 50px;
+}
+
+
+/* =========================
+   FORMULARIO
+========================= */
+
+.formulario {
+    width: 550px;
+}
+
+.formulario h1 {
+    text-align: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 55px;
+
+    margin-bottom: 35px;
+
+    color: #111827;
+}
+
+.campo {
+    margin-bottom: 25px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+    color: #333;
+}
+
+.campo input {
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background-color: #a6a6a6;
+
+    padding: 0 18px;
+
+    font-size: 18px;
+
+    outline: none;
+}
+
+.campo input::placeholder {
+    color: white;
+}
+
+.campo input:focus {
+    box-shadow: 0 0 0 3px #65c5d3;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+button {
+    display: block;
+
+    margin: 35px auto 0;
+
+    width: 150px;
+    height: 50px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background-color: #292d35;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #65c5d3;
+
+    color: #111;
+}
+
+
+/* =========================
+   BUS
+========================= */
+
+.bus {
+    font-size: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   PIE
+========================= */
+
+footer {
+    height: 70px;
+
+    background-color: #65c5d3;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.decoracion {
+    position: absolute;
+
+    width: 160px;
+    height: 160px;
+
+    background-color: #ff8525;
+
+    border-radius: 50%;
+
+    left: 25%;
+
+    top: 40px;
+}
+
+.decoracion.derecha {
+    left: auto;
+    right: -30px;
+    top: 0;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    main {
+        flex-direction: column;
+
+        gap: 30px;
+
+        padding: 30px;
+    }
+
+    .formulario {
+        width: 90%;
+        max-width: 550px;
+    }
+
+    .formulario h1 {
+        font-size: 45px;
+    }
+
+    .bus {
+        font-size: 100px;
+    }
+}
