@@ -1,123 +1,188 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
 body {
+    width: 100%;
     min-height: 100vh;
+
     font-family: Arial, sans-serif;
-    background-color: white;
+
+    background-color: #ffffff;
 
     display: flex;
     flex-direction: column;
+
+    overflow-x: hidden;
 }
 
-/* =========================
-   ENCABEZADO
-========================= */
+
+/* =========================================
+   HEADER
+========================================= */
 
 header {
+    position: relative;
+
+    width: 100%;
     height: 100px;
+
     background-color: #65c5d3;
 
-    position: relative;
+    flex-shrink: 0;
+
+    overflow: hidden;
 }
 
-.logo {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-}
 
-.logo img {
-  width: 90px; /* Cambia a tu medida deseada */
-  height: auto; /* Mantiene la proporción original */
-  object-fit: contain;
-} 
+/* =========================================
+   LOGO
+========================================= */
 
 .logo {
-    width: 200px;
-    height: 100px;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 165px;
+    height: 75px;
 
     background-color: #ff8525;
 
-    border-radius: 0 0 80px 80px;
+    border-radius: 0 0 75px 75px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    gap: 8px;
-
-    font-size: 20px;
+    z-index: 10;
 }
 
-.logo span {
-    font-size: 30px;
+.logo img {
+    display: block;
+
+    width: 105px;
+    height: auto;
+
+    object-fit: contain;
 }
 
-.logo strong {
-    font-size: 24px;
-}
 
-
-/* =========================
-   CONTENIDO
-========================= */
+/* =========================================
+   MAIN
+========================================= */
 
 main {
+    width: 100%;
+
     flex: 1;
+
+    background-color: #ffffff;
+
+    padding: clamp(30px, 5vw, 60px) 20px;
 
     display: flex;
 
     justify-content: center;
-    align-items: center;
-
-    gap: 100px;
-
-    padding: 50px;
+    align-items: flex-start;
 }
 
 
-/* =========================
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.contenido {
+    width: 100%;
+
+    max-width: 1050px;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: clamp(40px, 7vw, 100px);
+}
+
+
+/* =========================================
    FORMULARIO
-========================= */
+========================================= */
 
 .formulario {
-    width: 550px;
+    width: min(630px, 100%);
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
 }
 
+
+/* =========================================
+   TÍTULO
+========================================= */
+
 .formulario h1 {
+    width: 100%;
+
+    margin-bottom: clamp(22px, 3vw, 30px);
+
     text-align: center;
 
-    font-family: Georgia, serif;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 55px;
+    font-size: clamp(32px, 5vw, 52px);
 
-    margin-bottom: 35px;
+    font-weight: normal;
+
+    line-height: 1.1;
 
     color: #111827;
 }
 
+
+/* =========================================
+   CAMPOS
+========================================= */
+
 .campo {
-    margin-bottom: 25px;
+    width: 100%;
+
+    margin-bottom: 18px;
 }
 
 .campo label {
     display: block;
 
-    font-size: 18px;
+    margin-bottom: 7px;
 
-    margin-bottom: 8px;
+    font-size: clamp(14px, 1.5vw, 18px);
 
-    color: #333;
+    color: #222222;
 }
 
 .campo input {
+    display: block;
+
     width: 100%;
 
-    height: 55px;
+    height: 50px;
+
+    padding: 0 18px;
 
     border: none;
 
@@ -125,15 +190,19 @@ main {
 
     background-color: #a6a6a6;
 
-    padding: 0 18px;
+    color: #ffffff;
 
-    font-size: 18px;
+    font-size: 17px;
 
     outline: none;
+
+    transition: box-shadow 0.2s ease;
 }
 
 .campo input::placeholder {
-    color: white;
+    color: #ffffff;
+
+    opacity: 1;
 }
 
 .campo input:focus {
@@ -141,17 +210,17 @@ main {
 }
 
 
-/* =========================
+/* =========================================
    BOTÓN
-========================= */
+========================================= */
 
-button {
-    display: block;
-
-    margin: 35px auto 0;
+.formulario button {
+    align-self: center;
 
     width: 150px;
     height: 50px;
+
+    margin-top: 10px;
 
     border: none;
 
@@ -159,7 +228,7 @@ button {
 
     background-color: #292d35;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 17px;
 
@@ -167,89 +236,628 @@ button {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.15s ease;
 }
 
-button:hover {
+.formulario button:hover {
     background-color: #65c5d3;
 
-    color: #111;
+    color: #111111;
+}
+
+.formulario button:active {
+    transform: scale(0.96);
+}
+
+.formulario button:focus-visible {
+    outline: 3px solid #65c5d3;
+
+    outline-offset: 3px;
 }
 
 
-/* =========================
+/* =========================================
    BUS
-========================= */
+========================================= */
 
 .bus {
-    font-size: 170px;
+    width: 250px;
+
+    min-width: 180px;
+
+    height: 280px;
+
+    margin-top: 80px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
+
+    flex-shrink: 1;
+}
+
+.bus img {
+    display: block;
+
+    width: min(230px, 100%);
+
+    height: auto;
+
+    max-height: 250px;
+
+    object-fit: contain;
 }
 
 
-/* =========================
-   PIE
-========================= */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
-    height: 70px;
+    position: relative;
+
+    width: 100%;
+
+    height: 115px;
 
     background-color: #65c5d3;
 
-    position: relative;
+    flex-shrink: 0;
 
     overflow: hidden;
 }
 
+
+/* =========================================
+   DECORACIONES
+========================================= */
+
 .decoracion {
     position: absolute;
 
-    width: 160px;
-    height: 160px;
+    width: 260px;
+    height: 260px;
+
+    left: 63%;
+    top: -45px;
 
     background-color: #ff8525;
 
     border-radius: 50%;
 
-    left: 25%;
-
-    top: 40px;
+    pointer-events: none;
 }
 
 .decoracion.derecha {
+    width: 285px;
+    height: 285px;
+
     left: auto;
-    right: -30px;
-    top: 0;
+
+    right: -45px;
+    top: -120px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
 
-@media (max-width: 900px) {
+.volver {
+    position: absolute;
 
-    main {
-        flex-direction: column;
+    left: 25px;
+    top: 50%;
 
-        gap: 30px;
+    width: 45px;
+    height: 35px;
 
-        padding: 30px;
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    z-index: 20;
+}
+
+
+/* Línea de la flecha */
+
+.volver::before {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+    top: 16px;
+
+    width: 35px;
+    height: 2px;
+
+    background-color: #111111;
+}
+
+
+/* Punta de la flecha */
+
+.volver::after {
+    content: "";
+
+    position: absolute;
+
+    left: 2px;
+    top: 8px;
+
+    width: 15px;
+    height: 15px;
+
+    border-left: 2px solid #111111;
+    border-bottom: 2px solid #111111;
+
+    transform: rotate(45deg);
+}
+
+
+/* =========================================
+   TABLET
+   1000px
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .contenido {
+        max-width: 850px;
+
+        gap: 40px;
     }
 
     .formulario {
-        width: 90%;
-        max-width: 550px;
-    }
-
-    .formulario h1 {
-        font-size: 45px;
+        max-width: 560px;
     }
 
     .bus {
-        font-size: 100px;
+        width: 190px;
+
+        min-width: 150px;
+
+        margin-top: 90px;
+    }
+
+    .bus img {
+        width: 180px;
+
+        max-height: 220px;
+    }
+
+    .decoracion {
+        left: 55%;
+    }
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+   800px
+========================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        height: 85px;
+    }
+
+    .logo {
+        width: 130px;
+        height: 68px;
+
+        border-radius: 0 0 65px 65px;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+
+    main {
+        padding: 35px 25px;
+    }
+
+
+    .contenido {
+        max-width: 650px;
+
+        gap: 25px;
+    }
+
+
+    .formulario {
+        max-width: 500px;
+    }
+
+
+    .formulario h1 {
+        font-size: 40px;
+    }
+
+
+    .campo {
+        margin-bottom: 15px;
+    }
+
+
+    .campo input {
+        height: 46px;
+
+        font-size: 16px;
+    }
+
+
+    .bus {
+        width: 150px;
+
+        min-width: 120px;
+
+        height: 220px;
+
+        margin-top: 80px;
+    }
+
+
+    .bus img {
+        width: 140px;
+
+        max-height: 190px;
+    }
+
+
+    footer {
+        height: 105px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+
+    /* HEADER */
+
+    header {
+        height: 75px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        width: 105px;
+        height: 60px;
+
+        border-radius: 0 0 55px 55px;
+    }
+
+    .logo img {
+        width: 75px;
+    }
+
+
+    /* MAIN */
+
+    main {
+        padding: 30px 18px 35px;
+    }
+
+
+    /* CONTENIDO */
+
+    .contenido {
+        width: 100%;
+
+        max-width: 420px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 0;
+    }
+
+
+    /* FORMULARIO */
+
+    .formulario {
+        width: 100%;
+
+        max-width: 420px;
+    }
+
+
+    .formulario h1 {
+        font-size: 34px;
+
+        margin-bottom: 25px;
+    }
+
+
+    .campo {
+        margin-bottom: 17px;
+    }
+
+
+    .campo label {
+        font-size: 15px;
+
+        margin-bottom: 6px;
+    }
+
+
+    .campo input {
+        width: 100%;
+
+        height: 45px;
+
+        padding: 0 14px;
+
+        font-size: 15px;
+    }
+
+
+    .formulario button {
+        width: 135px;
+        height: 45px;
+
+        margin-top: 5px;
+
+        font-size: 15px;
+    }
+
+
+    /* BUS */
+
+    .bus {
+        width: 150px;
+
+        min-width: 0;
+
+        height: 160px;
+
+        margin-top: 25px;
+    }
+
+
+    .bus img {
+        width: 135px;
+
+        max-height: 150px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        height: 75px;
+    }
+
+
+    /* VOLVER */
+
+    .volver {
+        left: 15px;
+
+        width: 40px;
+        height: 30px;
+    }
+
+
+    /* DECORACIONES */
+
+    .decoracion {
+        width: 155px;
+        height: 155px;
+
+        left: 42%;
+        top: 15px;
+    }
+
+    .decoracion.derecha {
+        width: 165px;
+        height: 165px;
+
+        right: -45px;
+        top: -75px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+   390px
+========================================= */
+
+@media (max-width: 390px) {
+
+    header {
+        height: 68px;
+    }
+
+
+    .logo {
+        width: 92px;
+        height: 55px;
+
+        border-radius: 0 0 48px 48px;
+    }
+
+    .logo img {
+        width: 67px;
+    }
+
+
+    main {
+        padding: 25px 14px 30px;
+    }
+
+
+    .formulario h1 {
+        font-size: 30px;
+
+        margin-bottom: 22px;
+    }
+
+
+    .campo label {
+        font-size: 14px;
+    }
+
+
+    .campo input {
+        height: 42px;
+
+        padding: 0 12px;
+
+        font-size: 14px;
+    }
+
+
+    .formulario button {
+        width: 125px;
+        height: 42px;
+
+        font-size: 14px;
+    }
+
+
+    .bus {
+        width: 125px;
+
+        height: 135px;
+
+        margin-top: 20px;
+    }
+
+
+    .bus img {
+        width: 115px;
+
+        max-height: 125px;
+    }
+
+
+    footer {
+        height: 68px;
+    }
+
+
+    .decoracion {
+        width: 135px;
+        height: 135px;
+
+        left: 40%;
+        top: 18px;
+    }
+
+
+    .decoracion.derecha {
+        width: 145px;
+        height: 145px;
+
+        right: -42px;
+        top: -68px;
+    }
+}
+
+
+/* =========================================
+   CELULAR MUY PEQUEÑO
+   330px
+========================================= */
+
+@media (max-width: 330px) {
+
+    .logo {
+        width: 82px;
+        height: 50px;
+
+        border-radius: 0 0 42px 42px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+
+    main {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    .formulario h1 {
+        font-size: 27px;
+    }
+
+
+    .campo label {
+        font-size: 13px;
+    }
+
+
+    .campo input {
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    .formulario button {
+        width: 115px;
+        height: 40px;
+
+        font-size: 13px;
+    }
+
+
+    .bus {
+        width: 110px;
+
+        height: 120px;
+
+        margin-top: 18px;
+    }
+
+
+    .bus img {
+        width: 100px;
+
+        max-height: 110px;
+    }
+
+
+    footer {
+        height: 62px;
+    }
+
+
+    .volver {
+        left: 10px;
     }
 }

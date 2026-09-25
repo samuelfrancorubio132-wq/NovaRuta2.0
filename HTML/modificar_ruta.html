@@ -1,104 +1,295 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>Modificar ruta</title>
-    <link rel="stylesheet" href="../css/modificar_ruta.css">
+
+    <link
+        rel="stylesheet"
+        href="../css/modificar_ruta.css"
+    >
 </head>
 
 <body>
 
     <div class="pagina">
 
-        <!-- ENCABEZADO -->
+
+        <!-- =========================================
+             ENCABEZADO
+        ========================================== -->
+
         <header class="header">
 
             <div class="logo">
-                <img src="../img/Shape Set.png" alt="Logo">
+
+                <img
+                    src="../img/Shape Set.png"
+                    alt="Logo de NovaRuta"
+                >
+
             </div>
 
         </header>
 
-        <!-- TÍTULO -->
-        <h1>Modificar ruta</h1>
 
-        <!-- LISTA DE RUTAS -->
-        <section class="rutas">
+        <!-- =========================================
+             CONTENIDO PRINCIPAL
+        ========================================== -->
 
-            <div class="ruta">
-                <div class="ruta-info">
-                    <b>RUTA 01</b>
-                    <span>MANIZALES - CALDAS</span>
-                    <span>PARQUE PRINCIPAL</span>
-                </div>
+        <main class="contenido">
 
-                <button class="config">⚙</button>
-                <button class="editar">✎</button>
+            <!-- TÍTULO -->
+
+            <h1>Modificar ruta</h1>
+
+
+            <!-- =====================================
+                 LISTA DE RUTAS
+            ====================================== -->
+
+            <section
+                class="rutas"
+                aria-label="Lista de rutas"
+            >
+
+
+                <!-- RUTA 01 -->
+
+                <article class="ruta">
+
+                    <div class="ruta-info">
+
+                        <strong>RUTA 01</strong>
+
+                        <span>
+                            MANIZALES - CALDAS
+                        </span>
+
+                        <span>
+                            PARQUE PRINCIPAL
+                        </span>
+
+                    </div>
+
+
+                    <div class="ruta-acciones">
+
+                        <button
+                            type="button"
+                            class="config"
+                            aria-label="Configuración de Ruta 01"
+                        >
+                            ⚙
+                        </button>
+
+                        <button
+                            type="button"
+                            class="editar"
+                            aria-label="Editar Ruta 01"
+                        >
+                            ✎
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RUTA 02 -->
+
+                <article class="ruta">
+
+                    <div class="ruta-info">
+
+                        <strong>RUTA 02</strong>
+
+                        <span>
+                            MANIZALES - CALDAS
+                        </span>
+
+                        <span>
+                            TERMINAL - CENTRO
+                        </span>
+
+                    </div>
+
+
+                    <div class="ruta-acciones">
+
+                        <button
+                            type="button"
+                            class="config"
+                            aria-label="Configuración de Ruta 02"
+                        >
+                            ⚙
+                        </button>
+
+                        <button
+                            type="button"
+                            class="editar"
+                            aria-label="Editar Ruta 02"
+                        >
+                            ✎
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RUTA 03 -->
+
+                <article class="ruta">
+
+                    <div class="ruta-info">
+
+                        <strong>RUTA 03</strong>
+
+                        <span>
+                            MANIZALES - CALDAS
+                        </span>
+
+                        <span>
+                            LA ENEA - CENTRO
+                        </span>
+
+                    </div>
+
+
+                    <div class="ruta-acciones">
+
+                        <button
+                            type="button"
+                            class="config"
+                            aria-label="Configuración de Ruta 03"
+                        >
+                            ⚙
+                        </button>
+
+                        <button
+                            type="button"
+                            class="editar"
+                            aria-label="Editar Ruta 03"
+                        >
+                            ✎
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+                <!-- RUTA 04 -->
+
+                <article class="ruta">
+
+                    <div class="ruta-info">
+
+                        <strong>RUTA 04</strong>
+
+                        <span>
+                            MANIZALES - CALDAS
+                        </span>
+
+                        <span>
+                            LA LINDA - CENTRO
+                        </span>
+
+                    </div>
+
+
+                    <div class="ruta-acciones">
+
+                        <button
+                            type="button"
+                            class="config"
+                            aria-label="Configuración de Ruta 04"
+                        >
+                            ⚙
+                        </button>
+
+                        <button
+                            type="button"
+                            class="editar"
+                            aria-label="Editar Ruta 04"
+                        >
+                            ✎
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =====================================
+                 ICONO GRANDE DE EDITAR
+            ====================================== -->
+
+            <div
+                class="icono-editar"
+                aria-hidden="true"
+            >
+
+                <div class="cuadro"></div>
+
+                <div class="lapiz"></div>
+
             </div>
 
-
-            <div class="ruta">
-                <div class="ruta-info">
-                    <b>RUTA 02</b>
-                    <span>MANIZALES - CALDAS</span>
-                    <span>TERMINAL - CENTRO</span>
-                </div>
-
-                <button class="config">⚙</button>
-                <button class="editar">✎</button>
-            </div>
+        </main>
 
 
-            <div class="ruta">
-                <div class="ruta-info">
-                    <b>RUTA 03</b>
-                    <span>MANIZALES - CALDAS</span>
-                    <span>LA ENEA - CENTRO</span>
-                </div>
+        <!-- =========================================
+             PIE DE PÁGINA
+        ========================================== -->
 
-                <button class="config">⚙</button>
-                <button class="editar">✎</button>
-            </div>
-
-
-            <div class="ruta">
-                <div class="ruta-info">
-                    <b>RUTA 04</b>
-                    <span>MANIZALES - CALDAS</span>
-                    <span>LA LINDA - CENTRO</span>
-                </div>
-
-                <button class="config">⚙</button>
-                <button class="editar">✎</button>
-            </div>
-
-        </section>
-
-
-        <!-- ICONO GRANDE DE EDITAR -->
-        <div class="icono-editar">
-
-            <div class="cuadro"></div>
-
-            <div class="lapiz"></div>
-
-        </div>
-
-
-        <!-- PARTE INFERIOR -->
         <footer>
 
-            <div class="flecha">←</div>
+            <!-- BOTÓN VOLVER -->
 
-            <div class="forma-naranja naranja1"></div>
-            <div class="forma-naranja naranja2"></div>
+            <button
+                type="button"
+                class="flecha"
+                aria-label="Volver atrás"
+                onclick="history.back()"
+            >
+                ←
+            </button>
+
+
+            <!-- DECORACIONES -->
+
+            <div
+                class="forma-naranja naranja1"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="forma-naranja naranja2"
+                aria-hidden="true"
+            ></div>
 
         </footer>
 
     </div>
-    
-<script src="/JS/modificar_ruta.js"></script>
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="../JS/modificar_ruta.js"></script>
+
 </body>
 
 </html>

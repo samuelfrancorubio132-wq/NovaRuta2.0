@@ -1,528 +1,776 @@
-
-/* =========================
+/* =========================================
    CONFIGURACIÓN GENERAL
-   ========================= */
+========================================= */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
     width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+    min-height: 100%;
 }
 
 body {
-    background: #ffffff;
-    overflow: hidden;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #ffffff;
+
+    overflow-x: hidden;
 }
 
 
-/* =========================
-   PÁGINA COMPLETA
-   ========================= */
+/* =========================================
+   PÁGINA
+========================================= */
 
 .pagina {
-    position: relative;
+    width: 100%;
+    min-height: 100vh;
 
-    width: 100vw;
-    height: 100vh;
-
-    min-width: 100%;
-    min-height: 100%;
-
-    background: #ffffff;
+    display: flex;
+    flex-direction: column;
 
     overflow: hidden;
-
-    border: 1px solid #1689b2;
 }
 
 
-/* =========================
-   CABECERA
-   ========================= */
+/* =========================================
+   ENCABEZADO
+========================================= */
 
 .header {
-    position: absolute;
-
-    top: 0;
-    left: 0;
+    position: relative;
 
     width: 100%;
-    height: 80px;
+    height: 100px;
+    min-height: 100px;
 
-    background: #79cee0;
+    background-color: #65c5d3;
+
+    flex-shrink: 0;
 
     overflow: hidden;
-
-    z-index: 1;
 }
 
 
-/* =========================
-   FORMA NARANJA SUPERIOR
-   ========================= */
-
-.header::before {
-    content: "";
-
-    position: absolute;
-
-    width: 180px;
-    height: 180px;
-
-    left: -70px;
-    top: -105px;
-
-    background: #ff8725;
-
-    border-radius: 50%;
-}
-
-
-/* =========================
+/* =========================================
    LOGO
-   ========================= */
+========================================= */
 
 .logo {
     position: absolute;
 
-    z-index: 10;
+    top: 0;
+    left: 0;
 
-    left: 20px;
-    top: 5px;
+    width: 165px;
+    height: 75px;
 
-    width: 90px;
-    height: 70px;
+    background-color: #ff8525;
+
+    border-radius: 0 0 75px 75px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     overflow: hidden;
+
+    z-index: 5;
 }
 
 .logo img {
-    position: absolute;
+    display: block;
 
-    width: 90px;
+    width: 105px;
     height: auto;
-
-    max-width: none;
-
-    left: 0;
-    top: 0;
 
     object-fit: contain;
 }
 
 
-/* =========================
+/* =========================================
    CONTENIDO PRINCIPAL
-   ========================= */
+========================================= */
 
 .contenido1 {
-    position: absolute;
-
-    z-index: 5;
-
-    top: 80px;
-    left: 0;
+    position: relative;
 
     width: 100%;
-    height: calc(100% - 134px);
 
-    background: #ffffff;
+    flex: 1;
 
-    display: flex;
+    min-height: 0;
+
+    padding: 35px 30px 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(280px, 500px));
+
+    grid-template-rows: auto 1fr 1fr;
+
     justify-content: center;
+
     align-items: center;
+
+    column-gap: 70px;
+
+    row-gap: 20px;
+
+    overflow-y: auto;
 }
 
 
-/* =========================
+/* =========================================
    TÍTULO
-   ========================= */
+========================================= */
 
 .titulo {
-    position: absolute;
-
-    top: 25px;
-    left: 0;
+    grid-column: 1 / -1;
 
     width: 100%;
+
+    margin-bottom: 5px;
 
     text-align: center;
 
-    color: #111111;
-
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(28px, 3vw, 40px);
+    font-size: clamp(38px, 5vw, 55px);
 
     font-weight: normal;
 
-    line-height: 1.2;
+    line-height: 1.1;
+
+    color: #111827;
 }
 
 
-/* =========================
-   BOTONES
-   ========================= */
+/* =========================================
+   BOTONES DE NOVEDADES
+========================================= */
 
 .boton {
-    position: absolute;
+    position: relative;
 
-    width: clamp(140px, 15vw, 190px);
-    height: clamp(48px, 6vh, 60px);
+    width: 100%;
+
+    min-height: 150px;
 
     border: none;
-    border-radius: 5px;
 
-    background: #2d2d2d;
+    border-radius: 12px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #eeeeee;
-
-    font-family: Arial, sans-serif;
-
-    font-size: clamp(15px, 1.3vw, 18px);
-
-    font-weight: bold;
+    background-color: #a6a6a6;
 
     cursor: pointer;
 
-    transition: background 0.2s ease;
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: flex-end;
+
+    padding: 15px;
+
+    box-shadow:
+        0 3px 7px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
+
+
+/* =========================================
+   EFECTO HOVER
+========================================= */
 
 .boton:hover {
-    background: #444444;
+    background-color: #969696;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.18);
+}
+
+.boton:active {
+    transform: translateY(0) scale(0.99);
+}
+
+.boton:focus-visible {
+    outline: 3px solid #65c5d3;
+
+    outline-offset: 4px;
 }
 
 
-/* =========================
-   POSICIONES DE LOS BOTONES
-   ========================= */
-
-.boton-1 {
-    left: 20%;
-    top: 35%;
-}
-
-.boton-2 {
-    right: 20%;
-    top: 35%;
-}
-
-.boton-3 {
-    left: 20%;
-    top: 60%;
-}
-
-.boton-4 {
-    right: 20%;
-    top: 60%;
-}
-
-
-/* =========================
-   TRES PUNTOS
-   ========================= */
+/* =========================================
+   PUNTOS
+========================================= */
 
 .puntos {
-    letter-spacing: 3px;
+    width: 42px;
+    height: 42px;
 
-    transform: translateY(-2px);
+    border-radius: 50%;
+
+    background-color: #292d35;
+
+    color: #ffffff;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding-bottom: 10px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
 }
 
 
-/* =========================
+/* =========================================
    PIE DE PÁGINA
-   ========================= */
+========================================= */
 
 .footer {
-    position: absolute;
-
-    z-index: 20;
-
-    left: 0;
-    bottom: 0;
+    position: relative;
 
     width: 100%;
-    height: 54px;
 
-    background: #62c4d8;
+    height: 115px;
+    min-height: 115px;
+
+    background-color: #65c5d3;
+
+    flex-shrink: 0;
 
     overflow: hidden;
 }
 
 
-/* =========================
-   CÍRCULO NARANJA 1
-   ========================= */
+/* =========================================
+   CÍRCULOS NARANJAS
+========================================= */
 
-.circulo-naranja-1 {
-    position: absolute;
-
-    width: 194px;
-    height: 194px;
-
-    left: 45%;
-    top: -140px;
-
-    background: #ff8725;
-
-    border-radius: 50%;
-}
-
-
-/* =========================
-   CÍRCULO NARANJA 2
-   ========================= */
-
+.circulo-naranja-1,
 .circulo-naranja-2 {
     position: absolute;
 
-    width: 192px;
-    height: 192px;
-
-    right: -48px;
-    top: -54px;
-
-    background: #ff8725;
+    background-color: #ff8525;
 
     border-radius: 50%;
+
+    pointer-events: none;
 }
 
 
-/* =========================
-   PARTE AZUL DEL FOOTER
-   ========================= */
+/* CÍRCULO 1 */
 
-.footer::before {
-    content: "";
+.circulo-naranja-1 {
+    width: 260px;
+    height: 260px;
 
-    position: absolute;
+    left: 55%;
 
-    left: 0;
-    bottom: 0;
-
-    width: 245px;
-    height: 54px;
-
-    background: #62c4d8;
-
-    z-index: 2;
+    top: -150px;
 }
 
 
-/* =========================
-   FLECHA
-   ========================= */
+/* CÍRCULO 2 */
+
+.circulo-naranja-2 {
+    width: 300px;
+    height: 300px;
+
+    right: -70px;
+
+    top: -125px;
+}
+
+
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
 
 .volver {
     position: absolute;
 
-    z-index: 30;
+    left: 25px;
+    top: 50%;
 
-    left: 20px;
-    top: 17px;
+    width: 48px;
+    height: 40px;
 
-    width: 25px;
-    height: 20px;
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
 
     cursor: pointer;
+
+    z-index: 10;
 }
 
 
-/* =========================
-   LÍNEA DE LA FLECHA
-   ========================= */
+/* LÍNEA DE LA FLECHA */
 
 .volver::before {
     content: "";
 
     position: absolute;
 
-    left: 1px;
-    top: 8px;
+    left: 3px;
+    top: 19px;
 
-    width: 21px;
-    height: 2px;
+    width: 34px;
+    height: 3px;
 
-    background: #111111;
+    background-color: #111111;
+
+    border-radius: 2px;
 }
 
 
-/* =========================
-   PUNTA DE LA FLECHA
-   ========================= */
+/* PUNTA DE LA FLECHA */
 
 .volver::after {
     content: "";
 
     position: absolute;
 
-    left: 1px;
-    top: 3px;
+    left: 3px;
+    top: 10px;
 
-    width: 11px;
-    height: 11px;
+    width: 16px;
+    height: 16px;
 
-    border-left: 2px solid #111111;
-    border-bottom: 2px solid #111111;
+    border-left: 3px solid #111111;
+    border-bottom: 3px solid #111111;
 
     transform: rotate(45deg);
 }
 
 
-/* =========================
-   PANTALLAS MEDIANAS
-   ========================= */
+/* EFECTO HOVER */
 
-@media (max-width: 900px) {
+.volver:hover::before {
+    background-color: #ffffff;
+}
 
-    .boton-1 {
-        left: 15%;
+.volver:hover::after {
+    border-color: #ffffff;
+}
+
+.volver:focus-visible {
+    outline: 3px solid #ffffff;
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   TABLET
+   HASTA 1000px
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .contenido1 {
+        grid-template-columns:
+            repeat(2, minmax(240px, 400px));
+
+        column-gap: 35px;
+
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
-    .boton-2 {
-        right: 15%;
+
+    .boton {
+        min-height: 135px;
     }
 
-    .boton-3 {
-        left: 15%;
+
+    .puntos {
+        width: 40px;
+        height: 40px;
+
+        font-size: 20px;
     }
 
-    .boton-4 {
-        right: 15%;
+
+    .circulo-naranja-1 {
+        left: 50%;
     }
 }
 
 
-/* =========================
-   TABLETS / CELULARES
-   ========================= */
+/* =========================================
+   TABLET PEQUEÑA
+   HASTA 800px
+========================================= */
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
     .header {
-        height: 70px;
+        height: 85px;
+        min-height: 85px;
     }
+
 
     .logo {
-        left: 10px;
-        top: 5px;
+        width: 130px;
+        height: 68px;
 
-        width: 75px;
-        height: 60px;
+        border-radius: 0 0 65px 65px;
     }
+
+
+    .logo img {
+        width: 90px;
+    }
+
+
+    .contenido1 {
+        padding: 30px 20px 35px;
+
+        grid-template-columns:
+            repeat(2, minmax(210px, 350px));
+
+        column-gap: 20px;
+
+        row-gap: 15px;
+    }
+
+
+    .titulo {
+        font-size: 40px;
+    }
+
+
+    .boton {
+        min-height: 125px;
+
+        border-radius: 10px;
+    }
+
+
+    .puntos {
+        width: 37px;
+        height: 37px;
+
+        font-size: 18px;
+    }
+
+
+    .footer {
+        height: 105px;
+        min-height: 105px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+   HASTA 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+
+    .header {
+        height: 75px;
+        min-height: 75px;
+    }
+
+
+    .logo {
+        width: 105px;
+        height: 60px;
+
+        border-radius: 0 0 55px 55px;
+    }
+
 
     .logo img {
         width: 75px;
     }
 
+
+    /* CONTENIDO */
+
     .contenido1 {
-        top: 70px;
-        height: calc(100% - 124px);
+        padding: 25px 16px 30px;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows:
+            auto
+            repeat(4, 130px);
+
+        gap: 14px;
+
+        overflow-y: auto;
     }
+
 
     .titulo {
-        top: 20px;
+        grid-column: 1;
 
-        font-size: 26px;
+        font-size: 34px;
 
-        padding: 0 15px;
+        margin-bottom: 10px;
     }
+
+
+    /* BOTONES */
 
     .boton {
-        width: 130px;
-        height: 45px;
+        width: 100%;
 
-        font-size: 14px;
+        min-height: 130px;
+
+        padding: 12px;
+
+        border-radius: 9px;
     }
 
-    .boton-1 {
-        left: 8%;
-        top: 35%;
+
+    .puntos {
+        width: 36px;
+        height: 36px;
+
+        font-size: 17px;
     }
 
-    .boton-2 {
-        right: 8%;
-        top: 35%;
-    }
 
-    .boton-3 {
-        left: 8%;
-        top: 58%;
-    }
-
-    .boton-4 {
-        right: 8%;
-        top: 58%;
-    }
+    /* FOOTER */
 
     .footer {
-        height: 50px;
+        height: 75px;
+        min-height: 75px;
     }
+
+
+    .volver {
+        left: 12px;
+
+        width: 42px;
+        height: 35px;
+    }
+
 
     .circulo-naranja-1 {
         width: 160px;
         height: 160px;
 
-        left: 45%;
-        top: -115px;
+        left: 40%;
+
+        top: -90px;
     }
 
-    .circulo-naranja-2 {
-        width: 160px;
-        height: 160px;
 
-        right: -45px;
-        top: -45px;
+    .circulo-naranja-2 {
+        width: 180px;
+        height: 180px;
+
+        right: -50px;
+
+        top: -80px;
     }
 }
 
 
-/* =========================
-   CELULARES PEQUEÑOS
-   ========================= */
+/* =========================================
+   CELULAR PEQUEÑO
+   HASTA 390px
+========================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 390px) {
+
+    .header {
+        height: 68px;
+        min-height: 68px;
+    }
+
+
+    .logo {
+        width: 92px;
+        height: 55px;
+
+        border-radius: 0 0 48px 48px;
+    }
+
+
+    .logo img {
+        width: 67px;
+    }
+
+
+    .contenido1 {
+        padding: 22px 12px 25px;
+
+        grid-template-rows:
+            auto
+            repeat(4, 115px);
+
+        gap: 11px;
+    }
+
 
     .titulo {
-        font-size: 23px;
+        font-size: 30px;
+
+        margin-bottom: 8px;
     }
+
 
     .boton {
-        width: 115px;
-        height: 42px;
+        min-height: 115px;
 
-        font-size: 13px;
+        padding: 10px;
     }
 
-    .boton-1 {
-        left: 7%;
+
+    .puntos {
+        width: 33px;
+        height: 33px;
+
+        font-size: 16px;
     }
 
-    .boton-2 {
-        right: 7%;
-    }
-
-    .boton-3 {
-        left: 7%;
-    }
-
-    .boton-4 {
-        right: 7%;
-    }
 
     .footer {
+        height: 68px;
+        min-height: 68px;
+    }
+
+
+    .volver {
+        left: 8px;
+
+        width: 38px;
+        height: 32px;
+    }
+
+
+    .circulo-naranja-1 {
+        width: 135px;
+        height: 135px;
+
+        left: 38%;
+
+        top: -70px;
+    }
+
+
+    .circulo-naranja-2 {
+        width: 150px;
+        height: 150px;
+
+        right: -42px;
+
+        top: -65px;
+    }
+}
+
+
+/* =========================================
+   CELULAR MUY PEQUEÑO
+   HASTA 330px
+========================================= */
+
+@media (max-width: 330px) {
+
+    .logo {
+        width: 82px;
         height: 50px;
+    }
+
+
+    .logo img {
+        width: 60px;
+    }
+
+
+    .contenido1 {
+        padding-left: 9px;
+        padding-right: 9px;
+
+        grid-template-rows:
+            auto
+            repeat(4, 105px);
+
+        gap: 9px;
+    }
+
+
+    .titulo {
+        font-size: 27px;
+    }
+
+
+    .boton {
+        min-height: 105px;
+
+        padding: 8px;
+
+        border-radius: 7px;
+    }
+
+
+    .puntos {
+        width: 30px;
+        height: 30px;
+
+        font-size: 14px;
+    }
+
+
+    .footer {
+        height: 62px;
+        min-height: 62px;
+    }
+
+
+    .volver {
+        left: 5px;
+    }
+
+
+    .circulo-naranja-1 {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .circulo-naranja-2 {
+        width: 135px;
+        height: 135px;
     }
 }
