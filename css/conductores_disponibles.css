@@ -1,6 +1,16 @@
+<<<<<<< HEAD
 /* =========================================
    CONFIGURACIÓN GENERAL
 ========================================= */
+=======
+<<<<<<< HEAD
+
+=======
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 * {
     margin: 0;
@@ -11,11 +21,30 @@
 html,
 body {
     width: 100%;
+<<<<<<< HEAD
     min-height: 100%;
+=======
+<<<<<<< HEAD
+    height: 100%;
+=======
+    min-height: 100%;
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 }
 
 body {
     font-family: Georgia, "Times New Roman", serif;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    background-color: white;
+    overflow: hidden;
+}
+
+
+
+=======
+>>>>>>> main
 
     background-color: #ffffff;
 
@@ -26,10 +55,32 @@ body {
 /* =========================================
    PÁGINA
 ========================================= */
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .pagina {
     position: relative;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    width: 100vw;
+    height: 100vh;
+
+    min-width: 600px;
+    min-height: 550px;
+
+    background-color: white;
+
+    overflow: hidden;
+}
+
+
+
+=======
+>>>>>>> main
     width: 100%;
     min-height: 100vh;
 
@@ -45,13 +96,24 @@ body {
 /* =========================================
    ENCABEZADO
 ========================================= */
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .header {
     position: relative;
 
     width: 100%;
     height: 78px;
+<<<<<<< HEAD
     min-height: 78px;
+=======
+<<<<<<< HEAD
+=======
+    min-height: 78px;
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     background-color: #7bd3e4;
 
@@ -59,9 +121,19 @@ body {
 }
 
 
+<<<<<<< HEAD
 /* =========================================
    LOGO
 ========================================= */
+=======
+<<<<<<< HEAD
+
+=======
+/* =========================================
+   LOGO
+========================================= */
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .logo {
     position: absolute;
@@ -77,13 +149,31 @@ body {
     border-bottom-right-radius: 70px;
 
     overflow: visible;
+<<<<<<< HEAD
 
     z-index: 5;
+=======
+<<<<<<< HEAD
+=======
+
+    z-index: 5;
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 }
 
 .logo img {
     position: absolute;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    width: 96px;
+    height: auto;
+
+    left: 5px;
+    top: -4px;
+=======
+>>>>>>> main
     left: 5px;
     top: -4px;
 
@@ -91,19 +181,44 @@ body {
     height: auto;
 
     object-fit: contain;
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     z-index: 5;
 }
 
 
+<<<<<<< HEAD
 /* =========================================
    CONTENIDO PRINCIPAL
 ========================================= */
+=======
+<<<<<<< HEAD
+=======
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .contenido {
     position: relative;
 
     width: 100%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    height: calc(100vh - 135px);
+
+    background-color: white;
+}
+
+
+
+=======
+>>>>>>> main
 
     flex: 1;
 
@@ -118,12 +233,25 @@ body {
 /* =========================================
    TÍTULOS
 ========================================= */
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 h1 {
     font-family: Georgia, "Times New Roman", serif;
 
+<<<<<<< HEAD
     font-size: clamp(24px, 3vw, 30px);
 
+=======
+<<<<<<< HEAD
+    font-size: 27px;
+=======
+    font-size: clamp(24px, 3vw, 30px);
+
+>>>>>>> SamuelEmanuel
+>>>>>>> main
     font-weight: normal;
 
     line-height: 1.25;
@@ -134,9 +262,18 @@ h1 {
 }
 
 
+<<<<<<< HEAD
 /* =========================================
    RUTAS
 ========================================= */
+=======
+<<<<<<< HEAD
+=======
+/* =========================================
+   RUTAS
+========================================= */
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .rutas {
     position: absolute;
@@ -144,6 +281,21 @@ h1 {
     left: 0;
     top: 5px;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    width: 175px;
+    height: 100%;
+}
+
+.rutas h1 {
+    margin-bottom: 5px;
+}
+
+
+/* Lista */
+=======
+>>>>>>> main
     width: 190px;
     height: calc(100% - 5px);
 
@@ -160,6 +312,10 @@ h1 {
 /* =========================================
    LISTA DE RUTAS
 ========================================= */
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .lista-rutas {
     width: 100%;
@@ -169,6 +325,20 @@ h1 {
 
     align-items: center;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    gap: 22px;
+}
+
+
+
+
+.ruta {
+    width: 117px;
+    min-height: 35px;
+=======
+>>>>>>> main
     gap: 20px;
 
     overflow: hidden;
@@ -182,6 +352,10 @@ h1 {
 .ruta {
     width: 125px;
     min-height: 38px;
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     padding: 5px 7px;
 
@@ -192,15 +366,32 @@ h1 {
     color: #222222;
 
     font-family: Arial, Helvetica, sans-serif;
+<<<<<<< HEAD
 
     overflow: hidden;
+=======
+<<<<<<< HEAD
+=======
+
+    overflow: hidden;
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 }
 
 .ruta strong {
     display: block;
 
+<<<<<<< HEAD
     font-size: 8px;
 
+=======
+<<<<<<< HEAD
+    font-size: 7px;
+=======
+    font-size: 8px;
+
+>>>>>>> SamuelEmanuel
+>>>>>>> main
     font-weight: normal;
 
     margin-bottom: 2px;
@@ -209,19 +400,54 @@ h1 {
 .ruta span {
     display: block;
 
+<<<<<<< HEAD
     font-size: 7px;
 
+=======
+<<<<<<< HEAD
+    font-size: 6px;
+=======
+    font-size: 7px;
+
+>>>>>>> SamuelEmanuel
+>>>>>>> main
     line-height: 1.35;
 }
 
 
+<<<<<<< HEAD
 /* =========================================
    CONDUCTORES
 ========================================= */
+=======
+<<<<<<< HEAD
+
+=======
+/* =========================================
+   CONDUCTORES
+========================================= */
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .conductores {
     position: absolute;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    left: 185px;
+    top: 5px;
+
+    width: 410px;
+    height: 100%;
+}
+
+.conductores h1 {
+    position: relative;
+
+    margin-left: 0;
+=======
+>>>>>>> main
     left: 190px;
     top: 5px;
 
@@ -232,19 +458,44 @@ h1 {
 
 .conductores h1 {
     width: 100%;
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     text-align: center;
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 /* =========================================
    TARJETAS DE CONDUCTORES
 ========================================= */
 
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 .conductor {
     position: absolute;
 
     display: flex;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    align-items: flex-start;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+=======
+>>>>>>> main
 
     align-items: flex-start;
 
@@ -257,12 +508,26 @@ h1 {
 /* =========================================
    FOTO
 ========================================= */
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .conductor img {
     flex-shrink: 0;
 
+<<<<<<< HEAD
     width: 42px;
     height: 42px;
+=======
+<<<<<<< HEAD
+    width: 39px;
+    height: 39px;
+=======
+    width: 42px;
+    height: 42px;
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     border-radius: 50%;
 
@@ -272,28 +537,104 @@ h1 {
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+.datos {
+    margin-left: 7px;
+=======
+>>>>>>> main
 /* =========================================
    DATOS
 ========================================= */
 
 .datos {
     margin-left: 8px;
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     color: #aaaaaa;
 }
 
 .datos h2 {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+=======
+>>>>>>> main
     margin: 0 0 2px 0;
 
     font-family: Arial, Helvetica, sans-serif;
 
     font-size: 14px;
 
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
     font-weight: normal;
 
     line-height: 1.1;
 
     color: #777777;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+    margin: 0 0 1px 0;
+}
+
+.datos p {
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.12;
+
+    color: #b0b0b0;
+
+    margin: 0;
+}
+
+.conductor-1 {
+    top: 90px;
+    left: 17px;
+}
+
+
+/* Samuel */
+
+.conductor-2 {
+    top: 170px;
+    left: 185px;
+}
+
+
+/* Jeyder */
+
+.conductor-3 {
+    top: 267px;
+    left: 17px;
+}
+
+
+
+.footer {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 58px;
+=======
+>>>>>>> main
 }
 
 .datos p {
@@ -339,10 +680,22 @@ h1 {
     width: 100%;
     height: 58px;
     min-height: 58px;
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     background-color: #61c8dc;
 
     overflow: hidden;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+
+=======
+>>>>>>> main
 
     flex-shrink: 0;
 }
@@ -351,6 +704,10 @@ h1 {
 /* =========================================
    CÍRCULOS
 ========================================= */
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .circulo {
     position: absolute;
@@ -358,6 +715,14 @@ h1 {
     background-color: #ff8527;
 
     border-radius: 50%;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+
+=======
+>>>>>>> main
 
     pointer-events: none;
 }
@@ -367,6 +732,10 @@ h1 {
    CÍRCULO IZQUIERDO
 ========================================= */
 
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 .circulo-1 {
     width: 220px;
     height: 220px;
@@ -376,10 +745,19 @@ h1 {
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 /* =========================================
    CÍRCULO DERECHO
 ========================================= */
 
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 .circulo-2 {
     width: 235px;
     height: 235px;
@@ -389,20 +767,42 @@ h1 {
 }
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 /* =========================================
    BOTÓN VOLVER
 ========================================= */
 
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 .volver {
     position: absolute;
 
     left: 10px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    top: 21px;
+
+    width: 25px;
+    height: 20px;
+=======
+>>>>>>> main
     top: 50%;
 
     transform: translateY(-50%);
 
     width: 30px;
     height: 25px;
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     border: none;
 
@@ -414,32 +814,69 @@ h1 {
 }
 
 
+<<<<<<< HEAD
 /* Línea de la flecha */
+=======
+<<<<<<< HEAD
+=======
+/* Línea de la flecha */
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .volver::before {
     content: "";
 
     position: absolute;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    left: 1px;
+    top: 9px;
+
+    width: 23px;
+=======
+>>>>>>> main
     left: 2px;
     top: 11px;
 
     width: 25px;
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
     height: 2px;
 
     background-color: #111111;
 }
 
 
+<<<<<<< HEAD
 /* Punta de la flecha */
+=======
+<<<<<<< HEAD
+=======
+/* Punta de la flecha */
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
 .volver::after {
     content: "";
 
     position: absolute;
 
+<<<<<<< HEAD
     left: 2px;
     top: 5px;
+=======
+<<<<<<< HEAD
+    left: 1px;
+    top: 3px;
+=======
+    left: 2px;
+    top: 5px;
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     width: 12px;
     height: 12px;
@@ -448,6 +885,11 @@ h1 {
     border-bottom: 2px solid #111111;
 
     transform: rotate(45deg);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> main
 }
 
 
@@ -989,4 +1431,8 @@ h1 {
 
         top: -45px;
     }
+<<<<<<< HEAD
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 }
