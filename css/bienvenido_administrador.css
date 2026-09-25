@@ -4,23 +4,24 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html,
 body {
     width: 100%;
-    height: 100%;
-
-    margin: 0;
-    padding: 0;
-
-    overflow: hidden;
+    min-height: 100%;
 }
 
 body {
+    min-height: 100vh;
+
     font-family: Arial, Helvetica, sans-serif;
 
-    background: white;
+    background: #ffffff;
+
+    overflow-x: hidden;
 }
 
 
@@ -30,18 +31,12 @@ body {
 
 .pagina {
     width: 100%;
-    height: 100vh;
     min-height: 100vh;
-
-    margin: 0;
-    padding: 0;
 
     display: flex;
     flex-direction: column;
 
-    background: white;
-
-    overflow: hidden;
+    background: #ffffff;
 }
 
 
@@ -50,14 +45,11 @@ body {
 ========================================= */
 
 .header {
-    width: 100%;
-
-    /* 20% DE LA PANTALLA */
-    height: 20vh;
-
-    min-height: 80px;
-
     position: relative;
+
+    width: 100%;
+    height: 150px;
+    min-height: 150px;
 
     background: #63c9d9;
 
@@ -100,11 +92,11 @@ body {
 .header h1 {
     margin: 0;
 
-    color: #111;
+    color: #111111;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(24px, 3vw, 42px);
+    font-size: clamp(26px, 3vw, 42px);
 
     font-weight: normal;
 
@@ -120,45 +112,43 @@ body {
     position: absolute;
 
     top: 10px;
-    right: 10px;
+    right: 15px;
 
-    width: 100px;
-    height: 30px;
+    width: 110px;
+    height: 32px;
 
     border: none;
     border-radius: 3px;
 
     background: #292929;
 
-    color: white;
+    color: #ffffff;
 
-    font-size: 9px;
+    font-size: 10px;
 
     cursor: pointer;
 }
 
 .cerrar-sesion:hover {
-    background: #111;
+    background: #111111;
 }
 
 
 /* =========================================
-   CUADRO GRIS
+   BARRA DE OPCIONES
 ========================================= */
 
 .barra-opciones {
-    width: 50%;
-
-    /* AHORA EL GRIS SOLO OCUPA 25% */
-    height: 25vh;
-
-    min-height: 0;
-
     position: relative;
+
+    width: 50%;
+    height: 190px;
+    min-height: 190px;
 
     background: #808080;
 
     display: flex;
+    align-items: center;
 }
 
 
@@ -167,10 +157,9 @@ body {
 ========================================= */
 
 .opciones {
-    width: 55%;
+    width: 70%;
 
-    padding-top: 25px;
-    padding-left: 30px;
+    padding: 25px 20px;
 
     display: grid;
 
@@ -178,7 +167,7 @@ body {
 
     grid-template-rows: auto auto;
 
-    column-gap: 25px;
+    column-gap: 20px;
     row-gap: 25px;
 }
 
@@ -188,6 +177,8 @@ body {
 ========================================= */
 
 .opcion {
+    min-width: 0;
+
     display: flex;
 
     align-items: center;
@@ -204,6 +195,8 @@ body {
     width: 25px;
     height: 25px;
 
+    flex-shrink: 0;
+
     display: flex;
 
     align-items: center;
@@ -214,7 +207,7 @@ body {
 
 
 /* =========================================
-   BOTONES
+   BOTONES DE OPCIONES
 ========================================= */
 
 .opcion button {
@@ -222,20 +215,21 @@ body {
     height: 30px;
 
     border: none;
-
     border-radius: 3px;
 
     background: #292929;
 
-    color: white;
+    color: #ffffff;
 
     font-size: 9px;
 
     cursor: pointer;
+
+    white-space: nowrap;
 }
 
 .opcion button:hover {
-    background: #111;
+    background: #111111;
 }
 
 
@@ -246,7 +240,7 @@ body {
 .avatar {
     position: absolute;
 
-    right: 12%;
+    right: 10%;
 
     top: 50%;
 
@@ -270,37 +264,32 @@ body {
 
 
 /* =========================================
-   CONTENIDO BLANCO
+   CONTENIDO PRINCIPAL
 ========================================= */
 
 .contenido {
     width: 100%;
 
-    /* OCUPA TODO EL ESPACIO SOBRANTE */
-
     flex: 1;
 
-    background: white;
+    min-height: 300px;
+
+    background: #ffffff;
 
     position: relative;
-
-    overflow: hidden;
 }
 
 
 /* =========================================
-   PARTE INFERIOR
+   FOOTER
 ========================================= */
 
 .footer {
-    width: 100%;
-
-    /* 15% DE LA PANTALLA */
-    height: 15vh;
-
-    min-height: 75px;
-
     position: relative;
+
+    width: 100%;
+    height: 110px;
+    min-height: 110px;
 
     background: #63c9d9;
 
@@ -309,27 +298,29 @@ body {
 
 
 /* =========================================
-   TEXTO INFERIOR
+   TEXTO DEL FOOTER
 ========================================= */
 
 .texto-footer {
     position: absolute;
 
-    left: 8px;
+    left: 10px;
     top: 50%;
 
     transform: translateY(-50%);
 
-    color: #111;
+    color: #111111;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(18px, 2vw, 28px);
+    font-size: clamp(20px, 2vw, 28px);
+
+    white-space: nowrap;
 }
 
 
 /* =========================================
-   CÍRCULOS NARANJAS
+   CÍRCULOS
 ========================================= */
 
 .circulo {
@@ -373,66 +364,58 @@ body {
    TABLET
 ========================================= */
 
-@media (max-width: 800px) {
-
-    /* HEADER */
+@media (max-width: 900px) {
 
     .header {
-        height: 20vh;
+        height: 130px;
+        min-height: 130px;
     }
 
-
-    /* LOGO */
-
     .logo {
-        width: 65px;
-        height: 65px;
-
-        left: 5px;
+        width: 68px;
+        height: 68px;
     }
 
     .logo img {
-        width: 60px;
-        height: 60px;
+        width: 63px;
+        height: 63px;
     }
-
-
-    /* BOTÓN */
 
     .cerrar-sesion {
-        width: 85px;
-        height: 27px;
+        width: 100px;
+        height: 30px;
 
-        right: 8px;
+        right: 10px;
     }
 
 
-    /* CUADRO GRIS */
+    /* BARRA GRIS */
 
     .barra-opciones {
-        width: 70%;
-        height: 25vh;
-        min-height: 0;
-        position: relative;
-        background: #808080;
-        display: flex;
+        width: 65%;
+        height: 180px;
+        min-height: 180px;
     }
 
 
     /* OPCIONES */
 
     .opciones {
-        width: 70%;
+        width: 72%;
 
-        padding-left: 15px;
-        padding-top: 20px;
+        padding: 20px 15px;
 
-        column-gap: 10px;
+        column-gap: 12px;
         row-gap: 20px;
+    }
+
+    .opcion {
+        gap: 5px;
     }
 
     .opcion button {
         width: 90px;
+        height: 29px;
     }
 
 
@@ -449,105 +432,355 @@ body {
     /* FOOTER */
 
     .footer {
-        height: 15vh;
+        height: 95px;
+        min-height: 95px;
+    }
+
+    .circulo-1 {
+        width: 150px;
+        height: 150px;
+
+        left: 42%;
+        top: 30px;
+    }
+
+    .circulo-2 {
+        width: 200px;
+        height: 200px;
+
+        right: -30px;
+        top: -85px;
     }
 }
 
 
 /* =========================================
-   CELULARES
+   TABLET PEQUEÑA
+========================================= */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 115px;
+        min-height: 115px;
+    }
+
+    .logo {
+        left: 7px;
+        top: 5px;
+
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .cerrar-sesion {
+        width: 95px;
+        height: 29px;
+
+        top: 8px;
+        right: 8px;
+
+        font-size: 9px;
+    }
+
+
+    /* BARRA GRIS */
+
+    .barra-opciones {
+        width: 80%;
+        height: 175px;
+        min-height: 175px;
+    }
+
+
+    .opciones {
+        width: 72%;
+
+        padding: 18px 12px;
+
+        column-gap: 8px;
+        row-gap: 18px;
+    }
+
+    .icono {
+        width: 22px;
+        height: 22px;
+
+        font-size: 15px;
+    }
+
+    .opcion button {
+        width: 85px;
+        height: 28px;
+
+        font-size: 8px;
+    }
+
+
+    /* AVATAR */
+
+    .avatar {
+        right: 3%;
+
+        width: 80px;
+        height: 100px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        height: 90px;
+        min-height: 90px;
+    }
+
+    .texto-footer {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
 ========================================= */
 
 @media (max-width: 550px) {
 
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+
     /* HEADER */
 
     .header {
-        height: 20vh;
-
-        min-height: 70px;
+        height: 105px;
+        min-height: 105px;
     }
 
 
-    /* LOGO */
-
     .logo {
-        width: 55px;
-        height: 55px;
-
         left: 5px;
         top: 5px;
+
+        width: 55px;
+        height: 55px;
     }
 
     .logo img {
-        width: 52px;
-        height: 52px;
+        width: 51px;
+        height: 51px;
     }
 
-
-    /* TÍTULO */
 
     .header h1 {
-        font-size: 22px;
+        font-size: 25px;
+
+        margin-top: 20px;
     }
 
 
-    /* BOTÓN */
-
     .cerrar-sesion {
-        width: 70px;
-        height: 23px;
+        top: 7px;
+        right: 7px;
 
-        top: 6px;
-        right: 5px;
+        width: 85px;
+        height: 26px;
+
+        font-size: 8px;
+    }
+
+
+    /* =====================================
+       BARRA GRIS
+    ===================================== */
+
+    .barra-opciones {
+        width: 100%;
+        height: 205px;
+        min-height: 205px;
+
+        display: flex;
+    }
+
+
+    /* =====================================
+       OPCIONES
+    ===================================== */
+
+    .opciones {
+        width: 75%;
+
+        padding: 18px 10px;
+
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 8px;
+        row-gap: 20px;
+    }
+
+
+    .opcion {
+        gap: 4px;
+
+        min-width: 0;
+    }
+
+
+    .icono {
+        width: 20px;
+        height: 20px;
+
+        font-size: 14px;
+    }
+
+
+    .opcion button {
+        width: 75px;
+        height: 27px;
 
         font-size: 7px;
     }
 
 
-    /* CUADRO GRIS */
+    /* =====================================
+       AVATAR
+    ===================================== */
+
+    .avatar {
+        right: 3%;
+
+        width: 65px;
+        height: 85px;
+    }
+
+
+    /* =====================================
+       CONTENIDO
+    ===================================== */
+
+    .contenido {
+        min-height: 300px;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    .footer {
+        height: 80px;
+        min-height: 80px;
+    }
+
+
+    .texto-footer {
+        left: 10px;
+
+        font-size: 18px;
+    }
+
+
+    .circulo-1 {
+        width: 120px;
+        height: 120px;
+
+        left: 35%;
+        top: 30px;
+    }
+
+
+    .circulo-2 {
+        width: 160px;
+        height: 160px;
+
+        right: -30px;
+        top: -65px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+========================================= */
+
+@media (max-width: 390px) {
+
+    .header {
+        height: 100px;
+        min-height: 100px;
+    }
+
+
+    .logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .logo img {
+        width: 47px;
+        height: 47px;
+    }
+
+
+    .header h1 {
+        font-size: 22px;
+
+        margin-top: 20px;
+    }
+
+
+    .cerrar-sesion {
+        width: 78px;
+        height: 24px;
+
+        font-size: 7px;
+    }
+
+
+    /* BARRA GRIS */
 
     .barra-opciones {
-       position: relative;
-       width: 50%;
-       background-color: gray;
+        width: 100%;
+        height: 215px;
+        min-height: 215px;
     }
 
 
     /* OPCIONES */
 
     .opciones {
-        width: 75%;
+        width: 76%;
 
-        padding-left: 8px;
-        padding-top: 15px;
+        padding: 15px 7px;
 
         column-gap: 5px;
-        row-gap: 15px;
+        row-gap: 18px;
     }
 
-
-    .opcion {
-        gap: 3px;
-    }
-
-
-    /* ICONOS */
 
     .icono {
-        width: 18px;
+        width: 17px;
 
-        font-size: 13px;
+        font-size: 12px;
     }
 
 
-    /* BOTONES */
-
     .opcion button {
-        width: 75px;
+        width: 70px;
         height: 25px;
 
-        font-size: 7px;
+        font-size: 6.5px;
     }
 
 
@@ -556,45 +789,122 @@ body {
     .avatar {
         right: 2%;
 
-        width: 65px;
-        height: 85px;
+        width: 58px;
+        height: 75px;
+    }
+
+
+    /* CONTENIDO */
+
+    .contenido {
+        min-height: 280px;
     }
 
 
     /* FOOTER */
 
     .footer {
-        height: 15vh;
-
-        min-height: 65px;
+        height: 75px;
+        min-height: 75px;
     }
 
 
     .texto-footer {
-        font-size: 17px;
+        font-size: 16px;
     }
 
-
-    /* CÍRCULO IZQUIERDO */
 
     .circulo-1 {
-        width: 120px;
-        height: 120px;
+        width: 105px;
+        height: 105px;
 
         left: 35%;
-
-        top: 35px;
+        top: 30px;
     }
 
 
-    /* CÍRCULO DERECHO */
-
     .circulo-2 {
-        width: 160px;
-        height: 160px;
+        width: 140px;
+        height: 140px;
 
-        right: -30px;
+        right: -35px;
+        top: -60px;
+    }
+}
 
-        top: -65px;
+
+/* =========================================
+   CELULAR MUY PEQUEÑO
+========================================= */
+
+@media (max-width: 330px) {
+
+    .header {
+        height: 95px;
+        min-height: 95px;
+    }
+
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+
+    .cerrar-sesion {
+        width: 72px;
+        height: 23px;
+
+        font-size: 6.5px;
+    }
+
+
+    .barra-opciones {
+        height: 220px;
+        min-height: 220px;
+    }
+
+
+    .opciones {
+        width: 78%;
+
+        padding-left: 5px;
+        padding-right: 5px;
+
+        column-gap: 3px;
+        row-gap: 17px;
+    }
+
+
+    .icono {
+        width: 15px;
+
+        font-size: 11px;
+    }
+
+
+    .opcion button {
+        width: 65px;
+        height: 24px;
+
+        font-size: 6px;
+    }
+
+
+    .avatar {
+        width: 52px;
+        height: 68px;
+
+        right: 1%;
+    }
+
+
+    .footer {
+        height: 70px;
+        min-height: 70px;
+    }
+
+
+    .texto-footer {
+        font-size: 15px;
     }
 }

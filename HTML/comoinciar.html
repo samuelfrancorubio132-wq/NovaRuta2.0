@@ -28,14 +28,22 @@
         <section class="content">
 
             <h1>
-                ¿Como vas a iniciar<br>
+                ¿Cómo vas a iniciar<br>
                 sesión?
             </h1>
 
             <div class="buttons">
 
-                <button type="button" onclick="window.location.href='inicio_conductor.html'">Conductor</button>
+                <button type="button">
+                    Conductor
+                </button>
 
+                <button
+                    type="button"
+                    onclick="window.location.href='inicio_administrador.html'">
+                    Administrador
+                </button>
+>>>>>>> SamuelEmanuel
 
                 <button type="button" onclick="window.location.href='inicio_administrador.html'">Administrador</button>
             </div>
@@ -46,7 +54,11 @@
         <!-- BARRA INFERIOR -->
         <footer class="bottom-bar">
 
-            <button class="back" aria-label="Volver">
+            <button
+                class="back"
+                type="button"
+                aria-label="Volver"
+                onclick="history.back()">
                 ←
             </button>
 
