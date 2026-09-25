@@ -67,8 +67,18 @@ body {
     left: 0;
     top: 0;
 
+<<<<<<< HEAD
     width: 125px;
     height: 100px;
+=======
+    width: 2%;
+
+    height: 24.2%;
+
+    min-width: 100px;
+
+    min-height: 97px;
+>>>>>>> SamuelEmanuel
 
     background: #ff8828;
 
