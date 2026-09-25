@@ -645,6 +645,9 @@ footer {
         left: calc(50% + 250px);
 
         transform: scale(0.85);
+    
+    }
+}
 /* =========================================
    TABLET
 ========================================= */
@@ -691,9 +694,8 @@ footer {
         overflow-y: auto;
     }
 
-    main {
-    
-    }
+
+}
     
 /* =========================================
    TABLET PEQUEÑA
@@ -818,7 +820,7 @@ footer {
 
         padding: 25px 18px 30px;
 
->>>>>>> SamuelEmanuel
+
         display: flex;
 
         flex-direction: column;
@@ -827,7 +829,6 @@ footer {
 
         justify-content: flex-start;
 
-<<<<<<< HEAD
         padding: 30px;
     }
 
@@ -856,286 +857,4 @@ footer {
 
         margin-top: 20px;
     }
-=======
-        gap: 0;
-    }
-
-
-    /* =====================================
-       FORMULARIO
-    ===================================== */
-
-    .formulario {
-        width: 100%;
-        max-width: 420px;
-    }
-
-
-    .formulario h1 {
-        font-size: 34px;
-
-        margin-bottom: 25px;
-    }
-
-
-    .campo {
-        margin-bottom: 17px;
-    }
-
-
-    .campo label {
-        font-size: 15px;
-
-        margin-bottom: 6px;
-    }
-
-
-    .campo input {
-        width: 100%;
-
-        height: 45px;
-
-        padding: 0 14px;
-
-        font-size: 15px;
-    }
-
-
-    .formulario button {
-        width: 135px;
-        height: 45px;
-
-        margin-top: 22px;
-
-        font-size: 15px;
-    }
-
-
-    /* =====================================
-       BUS
-    ===================================== */
-
-    .bus {
-        width: 150px;
-        height: 160px;
-
-        min-width: 0;
-
-        margin-top: 25px;
-    }
-
-
-    .bus img {
-        width: 135px;
-        height: 150px;
-    }
-
-
-    /* =====================================
-       FOOTER
-    ===================================== */
-
-    footer {
-        height: 75px;
-        min-height: 75px;
-    }
-
-
-    .volver {
-        left: 15px;
-
-        width: 40px;
-        height: 30px;
-    }
-
-
-    .decoracion {
-        width: 155px;
-        height: 155px;
-
-        left: 42%;
-
-        top: 15px;
-    }
-
-
-    .decoracion.derecha {
-        width: 165px;
-        height: 165px;
-
-        right: -45px;
-
-        top: -75px;
-    }
-}
-
-
-/* =========================================
-   CELULAR PEQUEÑO
-========================================= */
-
-@media (max-width: 390px) {
-
-    header {
-        height: 68px;
-        min-height: 68px;
-    }
-
-
-    .logo {
-        width: 92px;
-        height: 55px;
-
-        border-radius: 0 0 48px 48px;
-    }
-
-
-    .logo img {
-        width: 67px;
-    }
-
-
-    main {
-        padding: 22px 14px 25px;
-    }
-
-
-    .formulario h1 {
-        font-size: 30px;
-
-        margin-bottom: 22px;
-    }
-
-
-    .campo label {
-        font-size: 14px;
-    }
-
-
-    .campo input {
-        height: 42px;
-
-        font-size: 14px;
-    }
-
-
-    .formulario button {
-        width: 125px;
-        height: 42px;
-
-        font-size: 14px;
-    }
-
-
-    .bus {
-        width: 125px;
-        height: 135px;
-
-        margin-top: 20px;
-    }
-
-
-    .bus img {
-        width: 115px;
-        height: 125px;
-    }
-
-
-    footer {
-        height: 68px;
-        min-height: 68px;
-    }
-
-
-    .decoracion {
-        width: 135px;
-        height: 135px;
-
-        left: 40%;
-
-        top: 18px;
-    }
-
-
-    .decoracion.derecha {
-        width: 145px;
-        height: 145px;
-
-        right: -42px;
-
-        top: -68px;
-    }
-}
-
-
-/* =========================================
-   CELULAR MUY PEQUEÑO
-========================================= */
-
-@media (max-width: 330px) {
-
-    .logo {
-        width: 82px;
-        height: 50px;
-    }
-
-
-    .logo img {
-        width: 60px;
-    }
-
-
-    main {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-
-    .formulario h1 {
-        font-size: 27px;
-    }
-
-
-    .campo label {
-        font-size: 13px;
-    }
-
-
-    .campo input {
-        height: 40px;
-
-        font-size: 13px;
-    }
-
-
-    .formulario button {
-        width: 115px;
-        height: 40px;
-
-        font-size: 13px;
-    }
-
-
-    .bus {
-        width: 110px;
-        height: 120px;
-    }
-
-
-    .bus img {
-        width: 100px;
-        height: 110px;
-    }
-
-
-    footer {
-        height: 62px;
-        min-height: 62px;
-    }
-
-
-    .volver {
-        left: 10px;
-    }
->>>>>>> SamuelEmanuel
 }
