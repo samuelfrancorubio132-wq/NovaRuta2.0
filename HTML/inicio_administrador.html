@@ -1,77 +1,104 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NovaRuta - Conductor</title>
 
-    <link rel="stylesheet" href="../css/inicio_conductor.css">
+    <link rel="stylesheet" href="..//css/inicio_administrador.css">
+
 </head>
 
 <body>
-
-    <!-- Encabezado -->
+    <!-- ENCABEZADO -->
     <header>
+
         <div class="logo">
-            <span><img src="../img/Shape Set.png" alt=""></span>
-            <div>
+
+            <img src="../img/Shape Set.png" alt="Logo NovaRuta">
+
+            <div class="logo-texto">
                 <strong>NovaRuta</strong>
-                <br>
-                Manizales
+                <span>Manizales</span>
             </div>
+
         </div>
+
     </header>
 
-    <!-- Contenido principal -->
+
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
 
         <section class="formulario">
 
             <h1>Administrador</h1>
 
+
+            <!-- CORREO -->
             <div class="campo">
-                <label for="cedula">Correo de administrador</label>
-                <input 
-                    type="text" 
-                    id="cedula"
-                    placeholder="C.C."
-                >
+
+                <label for="correo">
+                    Correo de administrador
+                </label>
+
+                <input type="email" id="correo" name="correo" placeholder="C.C.">
+
             </div>
 
+
+            <!-- CONTRASEÑA -->
             <div class="campo">
-                <label for="placa">Contarseña</label>
-                <input 
-                    type="text" 
-                    id="placa"
-                    placeholder="..."
-                >
+
+                <label for="contrasena">
+                    Contraseña
+                </label>
+
+                <input type="password" id="contrasena" name="contrasena" placeholder="...">
+
             </div>
 
+
+            <!-- LLAVE -->
             <div class="campo">
-                <label for="password">Llave de acceso</label>
-                <input 
-                    type="password" 
-                    id="password"
-                    placeholder="..."
-                >
+
+                <label for="password">
+                    Llave de acceso
+                </label>
+
+                <input type="password" id="password" name="password" placeholder="...">
+
             </div>
 
-            <button>Continuar</button>
+
+            <!-- BOTÓN -->
+            <button type="button">
+                Continuar
+            </button>
 
         </section>
 
-        <!-- Icono del bus -->
+
+        <!-- IMAGEN DEL ADMINISTRADOR -->
         <div class="bus">
-           <img src="../img/gerente.png" alt="">
+
+            <img src="../img/gerente.png" alt="Administrador">
+
         </div>
 
     </main>
 
-    <!-- Pie de página -->
+
+    <!-- PIE DE PÁGINA -->
     <footer>
+
         <div class="decoracion"></div>
+
         <div class="decoracion derecha"></div>
+
     </footer>
 
 </body>
+
 </html>
