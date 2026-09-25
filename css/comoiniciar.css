@@ -58,6 +58,47 @@ body {
     background: #6ECBDD;
 
     overflow: visible;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+}
+
+
+/* =========================================
+   CÍRCULO DEL LOGO
+========================================= */
+
+.logo {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+}
+
+.logo img {
+  width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
+}
+
+.logo-circle {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    left: -55px;
+    top: -55px;
+
+    border-radius: 50%;
+
+    background: #FF8625;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+=======
+>>>>>>> SamuelEmanuel
+>>>>>>> main
 
     z-index: 5;
 }
