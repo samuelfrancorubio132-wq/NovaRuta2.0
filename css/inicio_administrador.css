@@ -84,14 +84,9 @@ overflow: hidden;
 }
 
 .logo img {
-display: block;
-
-width: 72px;
-height: 72px;
-
-object-fit: contain;
-
-flex-shrink: 0;
+ width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
 
 
 }

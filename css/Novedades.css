@@ -87,12 +87,9 @@ body {
 }
 
 .logo img {
-    display: block;
-
-    width: 105px;
-    height: auto;
-
-    object-fit: contain;
+    width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
 }
 
 

@@ -31,6 +31,11 @@ header {
     display: flex;
     align-items: center;
 }
+.logo img{
+    width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
+}
 
 
 /* =========================================

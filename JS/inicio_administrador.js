@@ -1,201 +1,64 @@
-
-// Esperar a que cargue completamente la página
 document.addEventListener("DOMContentLoaded", function () {
-
-    // Obtener los elementos del formulario
     const correo = document.getElementById("correo");
     const contrasena = document.getElementById("contrasena");
-    const llave = document.getElementById("llave");
-    const boton = document.querySelector("button");
+    const llave = document.getElementById("password");
+    const botonContinuar = document.querySelector("button");
 
-
-    // Acción al presionar "Continuar"
-    boton.addEventListener("click", function (event) {
-
-        event.preventDefault();
-
-
-        // Obtener los valores escritos
-        const valorCorreo = correo.value.trim();
-        const valorContrasena = contrasena.value.trim();
-        const valorLlave = llave.value.trim();
-
-
-        // Validar correo vacío
-        if (valorCorreo === "") {
-
+    botonContinuar.addEventListener("click", function () {
+        // Validar correo
+        if (correo.value.trim() === "") {
             Swal.fire({
-                icon: "warning",
+                icon: "error",
                 title: "Campo vacío",
-                text: "Por favor, ingresa el correo del administrador.",
-                confirmButtonText: "Aceptar"
+                text: "Por favor, ingrese el correo de administrador."
             });
-
-            correo.focus();
-
             return;
         }
-
-
-        // Validar formato del correo
-        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valorCorreo)) {
-
+        if (correo.value.indexOf("@") === -1) {
             Swal.fire({
                 icon: "error",
                 title: "Correo inválido",
-                text: "Por favor, ingresa un correo electrónico válido.",
-                confirmButtonText: "Aceptar"
+                text: "El correo debe contener el símbolo '@'."
             });
-
-            correo.focus();
-
             return;
         }
 
-
-        // Validar contraseña vacía
-        if (valorContrasena === "") {
-
-            Swal.fire({
-                icon: "warning",
-                title: "Campo vacío",
-                text: "Por favor, ingresa la contraseña.",
-                confirmButtonText: "Aceptar"
-            });
-
-            contrasena.focus();
-
-            return;
-        }
-
-
-        // Validar longitud de contraseña
-        if (valorContrasena.length < 6) {
-
+        // Validar contraseña
+        if (contrasena.value.trim() === "") {
             Swal.fire({
                 icon: "error",
-                title: "Contraseña inválida",
-                text: "La contraseña debe tener mínimo 6 caracteres.",
-                confirmButtonText: "Aceptar"
-            });
-
-            contrasena.focus();
-
-            return;
-        }
-
-
-        // Validar llave de acceso vacía
-        if (valorLlave === "") {
-
-            Swal.fire({
-                icon: "warning",
                 title: "Campo vacío",
-                text: "Por favor, ingresa la llave de acceso.",
-                confirmButtonText: "Aceptar"
+                text: "Por favor, ingrese la contraseña."
             });
-
-            llave.focus();
-
             return;
         }
-
-
-        // Validar longitud de llave
-        if (valorLlave.length < 4) {
-
+        if (contrasena.value.length < 6) {
             Swal.fire({
                 icon: "error",
-                title: "Llave inválida",
-                text: "La llave de acceso debe tener mínimo 4 caracteres.",
-                confirmButtonText: "Aceptar"
+                title: "Contraseña corta",
+                text: "La contraseña debe tener al menos 6 caracteres."
             });
-
-            llave.focus();
-
             return;
         }
 
+        // Validar llave de acceso
+        if (llave.value.trim() === "") {
+            Swal.fire({
+                icon: "error",
+                title: "Campo vacío",
+                text: "Por favor, ingrese la llave de acceso."
+            });
+            return;
+        }
 
-        // Si todos los datos son correctos
+        // ✅ Si todo está correcto
         Swal.fire({
             icon: "success",
-            title: "Datos correctos",
-            text: "Los datos fueron ingresados correctamente.",
-            confirmButtonText: "Continuar"
-        }).then(function (resultado) {
-
-            if (resultado.isConfirmed) {
-
-                console.log("Correo:", valorCorreo);
-                console.log("Contraseña ingresada correctamente.");
-                console.log("Llave de acceso ingresada correctamente.");
-
-
-                // Mensaje de bienvenida
-                Swal.fire({
-                    icon: "info",
-                    title: "Bienvenido a NovaRuta",
-                    text: "Puedes continuar con el panel de administrador.",
-                    confirmButtonText: "Aceptar"
-                });
-
-            }
-
+            title: "Validación exitosa",
+            text: "Accediendo al panel de administrador..."
+        }).then(() => {
+            // Redirigir a la página de bienvenida
+            window.location.href = "bienvenido_administrador.html";
         });
-
     });
-
-
-    // Convertir correo a minúsculas
-    correo.addEventListener("input", function () {
-
-        correo.value = correo.value.toLowerCase();
-
-    });
-
-
-    // Evitar espacios en la contraseña
-    contrasena.addEventListener("input", function () {
-
-        contrasena.value = contrasena.value.replace(/\s/g, "");
-
-    });
-
-
-    // Evitar espacios en la llave de acceso
-    llave.addEventListener("input", function () {
-
-        llave.value = llave.value.replace(/\s/g, "");
-
-    });
-
-
-    // Mensaje en consola al seleccionar el correo
-    correo.addEventListener("focus", function () {
-
-        console.log("Campo de correo seleccionado.");
-
-    });
-
-
-    // Mensaje en consola al seleccionar la contraseña
-    contrasena.addEventListener("focus", function () {
-
-        console.log("Campo de contraseña seleccionado.");
-
-    });
-
-
-    // Mensaje en consola al seleccionar la llave
-    llave.addEventListener("focus", function () {
-
-        console.log("Campo de llave de acceso seleccionado.");
-
-    });
-
-
-    // Mensaje en consola cuando cargue la página
-    console.log("Página de administrador cargada correctamente.");
-
 });

@@ -1,943 +1,506 @@
-
 /* =========================================
-   CONFIGURACIÓN GENERAL
+CONFIGURACIÓN GENERAL
 ========================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
 
 html,
 body {
-    width: 100%;
-    min-height: 100%;
+width: 100%;
+height: 100%;
+font-family: Arial, sans-serif;
+background: #000;
 }
-
-body {
-    font-family: Georgia, "Times New Roman", serif;
-    background-color: #ffffff;
-    overflow-x: hidden;
-}
-
 
 /* =========================================
-   PÁGINA
+PÁGINA
 ========================================= */
 
 .pagina {
-    position: relative;
+width: 100vw;
+height: 100vh;
 
-    width: 100%;
-    min-height: 100vh;
+background: #ffffff;
 
-    background-color: #ffffff;
+position: relative;
 
-    overflow: hidden;
+overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
 }
 
-
 /* =========================================
-   ENCABEZADO
+HEADER
 ========================================= */
 
 .header {
-    position: relative;
+width: 100%;
+height: 100px;
 
-    width: 100%;
-    height: 78px;
-    min-height: 78px;
+background: #79cee0;
 
-    background-color: #7bd3e4;
+display: flex;
+align-items: center;
 
-    border-bottom: 1px solid #dddddd;
+position: relative;
+
 }
 
+/* LOGO */
 
-/* =========================================
-   LOGO
-========================================= */
 
-.logo {
-    position: absolute;
 
-    left: 0;
-    top: 0;
-
-    width: 112px;
-    height: 78px;
-
-    background-color: #ff8527;
-
-    border-bottom-right-radius: 70px;
-
-    overflow: visible;
-
-    z-index: 5;
-}
 
 .logo img {
-    position: absolute;
-
-    left: 5px;
-    top: -4px;
-
-    width: 96px;
-    height: auto;
-
-    object-fit: contain;
-
-    z-index: 5;
+    width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
 }
 
-
 /* =========================================
-   CONTENIDO PRINCIPAL
+CONTENIDO
 ========================================= */
 
 .contenido {
-    position: relative;
+width: 100%;
+height: calc(100vh - 170px);
 
-    width: 100%;
+display: flex;
 
-    flex: 1;
+position: relative;
 
-    min-height: 400px;
+padding: 30px 40px;
 
-    background-color: #ffffff;
-
-    overflow: hidden;
 }
 
-
 /* =========================================
-   TÍTULOS
-========================================= */
-
-h1 {
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: clamp(24px, 3vw, 30px);
-
-    font-weight: normal;
-
-    line-height: 1.25;
-
-    color: #111111;
-
-    text-align: center;
-}
-
-
-/* =========================================
-   RUTAS
+RUTAS
 ========================================= */
 
 .rutas {
-    position: absolute;
+width: 35%;
 
-    left: 0;
-    top: 5px;
+display: flex;
+flex-direction: column;
+align-items: center;
 
-    width: 190px;
-    height: calc(100% - 5px);
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
-.rutas h1 {
-    margin-bottom: 8px;
+.rutas h1,
+.conductores h1 {
+text-align: center;
+
+font-size: 28px;
+
+margin-bottom: 20px;
+
+color: #222;
+
 }
 
-
-/* =========================================
-   LISTA DE RUTAS
-========================================= */
+/* LISTA DE RUTAS */
 
 .lista-rutas {
-    width: 100%;
+width: 100%;
 
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
 
-    align-items: center;
+gap: 12px;
 
-    gap: 20px;
-
-    overflow: hidden;
 }
 
-
-/* =========================================
-   TARJETA DE RUTA
-========================================= */
+/* RUTA */
 
 .ruta {
-    width: 125px;
-    min-height: 38px;
+width: 100%;
 
-    padding: 5px 7px;
+min-height: 65px;
 
-    background-color: #bdbdbd;
+background: #e9e9e9;
 
-    border-radius: 3px;
+border-radius: 8px;
 
-    color: #222222;
+padding: 10px 15px;
 
-    font-family: Arial, Helvetica, sans-serif;
+display: flex;
+flex-direction: column;
 
-    overflow: hidden;
+justify-content: center;
+
+border-left: 5px solid #79cee0;
+
 }
 
 .ruta strong {
-    display: block;
+font-size: 17px;
 
-    font-size: 8px;
+color: #1689b2;
 
-    font-weight: normal;
+margin-bottom: 4px;
 
-    margin-bottom: 2px;
 }
 
 .ruta span {
-    display: block;
+font-size: 13px;
 
-    font-size: 7px;
+color: #333;
 
-    line-height: 1.35;
+line-height: 1.3;
+
 }
 
-
 /* =========================================
-   CONDUCTORES
+CONDUCTORES
 ========================================= */
 
 .conductores {
-    position: absolute;
+width: 35%;
 
-    left: 190px;
-    top: 5px;
+padding-left: 40px;
 
-    width: min(600px, calc(100% - 210px));
+display: flex;
+flex-direction: column;
 
-    height: calc(100% - 5px);
+align-items: center;
+
 }
 
-.conductores h1 {
-    width: 100%;
-
-    text-align: center;
-}
-
-
-/* =========================================
-   TARJETAS DE CONDUCTORES
-========================================= */
+/* CONDUCTOR */
 
 .conductor {
-    position: absolute;
+width: 100%;
 
-    display: flex;
+min-height: 115px;
 
-    align-items: flex-start;
+margin-bottom: 12px;
 
-    font-family: Arial, Helvetica, sans-serif;
+display: flex;
+align-items: center;
 
-    max-width: 240px;
+background: #f1f1f1;
+
+border-radius: 10px;
+
+padding: 10px;
+
+border-left: 5px solid #79cee0;
+
 }
 
-
-/* =========================================
-   FOTO DEL CONDUCTOR
-========================================= */
+/* IMAGEN */
 
 .conductor img {
-    flex-shrink: 0;
+width: 85px;
+height: 85px;
 
-    width: 42px;
-    height: 42px;
+object-fit: cover;
 
-    border-radius: 50%;
+border-radius: 50%;
 
-    object-fit: cover;
+margin-right: 18px;
 
-    background-color: #eeeeee;
 }
 
-
-/* =========================================
-   DATOS DEL CONDUCTOR
-========================================= */
-
-.datos {
-    margin-left: 8px;
-
-    color: #aaaaaa;
-}
+/* DATOS */
 
 .datos h2 {
-    font-family: Arial, Helvetica, sans-serif;
+font-size: 17px;
 
-    font-size: 14px;
+color: #1689b2;
 
-    font-weight: normal;
+margin-bottom: 7px;
 
-    line-height: 1.1;
-
-    color: #777777;
-
-    margin: 0 0 1px 0;
 }
 
 .datos p {
-    font-family: Arial, Helvetica, sans-serif;
+font-size: 13px;
 
-    font-size: 13px;
+color: #333;
 
-    line-height: 1.2;
+line-height: 1.3;
 
-    color: #b0b0b0;
-
-    margin: 0;
 }
 
-
 /* =========================================
-   POSICIONES DE CONDUCTORES
+PANEL DERECHO
 ========================================= */
 
-.conductor-1 {
-    top: 90px;
-    left: 4%;
-}
+.panel-derecho {
+width: 30%;
 
-.conductor-2 {
-    top: 175px;
-    left: 48%;
-}
+margin-left: 35px;
 
-.conductor-3 {
-    top: 275px;
-    left: 4%;
-}
+padding: 10px;
 
+background: #eeeeee;
+
+border-radius: 12px;
+
+height: fit-content;
+
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+}
 
 /* =========================================
-   PIE DE PÁGINA
+DESPLEGABLE
+========================================= */
+
+.desplegable {
+width: 100%;
+
+margin-bottom: 10px;
+
+background: #ffffff;
+
+border-radius: 8px;
+
+overflow: hidden;
+
+border: 1px solid #d5d5d5;
+
+}
+
+/* TITULO */
+
+.titulo-desplegable {
+width: 100%;
+
+padding: 15px;
+
+border: none;
+
+background: #79cee0;
+
+color: #ffffff;
+
+font-size: 17px;
+
+font-weight: bold;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+cursor: pointer;
+
+}
+
+.titulo-desplegable {
+background: #1689b2;
+}
+
+/* FLECHA */
+
+.flecha {
+transition: transform 0.3s ease;
+}
+
+/* CONTENIDO */
+
+.contenido-desplegable {
+display: none;
+
+padding: 10px 15px;
+
+background: #ffffff;
+
+}
+
+/* PARRAFOS */
+
+.contenido-desplegable p {
+padding: 9px 5px;
+
+border-bottom: 1px solid #eeeeee;
+
+font-size: 14px;
+
+color: #333;
+
+line-height: 1.3;
+
+}
+
+.contenido-desplegable p {
+border-bottom: none;
+}
+
+/* DESPLEGABLE ABIERTO */
+
+.desplegable.activo .contenido-desplegable {
+display: block;
+}
+
+.desplegable.activo .flecha {
+transform: rotate(180deg);
+}
+
+/* =========================================
+FECHA
+========================================= */
+
+.fecha {
+text-align: center;
+}
+
+#fecha-actual {
+font-weight: bold;
+
+color: #1689b2;
+
+border: none;
+
+}
+
+/* =========================================
+FOOTER
 ========================================= */
 
 .footer {
-    position: relative;
+position: absolute;
 
-    width: 100%;
-    height: 58px;
-    min-height: 58px;
+bottom: 0;
+left: 0;
 
-    background-color: #61c8dc;
+width: 100%;
+height: 70px;
 
-    overflow: hidden;
+background: #79cee0;
 
-    flex-shrink: 0;
+display: flex;
+
+align-items: center;
+justify-content: center;
+
 }
 
-
 /* =========================================
-   CÍRCULOS
+CÍRCULOS
 ========================================= */
 
 .circulo {
-    position: absolute;
+position: absolute;
 
-    background-color: #ff8527;
+width: 45px;
+height: 45px;
 
-    border-radius: 50%;
+border-radius: 50%;
 
-    pointer-events: none;
+background: #1689b2;
+
 }
-
-
-/* =========================================
-   CÍRCULO IZQUIERDO
-========================================= */
 
 .circulo-1 {
-    width: 220px;
-    height: 220px;
-
-    left: 260px;
-    top: -17px;
+left: 30px;
 }
-
-
-/* =========================================
-   CÍRCULO DERECHO
-========================================= */
 
 .circulo-2 {
-    width: 235px;
-    height: 235px;
-
-    right: -70px;
-    top: -60px;
+right: 30px;
 }
 
-
 /* =========================================
-   BOTÓN VOLVER
+BOTÓN VOLVER
 ========================================= */
 
 .volver {
-    position: absolute;
+position: absolute;
 
-    left: 10px;
-    top: 50%;
+right: 30px;
 
-    transform: translateY(-50%);
+width: 45px;
+height: 45px;
 
-    width: 30px;
-    height: 25px;
+border-radius: 50%;
 
-    border: none;
+border: none;
 
-    background: transparent;
+background: #27272e;
 
-    cursor: pointer;
+cursor: pointer;
 
-    z-index: 10;
 }
 
+/* FLECHA */
 
-/* =========================================
-   LÍNEA DE LA FLECHA
-========================================= */
+.volver span {
+position: absolute;
 
-.volver::before {
-    content: "";
+width: 13px;
+height: 13px;
 
-    position: absolute;
+border-left: 3px solid #ffffff;
+border-bottom: 3px solid #ffffff;
 
-    left: 2px;
-    top: 11px;
+transform: rotate(45deg);
 
-    width: 25px;
-    height: 2px;
+left: 17px;
+top: 14px;
 
-    background-color: #111111;
 }
 
-
 /* =========================================
-   PUNTA DE LA FLECHA
+RESPONSIVE
 ========================================= */
 
-.volver::after {
-    content: "";
+@media (max-width: 1100px) {
 
-    position: absolute;
-
-    left: 2px;
-    top: 5px;
-
-    width: 12px;
-    height: 12px;
-
-    border-left: 2px solid #111111;
-    border-bottom: 2px solid #111111;
-
-    transform: rotate(45deg);
+.contenido {
+    padding: 25px;
 }
 
+.rutas {
+    width: 33%;
+}
 
-/* =========================================
-   TABLET
-========================================= */
+.conductores {
+    width: 33%;
+    padding-left: 20px;
+}
+
+.panel-derecho {
+    width: 34%;
+    margin-left: 20px;
+}
+
+}
 
 @media (max-width: 800px) {
 
-    .header {
-        height: 70px;
-        min-height: 70px;
-    }
-
-
-    /* LOGO */
-
-    .logo {
-        width: 95px;
-        height: 70px;
-
-        border-bottom-right-radius: 60px;
-    }
-
-    .logo img {
-        width: 82px;
-
-        left: 4px;
-        top: -3px;
-    }
-
-
-    /* CONTENIDO */
-
-    .contenido {
-        min-height: 450px;
-    }
-
-
-    /* RUTAS */
-
-    .rutas {
-        width: 160px;
-    }
-
-    .ruta {
-        width: 115px;
-    }
-
-
-    /* CONDUCTORES */
-
-    .conductores {
-        left: 160px;
-
-        width: calc(100% - 175px);
-    }
-
-    .conductor {
-        max-width: 220px;
-    }
-
-    .conductor-1 {
-        left: 3%;
-    }
-
-    .conductor-2 {
-        left: 52%;
-    }
-
-    .conductor-3 {
-        left: 3%;
-    }
-
-
-    .datos h2 {
-        font-size: 13px;
-    }
-
-    .datos p {
-        font-size: 12px;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        height: 55px;
-        min-height: 55px;
-    }
-
-    .circulo-1 {
-        width: 190px;
-        height: 190px;
-
-        left: 35%;
-        top: -10px;
-    }
-
-    .circulo-2 {
-        width: 205px;
-        height: 205px;
-
-        right: -60px;
-        top: -55px;
-    }
+.pagina {
+    overflow-y: auto;
 }
 
+.contenido {
+    height: auto;
 
-/* =========================================
-   CELULAR
-========================================= */
+    flex-direction: column;
 
-@media (max-width: 600px) {
-
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-
-
-    .pagina {
-        min-height: 100vh;
-
-        overflow: hidden;
-    }
-
-
-    /* HEADER */
-
-    .header {
-        height: 70px;
-        min-height: 70px;
-    }
-
-
-    /* LOGO */
-
-    .logo {
-        width: 88px;
-        height: 70px;
-
-        border-bottom-right-radius: 55px;
-    }
-
-    .logo img {
-        width: 76px;
-
-        left: 4px;
-        top: -2px;
-    }
-
-
-    /* CONTENIDO */
-
-    .contenido {
-        min-height: 600px;
-
-        height: auto;
-
-        overflow: visible;
-
-        padding-bottom: 20px;
-
-        display: flex;
-        flex-direction: column;
-    }
-
-
-    /* RUTAS */
-
-    .rutas {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        width: 100%;
-        height: auto;
-
-        padding-top: 15px;
-    }
-
-    .rutas h1 {
-        margin-bottom: 15px;
-
-        font-size: 25px;
-    }
-
-    .lista-rutas {
-        gap: 12px;
-    }
-
-    .ruta {
-        width: min(190px, 60%);
-
-        min-height: 40px;
-
-        padding: 6px 8px;
-    }
-
-    .ruta strong {
-        font-size: 8px;
-
-        margin-bottom: 2px;
-    }
-
-    .ruta span {
-        font-size: 7px;
-
-        line-height: 1.3;
-    }
-
-
-    /* CONDUCTORES */
-
-    .conductores {
-        position: relative;
-
-        left: auto;
-        top: auto;
-
-        width: 100%;
-        height: auto;
-
-        margin-top: 25px;
-
-        padding: 0 15px;
-    }
-
-    .conductores h1 {
-        font-size: 25px;
-
-        margin-bottom: 20px;
-    }
-
-
-    /* CONDUCTORES EN COLUMNA */
-
-    .conductor {
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        width: 100%;
-        max-width: 350px;
-
-        margin: 0 auto 20px auto;
-
-        display: flex;
-
-        align-items: flex-start;
-    }
-
-    .conductor img {
-        width: 48px;
-        height: 48px;
-    }
-
-    .datos {
-        margin-left: 10px;
-
-        flex: 1;
-    }
-
-    .datos h2 {
-        font-size: 14px;
-
-        line-height: 1.15;
-    }
-
-    .datos p {
-        font-size: 12px;
-
-        line-height: 1.25;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        height: 65px;
-        min-height: 65px;
-    }
-
-    .volver {
-        left: 10px;
-    }
-
-    .circulo-1 {
-        width: 150px;
-        height: 150px;
-
-        left: 38%;
-        top: 15px;
-    }
-
-    .circulo-2 {
-        width: 160px;
-        height: 160px;
-
-        right: -45px;
-        top: -55px;
-    }
+    gap: 30px;
 }
 
+.rutas,
+.conductores,
+.panel-derecho {
+    width: 100%;
 
-/* =========================================
-   CELULAR PEQUEÑO
-========================================= */
+    padding-left: 0;
 
-@media (max-width: 390px) {
-
-    .header {
-        height: 65px;
-        min-height: 65px;
-    }
-
-
-    .logo {
-        width: 80px;
-        height: 65px;
-
-        border-bottom-right-radius: 50px;
-    }
-
-    .logo img {
-        width: 69px;
-
-        left: 3px;
-        top: -2px;
-    }
-
-
-    /* RUTAS */
-
-    .rutas {
-        padding-top: 12px;
-    }
-
-    .rutas h1 {
-        font-size: 23px;
-
-        margin-bottom: 13px;
-    }
-
-    .ruta {
-        width: 185px;
-
-        min-height: 38px;
-    }
-
-
-    /* CONDUCTORES */
-
-    .conductores {
-        margin-top: 22px;
-
-        padding: 0 12px;
-    }
-
-    .conductores h1 {
-        font-size: 23px;
-
-        margin-bottom: 18px;
-    }
-
-    .conductor {
-        max-width: 330px;
-
-        margin-bottom: 18px;
-    }
-
-    .conductor img {
-        width: 44px;
-        height: 44px;
-    }
-
-    .datos {
-        margin-left: 8px;
-    }
-
-    .datos h2 {
-        font-size: 13px;
-    }
-
-    .datos p {
-        font-size: 11px;
-    }
-
-
-    /* FOOTER */
-
-    .footer {
-        height: 60px;
-        min-height: 60px;
-    }
-
-    .circulo-1 {
-        width: 130px;
-        height: 130px;
-
-        left: 38%;
-        top: 15px;
-    }
-
-    .circulo-2 {
-        width: 140px;
-        height: 140px;
-
-        right: -40px;
-        top: -50px;
-    }
+    margin-left: 0;
 }
 
+.panel-derecho {
+    margin-bottom: 30px;
+}
 
-/* =========================================
-   CELULAR MUY PEQUEÑO
-========================================= */
+.footer {
+    position: relative;
+}
 
-@media (max-width: 330px) {
-
-    .header {
-        height: 60px;
-        min-height: 60px;
-    }
-
-    .logo {
-        width: 72px;
-        height: 60px;
-    }
-
-    .logo img {
-        width: 62px;
-    }
-
-
-    .rutas h1 {
-        font-size: 21px;
-    }
-
-    .ruta {
-        width: 175px;
-    }
-
-
-    .conductores h1 {
-        font-size: 21px;
-    }
-
-    .conductor {
-        max-width: 290px;
-    }
-
-    .conductor img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .datos h2 {
-        font-size: 12px;
-    }
-
-    .datos p {
-        font-size: 10px;
-    }
-
-
-    .footer {
-        height: 55px;
-        min-height: 55px;
-    }
-
-    .circulo-1 {
-        width: 115px;
-        height: 115px;
-
-        left: 37%;
-        top: 15px;
-    }
-
-    .circulo-2 {
-        width: 125px;
-        height: 125px;
-
-        right: -35px;
-        top: -45px;
-    }
 }

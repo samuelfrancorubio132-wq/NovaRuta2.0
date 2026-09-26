@@ -103,10 +103,9 @@ body {
 }
 
 .logo img {
-    width: 88px;
-    height: 88px;
-
-    object-fit: contain;
+   width: 90px; /* Cambia a tu medida deseada */
+  height: auto; /* Mantiene la proporción original */
+  object-fit: contain;
 }
 
 
@@ -1032,7 +1031,7 @@ body {
 @media screen and (max-width: 360px) {
 
     .header h1 {
-        font-size: 20px;
+        font-size: 100px;
     }
 
     .cerrar {
