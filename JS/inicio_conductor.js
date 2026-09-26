@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("password");
     const boton = document.querySelector("button");
 
-    boton.addEventListener("click", function (event) {
+    boton.addEventListener("click", function (event ) { 
 
         event.preventDefault();
 
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         if (valorCedula === "") {
-           
+
             cedula.focus();
             return;
         }
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (valorPlaca === "") {
-        
+
             placa.focus();
             return;
         }
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (valorPassword === "") {
-        
+
             password.focus();
             return;
         }
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         if (!/^\d+$/.test(valorCedula)) {
-          
+
             cedula.focus();
             return;
         }
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (!/^[A-Za-z0-9-]+$/.test(valorPlaca)) {
-           
+
             placa.focus();
             return;
         }
@@ -87,15 +87,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         Swal.fire({
-  title: "Good job!",
-  text: "ingresaste todos los datos correctamente",
-  icon: "success"
-});
+            title: "Good job!",
+            text: "ingresaste todos los datos correctamente",
+            icon: "success"
+            
+        });
 
         console.log("Cédula:", valorCedula);
         console.log("Placa:", valorPlaca.toUpperCase());
         console.log("Contraseña:", valorPassword);
-
+    
     });
 
 
