@@ -161,6 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: "Bienvenido a NovaRuta",
                     text: "Puedes continuar con el proceso.",
                     confirmButtonText: "Aceptar"
+                    
                 });
 
             }

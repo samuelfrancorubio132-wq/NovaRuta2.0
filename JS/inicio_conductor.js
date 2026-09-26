@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
             footer: "<a href=\"#\">Why do I have this issue?</a>"
         });
 
-        if (/^[A-Za-z0-9-]+$/.test(valorPlaca)) {
+        if (!/^[A-Za-z0-9-]+$/.test(valorPlaca)) {
            
             placa.focus();
             return;
