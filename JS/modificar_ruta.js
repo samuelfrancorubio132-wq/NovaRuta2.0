@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
     // Obtener los elementos de las rutas
@@ -8,94 +7,60 @@ document.addEventListener("DOMContentLoaded", function () {
     const botonRegresar = document.querySelector(".flecha");
     const iconoEditar = document.querySelector(".icono-editar");
 
+    // --- Botón Editar ---
     botonesEditar.forEach(function (boton, index) {
-
         boton.addEventListener("click", function (event) {
-
             event.stopPropagation();
 
             const ruta = rutas[index];
-            const informacion = ruta.querySelector(".ruta-info");
-
-            const nombre = informacion.querySelector("b");
+            const informacion = ruta.querySelector(".ruta-info"); // ✅ correcto
+            const nombre = informacion.querySelector("strong");   // nodo <strong>
             const datos = informacion.querySelectorAll("span");
 
             const nombreRuta = nombre.textContent;
             const ciudad = datos[0].textContent;
             const recorrido = datos[1].textContent;
 
-            const nuevoNombre = prompt(
-                "Ingresa el nombre de la ruta:",
-                nombreRuta
-            );
-
-            if (nuevoNombre === null) {
-                return;
-            }
-
-            if (nuevoNombre.trim() === "") {
+            const nuevoNombre = prompt("Ingresa el nombre de la ruta:", nombreRuta);
+            if (!nuevoNombre || nuevoNombre.trim() === "") {
                 alert("El nombre de la ruta no puede estar vacío.");
                 return;
             }
 
-
-            const nuevaCiudad = prompt(
-                "Ingresa la ciudad:",
-                ciudad
-            );
-
-            if (nuevaCiudad === null) {
-                return;
-            }
-
-            if (nuevaCiudad.trim() === "") {
+            const nuevaCiudad = prompt("Ingresa la ciudad:", ciudad);
+            if (!nuevaCiudad || nuevaCiudad.trim() === "") {
                 alert("La ciudad no puede estar vacía.");
                 return;
             }
 
-
-            const nuevoRecorrido = prompt(
-                "Ingresa el recorrido:",
-                recorrido
-            );
-
-            if (nuevoRecorrido === null) {
-                return;
-            }
-
-            if (nuevoRecorrido.trim() === "") {
+            const nuevoRecorrido = prompt("Ingresa el recorrido:", recorrido);
+            if (!nuevoRecorrido || nuevoRecorrido.trim() === "") {
                 alert("El recorrido no puede estar vacío.");
                 return;
             }
 
-
-            // Actualizar la información de la ruta
+            // ✅ Actualizar la información de la ruta
             nombre.textContent = nuevoNombre.toUpperCase();
             datos[0].textContent = nuevaCiudad.toUpperCase();
             datos[1].textContent = nuevoRecorrido.toUpperCase();
 
-
-            // Mostrar mensaje de confirmación
+            // Confirmación
             alert("La ruta se modificó correctamente.");
-
             console.log("Ruta:", nuevoNombre.toUpperCase());
             console.log("Ciudad:", nuevaCiudad.toUpperCase());
-            console.log("Recorrido:", nuevoRecorrido.toUpperCase());
-
+            console.log("Recorrido:", nuevoRecorrido);
         });
-
     });
 
+    // --- Botón Configuración ---
     botonesConfig.forEach(function (boton, index) {
-
         boton.addEventListener("click", function (event) {
-
             event.stopPropagation();
 
             const ruta = rutas[index];
             const informacion = ruta.querySelector(".ruta-info");
 
-            const nombre = informacion.querySelector("b").textContent;
+            const nombre = informacion.querySelector("strong").textContent;
             const ciudad = informacion.querySelectorAll("span")[0].textContent;
             const recorrido = informacion.querySelectorAll("span")[1].textContent;
 
@@ -105,16 +70,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 "Ciudad: " + ciudad + "\n" +
                 "Recorrido: " + recorrido
             );
-
         });
-
     });
 
-
+    // --- Selección de rutas ---
     rutas.forEach(function (ruta) {
-
         ruta.addEventListener("click", function () {
-
             rutas.forEach(function (otraRuta) {
                 otraRuta.classList.remove("seleccionada");
             });
@@ -122,39 +83,22 @@ document.addEventListener("DOMContentLoaded", function () {
             ruta.classList.add("seleccionada");
 
             const nombre = ruta.querySelector("b").textContent;
-
             console.log("Ruta seleccionada:", nombre);
-
         });
-
     });
 
-
+    // --- Botón regresar ---
     botonRegresar.addEventListener("click", function () {
-
-        const confirmar = confirm(
-            "¿Deseas regresar a la página anterior?"
-        );
-
+        const confirmar = confirm("¿Deseas regresar a la página anterior?");
         if (confirmar) {
-
             window.history.back();
-
         }
-
     });
 
-
+    // --- Icono editar ---
     iconoEditar.addEventListener("click", function () {
-
-        alert(
-            "Selecciona una ruta y presiona el botón ✎ para modificarla."
-        );
-
+        alert("Selecciona una ruta y presiona el botón ✎ para modificarla.");
     });
-
 
     console.log("Página de modificar ruta cargada correctamente.");
-
 });
-
