@@ -5,12 +5,18 @@
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 /* =========================================
    CONFIGURACIÓN GENERAL
 ========================================= */
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 * {
     margin: 0;
@@ -22,6 +28,7 @@ html,
 body {
     width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
     min-height: 100%;
 =======
 <<<<<<< HEAD
@@ -30,10 +37,14 @@ body {
     min-height: 100%;
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    min-height: 100%;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 }
 
 body {
     font-family: Georgia, "Times New Roman", serif;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -59,25 +70,41 @@ body {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .pagina {
     position: relative;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     width: 100vw;
     height: 100vh;
+=======
+    width: 100%;
+    min-height: 100vh;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
-    min-width: 600px;
-    min-height: 550px;
-
-    background-color: white;
+    background-color: #ffffff;
 
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
 }
 
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
@@ -100,12 +127,18 @@ body {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   ENCABEZADO
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .header {
     position: relative;
 
     width: 100%;
     height: 78px;
+<<<<<<< HEAD
 <<<<<<< HEAD
     min-height: 78px;
 =======
@@ -114,6 +147,9 @@ body {
     min-height: 78px;
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    min-height: 78px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     background-color: #7bd3e4;
 
@@ -122,6 +158,7 @@ body {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* =========================================
    LOGO
 ========================================= */
@@ -134,6 +171,11 @@ body {
 ========================================= */
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   LOGO
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .logo {
     position: absolute;
@@ -150,6 +192,7 @@ body {
 
     overflow: visible;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     z-index: 5;
 =======
@@ -159,11 +202,16 @@ body {
     z-index: 5;
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+
+    z-index: 5;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 }
 
 .logo img {
     position: absolute;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -185,11 +233,21 @@ body {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    left: 5px;
+    top: -4px;
+
+    width: 96px;
+    height: auto;
+
+    object-fit: contain;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     z-index: 5;
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* =========================================
    CONTENIDO PRINCIPAL
@@ -202,20 +260,35 @@ body {
 ========================================= */
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .contenido {
     position: relative;
 
     width: 100%;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     height: calc(100vh - 135px);
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
-    background-color: white;
+    flex: 1;
+
+    min-height: 400px;
+
+    background-color: #ffffff;
+
+    overflow: hidden;
 }
 
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
@@ -237,10 +310,16 @@ body {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   TÍTULOS
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 h1 {
     font-family: Georgia, "Times New Roman", serif;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     font-size: clamp(24px, 3vw, 30px);
 
@@ -252,6 +331,10 @@ h1 {
 
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    font-size: clamp(24px, 3vw, 30px);
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     font-weight: normal;
 
     line-height: 1.25;
@@ -262,6 +345,7 @@ h1 {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* =========================================
    RUTAS
@@ -274,6 +358,11 @@ h1 {
 ========================================= */
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   RUTAS
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .rutas {
     position: absolute;
@@ -282,17 +371,27 @@ h1 {
     top: 5px;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     width: 175px;
     height: 100%;
+=======
+    width: 190px;
+    height: calc(100% - 5px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 }
 
 .rutas h1 {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 
+<<<<<<< HEAD
 /* Lista */
 =======
 >>>>>>> main
@@ -316,6 +415,11 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   LISTA DE RUTAS
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .lista-rutas {
     width: 100%;
@@ -326,15 +430,24 @@ h1 {
     align-items: center;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     gap: 22px;
+=======
+    gap: 20px;
+
+    overflow: hidden;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 }
 
 
-
+/* =========================================
+   TARJETA DE RUTA
+========================================= */
 
 .ruta {
+<<<<<<< HEAD
     width: 117px;
     min-height: 35px;
 =======
@@ -356,6 +469,10 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    width: 125px;
+    min-height: 38px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     padding: 5px 7px;
 
@@ -367,6 +484,7 @@ h1 {
 
     font-family: Arial, Helvetica, sans-serif;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     overflow: hidden;
 =======
@@ -376,11 +494,16 @@ h1 {
     overflow: hidden;
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+
+    overflow: hidden;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 }
 
 .ruta strong {
     display: block;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     font-size: 8px;
 
@@ -392,6 +515,10 @@ h1 {
 
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    font-size: 8px;
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     font-weight: normal;
 
     margin-bottom: 2px;
@@ -400,6 +527,7 @@ h1 {
 .ruta span {
     display: block;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     font-size: 7px;
 
@@ -411,10 +539,15 @@ h1 {
 
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    font-size: 7px;
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     line-height: 1.35;
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* =========================================
    CONDUCTORES
@@ -428,21 +561,32 @@ h1 {
 ========================================= */
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   CONDUCTORES
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .conductores {
     position: absolute;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     left: 185px;
+=======
+    left: 190px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     top: 5px;
 
-    width: 410px;
-    height: 100%;
+    width: min(600px, calc(100% - 210px));
+
+    height: calc(100% - 5px);
 }
 
 .conductores h1 {
+<<<<<<< HEAD
     position: relative;
 
     margin-left: 0;
@@ -462,37 +606,53 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    width: 100%;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     text-align: center;
 }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 /* =========================================
    TARJETAS DE CONDUCTORES
 ========================================= */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 .conductor {
     position: absolute;
 
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     align-items: flex-start;
 
     font-family: Arial, Helvetica, sans-serif;
+
+    max-width: 240px;
 }
 
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> main
@@ -512,10 +672,16 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   FOTO DEL CONDUCTOR
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .conductor img {
     flex-shrink: 0;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 42px;
     height: 42px;
@@ -528,6 +694,10 @@ h1 {
     height: 42px;
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    width: 42px;
+    height: 42px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     border-radius: 50%;
 
@@ -537,6 +707,7 @@ h1 {
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -555,6 +726,14 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   DATOS DEL CONDUCTOR
+========================================= */
+
+.datos {
+    margin-left: 8px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     color: #aaaaaa;
 }
@@ -566,6 +745,7 @@ h1 {
     font-family: Arial, Helvetica, sans-serif;
 
     font-size: 14px;
+<<<<<<< HEAD
 =======
 >>>>>>> main
     margin: 0 0 2px 0;
@@ -578,6 +758,9 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     font-weight: normal;
 
     line-height: 1.1;
@@ -593,46 +776,46 @@ h1 {
 .datos p {
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.12;
+    line-height: 1.2;
 
     color: #b0b0b0;
 
     margin: 0;
 }
 
+
+/* =========================================
+   POSICIONES DE CONDUCTORES
+========================================= */
+
 .conductor-1 {
     top: 90px;
-    left: 17px;
+    left: 4%;
 }
-
-
-/* Samuel */
 
 .conductor-2 {
-    top: 170px;
-    left: 185px;
+    top: 175px;
+    left: 48%;
 }
-
-
-/* Jeyder */
 
 .conductor-3 {
-    top: 267px;
-    left: 17px;
+    top: 275px;
+    left: 4%;
 }
 
 
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
 
 .footer {
-    position: absolute;
-
-    left: 0;
-    bottom: 0;
+    position: relative;
 
     width: 100%;
     height: 58px;
+<<<<<<< HEAD
 =======
 >>>>>>> main
 }
@@ -684,10 +867,14 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    min-height: 58px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     background-color: #61c8dc;
 
     overflow: hidden;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -708,6 +895,16 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   CÍRCULOS
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .circulo {
     position: absolute;
@@ -715,6 +912,7 @@ h1 {
     background-color: #ff8527;
 
     border-radius: 50%;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -728,14 +926,24 @@ h1 {
 }
 
 
+=======
+
+    pointer-events: none;
+}
+
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 /* =========================================
    CÍRCULO IZQUIERDO
 ========================================= */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 .circulo-1 {
     width: 220px;
     height: 220px;
@@ -746,18 +954,24 @@ h1 {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 /* =========================================
    CÍRCULO DERECHO
 ========================================= */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 .circulo-2 {
     width: 235px;
     height: 235px;
@@ -768,22 +982,29 @@ h1 {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 /* =========================================
    BOTÓN VOLVER
 ========================================= */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 .volver {
     position: absolute;
 
     left: 10px;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -795,14 +1016,21 @@ h1 {
 >>>>>>> main
     top: 50%;
 
+=======
+    top: 50%;
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     transform: translateY(-50%);
 
     width: 30px;
     height: 25px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     border: none;
 
@@ -815,6 +1043,7 @@ h1 {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Línea de la flecha */
 =======
 <<<<<<< HEAD
@@ -822,12 +1051,18 @@ h1 {
 /* Línea de la flecha */
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   LÍNEA DE LA FLECHA
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .volver::before {
     content: "";
 
     position: absolute;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -845,12 +1080,19 @@ h1 {
 =======
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    left: 2px;
+    top: 11px;
+
+    width: 25px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     height: 2px;
 
     background-color: #111111;
 }
 
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /* Punta de la flecha */
 =======
@@ -859,12 +1101,18 @@ h1 {
 /* Punta de la flecha */
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+/* =========================================
+   PUNTA DE LA FLECHA
+========================================= */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
 .volver::after {
     content: "";
 
     position: absolute;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     left: 2px;
     top: 5px;
@@ -877,6 +1125,10 @@ h1 {
     top: 5px;
 >>>>>>> SamuelEmanuel
 >>>>>>> main
+=======
+    left: 2px;
+    top: 5px;
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     width: 12px;
     height: 12px;
@@ -886,10 +1138,13 @@ h1 {
 
     transform: rotate(45deg);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> main
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 }
 
 
@@ -981,13 +1236,19 @@ h1 {
         min-height: 55px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .circulo-1 {
         width: 190px;
         height: 190px;
 
         left: 35%;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
         top: -10px;
     }
 
@@ -996,7 +1257,10 @@ h1 {
         height: 205px;
 
         right: -60px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
         top: -55px;
     }
 }
@@ -1021,9 +1285,13 @@ h1 {
     }
 
 
+<<<<<<< HEAD
     /* =====================================
        HEADER
     ===================================== */
+=======
+    /* HEADER */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     .header {
         height: 70px;
@@ -1048,9 +1316,13 @@ h1 {
     }
 
 
+<<<<<<< HEAD
     /* =====================================
        CONTENIDO
     ===================================== */
+=======
+    /* CONTENIDO */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     .contenido {
         min-height: 600px;
@@ -1066,9 +1338,13 @@ h1 {
     }
 
 
+<<<<<<< HEAD
     /* =====================================
        RUTAS
     ===================================== */
+=======
+    /* RUTAS */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     .rutas {
         position: relative;
@@ -1082,19 +1358,28 @@ h1 {
         padding-top: 15px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .rutas h1 {
         margin-bottom: 15px;
 
         font-size: 25px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .lista-rutas {
         gap: 12px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .ruta {
         width: min(190px, 60%);
 
@@ -1116,9 +1401,13 @@ h1 {
     }
 
 
+<<<<<<< HEAD
     /* =====================================
        CONDUCTORES
     ===================================== */
+=======
+    /* CONDUCTORES */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     .conductores {
         position: relative;
@@ -1134,7 +1423,10 @@ h1 {
         padding: 0 15px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .conductores h1 {
         font-size: 25px;
 
@@ -1142,9 +1434,13 @@ h1 {
     }
 
 
+<<<<<<< HEAD
     /* =====================================
        CONDUCTORES EN COLUMNA
     ===================================== */
+=======
+    /* CONDUCTORES EN COLUMNA */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     .conductor {
         position: relative;
@@ -1162,27 +1458,39 @@ h1 {
         align-items: flex-start;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .conductor img {
         width: 48px;
         height: 48px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos {
         margin-left: 10px;
 
         flex: 1;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos h2 {
         font-size: 14px;
 
         line-height: 1.15;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos p {
         font-size: 12px;
 
@@ -1190,37 +1498,56 @@ h1 {
     }
 
 
+<<<<<<< HEAD
     /* =====================================
        FOOTER
     ===================================== */
+=======
+    /* FOOTER */
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 
     .footer {
         height: 65px;
         min-height: 65px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .volver {
         left: 10px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .circulo-1 {
         width: 150px;
         height: 150px;
 
         left: 38%;
+<<<<<<< HEAD
 
         top: 15px;
     }
 
 
+=======
+        top: 15px;
+    }
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .circulo-2 {
         width: 160px;
         height: 160px;
 
         right: -45px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
         top: -55px;
     }
 }
@@ -1245,7 +1572,10 @@ h1 {
         border-bottom-right-radius: 50px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .logo img {
         width: 69px;
 
@@ -1260,14 +1590,20 @@ h1 {
         padding-top: 12px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .rutas h1 {
         font-size: 23px;
 
         margin-bottom: 13px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .ruta {
         width: 185px;
 
@@ -1283,37 +1619,55 @@ h1 {
         padding: 0 12px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .conductores h1 {
         font-size: 23px;
 
         margin-bottom: 18px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .conductor {
         max-width: 330px;
 
         margin-bottom: 18px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .conductor img {
         width: 44px;
         height: 44px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos {
         margin-left: 8px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos h2 {
         font-size: 13px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos p {
         font-size: 11px;
     }
@@ -1326,23 +1680,35 @@ h1 {
         min-height: 60px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .circulo-1 {
         width: 130px;
         height: 130px;
 
         left: 38%;
+<<<<<<< HEAD
 
         top: 15px;
     }
 
 
+=======
+        top: 15px;
+    }
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .circulo-2 {
         width: 140px;
         height: 140px;
 
         right: -40px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
         top: -50px;
     }
 }
@@ -1359,13 +1725,19 @@ h1 {
         min-height: 60px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .logo {
         width: 72px;
         height: 60px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .logo img {
         width: 62px;
     }
@@ -1375,7 +1747,10 @@ h1 {
         font-size: 21px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .ruta {
         width: 175px;
     }
@@ -1385,23 +1760,35 @@ h1 {
         font-size: 21px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .conductor {
         max-width: 290px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .conductor img {
         width: 40px;
         height: 40px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos h2 {
         font-size: 12px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .datos p {
         font-size: 10px;
     }
@@ -1412,22 +1799,32 @@ h1 {
         min-height: 55px;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .circulo-1 {
         width: 115px;
         height: 115px;
 
         left: 37%;
+<<<<<<< HEAD
 
         top: 15px;
     }
 
 
+=======
+        top: 15px;
+    }
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
     .circulo-2 {
         width: 125px;
         height: 125px;
 
         right: -35px;
+<<<<<<< HEAD
 
         top: -45px;
     }
@@ -1436,3 +1833,8 @@ h1 {
 >>>>>>> SamuelEmanuel
 >>>>>>> main
 }
+=======
+        top: -45px;
+    }
+}
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162

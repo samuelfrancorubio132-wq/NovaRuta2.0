@@ -645,6 +645,12 @@ footer {
         left: calc(50% + 250px);
 
         transform: scale(0.85);
+<<<<<<< HEAD
+=======
+    
+    }
+}
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
 /* =========================================
    TABLET
 ========================================= */
@@ -691,7 +697,36 @@ footer {
         overflow-y: auto;
     }
 
+
+}
+    
+/* =========================================
+   TABLET PEQUEÑA
+========================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        height: 85px;
+        min-height: 85px;
+    }
+
+
+    .logo {
+        width: 130px;
+        height: 68px;
+
+        border-radius: 0 0 65px 65px;
+    }
+
+
+    .logo img {
+        width: 90px;
+    }
+
+
     main {
+<<<<<<< HEAD
     
     }
     
@@ -721,6 +756,8 @@ footer {
 
 
     main {
+=======
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
         min-height: calc(100vh - 190px);
 
         padding: 30px 20px;
@@ -818,7 +855,11 @@ footer {
 
         padding: 25px 18px 30px;
 
+<<<<<<< HEAD
 >>>>>>> SamuelEmanuel
+=======
+
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
         display: flex;
 
         flex-direction: column;

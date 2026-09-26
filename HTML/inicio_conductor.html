@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>NovaRuta - Conductor</title>
 
     <link rel="stylesheet" href="../css/inicio_conductor.css">
@@ -11,12 +12,34 @@
 
 <body>
 
-    <!-- Encabezado -->
+    <!-- =========================================
+         ENCABEZADO
+    ========================================== -->
     <header>
+
         <div class="logo">
 
             <span><img src="/img/Shape Set.png" alt=""></span>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+            <span><img src="../img/Shape Set.png" alt=""></span>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <span><img src="/img/Shape Set.png" alt=""></span>
+=======
+            <span><img src="../img/Shape Set.png" alt=""></span>
+>>>>>>> SamuelEmanuel
+=======
+            <span><img src="../img/Shape Set.png" alt=""></span>
+>>>>>>> SamuelEmanuel
+>>>>>>> main
+>>>>>>> SamuelEmanuel
+>>>>>>> ac8359c9fdb6e3a5e25accef061dfd3a0b20b162
             <div>
 
                 <strong>NovaRuta</strong>
@@ -24,50 +47,126 @@
                 Manizales
             </div>
         </div>
+
     </header>
 
-    <!-- Contenido principal -->
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
     <main>
 
+        <!-- FORMULARIO -->
         <section class="formulario">
 
             <h1>Conductor</h1>
 
+
+            <!-- CÉDULA -->
             <div class="campo">
-                <label for="cedula">Cédula</label>
-                <input type="text" id="cedula" placeholder="C.C.">
+
+                <label for="cedula">
+                    Cédula
+                </label>
+
+                <input
+                    type="text"
+                    id="cedula"
+                    name="cedula"
+                    placeholder="C.C."
+                    autocomplete="username"
+                >
+
             </div>
 
+
+            <!-- PLACA -->
             <div class="campo">
-                <label for="placa">Placa del Vehículo</label>
-                <input type="text" id="placa" placeholder="...">
+
+                <label for="placa">
+                    Placa del Vehículo
+                </label>
+
+                <input
+                    type="text"
+                    id="placa"
+                    name="placa"
+                    placeholder="..."
+                    autocomplete="off"
+                >
+
             </div>
 
+
+            <!-- CONTRASEÑA -->
             <div class="campo">
-                <label for="password">Contraseña</label>
-                <input type="password" id="password" placeholder="...">
+
+                <label for="password">
+                    Contraseña
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="..."
+                    autocomplete="current-password"
+                >
+
             </div>
 
-            <button>Continuar</button>
+
+            <!-- BOTÓN -->
+            <button type="button" id="btnContinuar">
+                Continuar
+            </button>
 
         </section>
 
-        <!-- Icono del bus -->
+
+        <!-- =========================================
+             ICONO DEL BUS
+        ========================================== -->
         <div class="bus">
-            <img src="../img/transporte-publico.png" alt="">
+
+            <img
+                src="../img/transporte-publico.png"
+                alt="Transporte público"
+            >
+
         </div>
 
     </main>
 
-    <!-- Pie de página -->
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================== -->
     <footer>
+
         <div class="decoracion"></div>
+
         <div class="decoracion derecha"></div>
+
+        <!-- Botón volver -->
+        <button
+            type="button"
+            class="volver"
+            aria-label="Volver"
+            id="btnVolver">
+        </button>
+
     </footer>
 
 
-<script src="../js/inicio_conductor.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="../js/inicio_conductor.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>

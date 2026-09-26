@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>NovaRuta - Conductor</title>
 
     <link rel="stylesheet" href="../css/inicio_conductor.css">
@@ -13,53 +14,101 @@
 
     <!-- Encabezado -->
     <header>
+
         <div class="logo">
-            <span><img src="/img/Shape Set.png" alt=""></span>
+
+            <span>
+                <img src="/img/Shape Set.png" alt="Logo NovaRuta">
+            </span>
+
             <div>
                 <strong>NovaRuta</strong>
                 <br>
                 Manizales
             </div>
+
         </div>
+
     </header>
+
 
     <!-- Contenido principal -->
     <main>
 
+        <!-- Formulario -->
         <section class="formulario">
 
             <h1>Reportar novedad</h1>
 
             <div class="campo">
+
                 <label for="cedula">Cédula</label>
-                <input type="text" id="cedula" placeholder="C.C.">
+
+                <input
+                    type="text"
+                    id="cedula"
+                    name="cedula"
+                    placeholder="C.C."
+                >
+
             </div>
 
+
             <div class="campo">
+
                 <label for="placa">Placa del Vehículo</label>
-                <input type="text" id="placa" placeholder="...">
+
+                <input
+                    type="text"
+                    id="placa"
+                    name="placa"
+                    placeholder="..."
+                >
+
             </div>
+
 
             <div class="campo">
+
                 <label for="password">Contraseña</label>
-                <input type="password" id="password" placeholder="...">
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="..."
+                >
+
             </div>
 
-            <button>Continuar</button>
+
+            <button type="button">
+                Continuar
+            </button>
 
         </section>
 
-        <!-- Icono del bus -->
+
+        <!-- Imagen del bus -->
         <div class="bus">
-            <img src="../img/transporte-publico.png" alt="">
+
+            <img
+                src="../img/transporte-publico.png"
+                alt="Transporte público"
+            >
+
         </div>
 
     </main>
 
+
     <!-- Pie de página -->
     <footer>
+
         <div class="decoracion"></div>
+
         <div class="decoracion derecha"></div>
+
     </footer>
 
 <script src="../js/reportar_novedad.js"></script>

@@ -14,7 +14,9 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+
     overflow: hidden;
+
     font-family: Arial, sans-serif;
 }
 
@@ -32,9 +34,6 @@ body {
 
     width: 100vw;
     height: 100vh;
-
-    min-width: 100%;
-    min-height: 100%;
 
     background: #fff;
 
@@ -63,7 +62,7 @@ body {
 
 
 /* =========================================
-   CÍRCULO NARANJA DEL LOGO
+   CÍRCULO LOGO
 ========================================= */
 
 .circulo-logo {
@@ -140,7 +139,7 @@ body {
 
 
 /* =========================================
-   BOTÓN CERRAR SESIÓN
+   CERRAR SESIÓN
 ========================================= */
 
 .cerrar {
@@ -180,6 +179,7 @@ body {
 
 .contenido {
     width: 100%;
+
     height: calc(100vh - 23vh - 13vh);
 
     min-height: 0;
@@ -225,7 +225,7 @@ body {
 
 
 /* =========================================
-   CADA RUTA
+   RUTA
 ========================================= */
 
 .ruta {
@@ -234,6 +234,7 @@ body {
     height: clamp(48px, 8vh, 65px);
 
     display: flex;
+
     align-items: center;
 
     margin-bottom: 2.5%;
@@ -258,6 +259,7 @@ body {
     color: #fff;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -266,11 +268,13 @@ body {
     font-size: clamp(9px, 1vw, 13px);
 
     white-space: nowrap;
+
+    flex-shrink: 0;
 }
 
 
 /* =========================================
-   INFORMACIÓN DE LA RUTA
+   DATOS
 ========================================= */
 
 .datos {
@@ -286,11 +290,14 @@ body {
     background: #d3d3d3;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
 
     overflow: hidden;
+
+    flex-shrink: 1;
 }
 
 
@@ -302,6 +309,8 @@ body {
     font-weight: normal;
 
     margin-bottom: 3px;
+
+    white-space: nowrap;
 }
 
 
@@ -327,6 +336,7 @@ body {
     border: none;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -337,7 +347,7 @@ body {
 
 
 /* =========================================
-   BOTÓN ACEPTAR
+   ACEPTAR
 ========================================= */
 
 .aceptar {
@@ -352,7 +362,7 @@ body {
 
 
 /* =========================================
-   BOTÓN ESPERAR
+   ESPERAR
 ========================================= */
 
 .esperar {
@@ -372,9 +382,6 @@ body {
     border-radius: 50%;
 }
 
-
-/* Manecilla vertical */
-
 .esperar span::before {
     content: "";
 
@@ -388,9 +395,6 @@ body {
     left: 10px;
     top: 4px;
 }
-
-
-/* Manecilla horizontal */
 
 .esperar span::after {
     content: "";
@@ -408,7 +412,7 @@ body {
 
 
 /* =========================================
-   BOTÓN CANCELAR
+   CANCELAR
 ========================================= */
 
 .cancelar {
@@ -439,7 +443,7 @@ body {
 
 
 /* =========================================
-   CAJA DE NOVEDAD
+   NOVEDAD
 ========================================= */
 
 .novedad {
@@ -458,7 +462,7 @@ body {
 
 
 /* =========================================
-   ICONO ALARMA
+   ALARMA
 ========================================= */
 
 .alarma {
@@ -519,7 +523,7 @@ body {
 
 
 /* =========================================
-   BOTÓN ENVIAR
+   ENVIAR
 ========================================= */
 
 .enviar {
@@ -589,7 +593,7 @@ body {
 
 
 /* =========================================
-   CÍRCULO NARANJA IZQUIERDO
+   CÍRCULO IZQUIERDO
 ========================================= */
 
 .naranja-izquierda {
@@ -609,7 +613,7 @@ body {
 
 
 /* =========================================
-   CÍRCULO NARANJA DERECHO
+   CÍRCULO DERECHO
 ========================================= */
 
 .naranja-derecha {
@@ -628,11 +632,11 @@ body {
 }
 
 
-/* =========================================
-   TABLETS
-========================================= */
+/* =================================================
+   TABLET
+================================================= */
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
 
     .header {
         height: 20vh;
@@ -642,13 +646,10 @@ body {
         height: calc(100vh - 20vh - 13vh);
     }
 
-    .footer {
-        height: 13vh;
-    }
-
     .panel-rutas {
         width: 68%;
         padding-left: 3%;
+        padding-right: 2%;
     }
 
     .panel-derecho {
@@ -656,14 +657,18 @@ body {
     }
 
     .hora {
-        min-width: 85px;
+        width: 24%;
+        min-width: 80px;
     }
 
     .datos {
         width: 29%;
+        margin-left: 2%;
     }
 
     .btn {
+        width: 36px;
+        height: 36px;
         margin-left: 1.5%;
     }
 
@@ -673,206 +678,305 @@ body {
 }
 
 
-/* =========================================
-   CELULARES
-========================================= */
+/* =================================================
+   TABLET PEQUEÑA / CELULAR HORIZONTAL
+================================================= */
 
-@media (max-width: 650px) {
+@media screen and (max-width: 700px) {
 
     .header {
-        height: 18vh;
-        min-height: 75px;
+        height: 17vh;
+        min-height: 80px;
     }
 
     .contenido {
-        height: calc(100vh - 18vh - 12vh);
+        height: calc(100vh - 17vh - 12vh);
     }
 
     .footer {
         height: 12vh;
-        min-height: 50px;
     }
 
-    .circulo-logo {
-        width: 120px;
-        height: 120px;
 
-        left: -58px;
+    /* Logo */
+
+    .circulo-logo {
+        width: 125px;
+        height: 125px;
+
+        left: -60px;
         top: -42px;
     }
 
     .logo {
-        width: 75px;
+        width: 80px;
         height: 70px;
 
-        left: 8px;
+        left: 7px;
         top: 5px;
     }
 
     .logo img {
-        width: 65px;
-        height: 65px;
+        width: 68px;
+        height: 68px;
     }
+
+
+    /* Título */
 
     .header h1 {
-        font-size: clamp(22px, 6vw, 30px);
+        font-size: 27px;
     }
 
+
+    /* Botón cerrar */
+
     .cerrar {
-        right: 3%;
-        width: 95px;
-        height: 28px;
+        width: 100px;
+        height: 30px;
+
         font-size: 10px;
     }
+
+
+    /* Panel */
 
     .panel-rutas {
         width: 100%;
 
         padding-left: 4%;
-        padding-right: 3%;
-    }
-
-    .panel-rutas h2 {
-        font-size: 25px;
+        padding-right: 4%;
+        padding-top: 4%;
     }
 
     .panel-derecho {
         display: none;
     }
 
-    .ruta {
-        height: 55px;
-        margin-bottom: 12px;
+
+    /* Título */
+
+    .panel-rutas h2 {
+        font-size: 27px;
+
+        margin-bottom: 20px;
     }
+
+
+    /* Ruta */
+
+    .ruta {
+        width: 100%;
+
+        height: 60px;
+
+        margin-bottom: 15px;
+
+        overflow: visible;
+    }
+
+
+    /* Hora */
 
     .hora {
-        width: 25%;
+        width: 27%;
         min-width: 85px;
-        font-size: 8px;
+
+        height: 60%;
+
+        font-size: 9px;
     }
 
+
+    /* Datos */
+
     .datos {
-        width: 32%;
-        height: 43px;
+        width: 33%;
+
+        height: 80%;
+
         margin-left: 2%;
+
+        padding-left: 3%;
     }
 
     .nombre-ruta {
-        font-size: 8px;
+        font-size: 9px;
     }
 
     .recorrido {
         font-size: 7px;
     }
 
+
+    /* Botones */
+
     .btn {
-        width: 35px;
-        height: 35px;
-        margin-left: 5px;
+        width: 38px;
+        height: 38px;
+
+        margin-left: 7px;
     }
 
     .aceptar {
-        font-size: 23px;
+        font-size: 24px;
     }
 
     .cancelar {
-        font-size: 27px;
+        font-size: 28px;
     }
+
+
+    /* Footer */
 
     .footer h2 {
         left: 4%;
-        font-size: 25px;
+        font-size: 26px;
     }
 
     .naranja-izquierda {
-        width: 170px;
-        height: 170px;
+        width: 175px;
+        height: 175px;
+
         left: 45%;
-        top: -5px;
+        top: -10px;
     }
 
     .naranja-derecha {
-        width: 170px;
-        height: 170px;
-        right: -55px;
-        top: -50px;
+        width: 175px;
+        height: 175px;
+
+        right: -60px;
+        top: -55px;
     }
 }
 
 
-/* =========================================
-   CELULARES PEQUEÑOS
-========================================= */
+/* =================================================
+   CELULAR
+================================================= */
 
-@media (max-width: 430px) {
+@media screen and (max-width: 500px) {
 
     .header {
-        height: 17vh;
+        height: 16vh;
+        min-height: 75px;
     }
 
     .contenido {
-        height: calc(100vh - 17vh - 11vh);
+        height: calc(100vh - 16vh - 11vh);
     }
 
     .footer {
         height: 11vh;
+        min-height: 50px;
+    }
+
+
+    /* Header */
+
+    .circulo-logo {
+        width: 110px;
+        height: 110px;
+
+        left: -53px;
+        top: -38px;
+    }
+
+    .logo {
+        width: 70px;
+        height: 60px;
+
+        left: 5px;
+        top: 4px;
+    }
+
+    .logo img {
+        width: 58px;
+        height: 58px;
     }
 
     .header h1 {
-        font-size: 21px;
+        font-size: 23px;
     }
 
     .cerrar {
         width: 85px;
-        height: 25px;
+        height: 27px;
+
+        right: 3%;
+
         font-size: 9px;
     }
 
+
+    /* Panel */
+
     .panel-rutas {
         padding-left: 3%;
-        padding-right: 2%;
+        padding-right: 3%;
+        padding-top: 5%;
     }
 
     .panel-rutas h2 {
-        font-size: 21px;
-        margin-bottom: 15px;
+        font-size: 23px;
+        margin-bottom: 18px;
     }
+
+
+    /* Rutas */
 
     .ruta {
-        height: 50px;
+        height: 55px;
+
+        margin-bottom: 13px;
     }
 
+
     .hora {
-        width: 25%;
+        width: 27%;
         min-width: 75px;
+
+        height: 58%;
+
         font-size: 7px;
     }
 
+
     .datos {
-        width: 30%;
-        height: 40px;
+        width: 31%;
+
+        height: 78%;
+
+        margin-left: 2%;
+
+        padding-left: 3%;
     }
 
     .nombre-ruta {
-        font-size: 7px;
+        font-size: 8px;
     }
 
     .recorrido {
         font-size: 6px;
     }
 
+
+    /* Botones */
+
     .btn {
-        width: 30px;
-        height: 30px;
-        margin-left: 4px;
+        width: 32px;
+        height: 32px;
+
+        margin-left: 5px;
     }
 
     .aceptar {
-        font-size: 20px;
+        font-size: 21px;
     }
 
     .cancelar {
-        font-size: 24px;
+        font-size: 25px;
     }
 
     .esperar span {
@@ -881,18 +985,102 @@ body {
     }
 
     .esperar span::before {
+        width: 2px;
+        height: 6px;
+
         left: 8px;
         top: 3px;
-        height: 6px;
     }
 
     .esperar span::after {
+        width: 6px;
+        height: 2px;
+
         left: 8px;
         top: 8px;
-        width: 6px;
+    }
+
+
+    /* Footer */
+
+    .footer h2 {
+        font-size: 22px;
+    }
+
+    .naranja-izquierda {
+        width: 150px;
+        height: 150px;
+
+        left: 45%;
+        top: -5px;
+    }
+
+    .naranja-derecha {
+        width: 150px;
+        height: 150px;
+
+        right: -55px;
+        top: -45px;
+    }
+}
+
+
+/* =================================================
+   CELULAR MUY PEQUEÑO
+================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .cerrar {
+        width: 78px;
+        height: 25px;
+
+        font-size: 8px;
+    }
+
+    .panel-rutas h2 {
+        font-size: 21px;
+    }
+
+    .hora {
+        width: 27%;
+        min-width: 68px;
+
+        font-size: 6px;
+    }
+
+    .datos {
+        width: 31%;
+    }
+
+    .nombre-ruta {
+        font-size: 7px;
+    }
+
+    .recorrido {
+        font-size: 5.5px;
+    }
+
+    .btn {
+        width: 29px;
+        height: 29px;
+
+        margin-left: 3px;
+    }
+
+    .aceptar {
+        font-size: 19px;
+    }
+
+    .cancelar {
+        font-size: 23px;
     }
 
     .footer h2 {
-        font-size: 21px;
+        font-size: 20px;
     }
 }

@@ -1,480 +1,1008 @@
-/* =====================================================
+/* =========================================
    CONFIGURACIÓN GENERAL
-   ===================================================== */
+========================================= */
 
 * {
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html,
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: white;
-  overflow: hidden;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-x: hidden;
 }
 
 
-/* =====================================================
+/* =========================================
    HEADER
-   ===================================================== */
+========================================= */
 
-header {
-  width: 100%;
-  height: 70px;
+.header {
+    width: 100%;
+    height: 100px;
+    min-height: 100px;
 
-  background: #B0D7F9;
+    background-color: #65c5d3;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
-  padding: 10px 20px;
+    position: relative;
 
-  position: relative;
-  z-index: 10;
+    flex-shrink: 0;
 }
+
+
+/* =========================================
+   LOGO
+========================================= */
 
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 165px;
+    height: 75px;
+
+    background-color: #ff8525;
+
+    border-radius: 0 0 75px 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    overflow: hidden;
 }
 
 .logo img {
-  width: 90px; /* Cambia a tu medida deseada */
-  height: auto; /* Mantiene la proporción original */
-  object-fit: contain;
+    width: 80px;
+    height: auto;
+
+    object-fit: contain;
+}
+
+.logo-text {
+    display: none;
 }
 
 
-/* Círculo del logo */
-.logo-circle {
-  width: 20px;
-  height: 20px;
-
-  background: #0B64C6;
-  border-radius: 50%;
-
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  margin-right: 10px;
-
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-
-/* Botón iniciar sesión */
+/* =========================================
+   BOTÓN INICIAR SESIÓN
+========================================= */
 
 .login-btn {
-  background: #27272E;
-  color: white;
+    margin: 25px 35px 0 20px;
 
-  padding: 8px 16px;
+    padding: 12px 25px;
 
-  border-radius: 6px;
-  border: none;
+    background-color: #292d35;
 
-  cursor: pointer;
+    color: #ffffff;
 
-  font-weight: 600;
+    text-decoration: none;
+
+    border-radius: 7px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .login-btn:hover {
-  background: #111118;
+    background-color: #ffffff;
+
+    color: #292d35;
+}
+
+.login-btn:active {
+    transform: scale(0.96);
 }
 
 
-/* =====================================================
+/* =========================================
    CONTENIDO PRINCIPAL
-   ===================================================== */
+========================================= */
 
-main {
-  width: 100%;
+.main-content {
+    width: 100%;
 
-  /* Ocupa exactamente el espacio debajo del header */
-  height: calc(100vh - 70px);
+    flex: 1;
 
-  display: flex;
+    min-height: 0;
 
-  padding: 15px 30px;
+    padding: 35px clamp(20px, 4vw, 60px) 120px;
 
-  gap: 30px;
+    display: grid;
 
-  position: relative;
-  z-index: 2;
+    grid-template-columns: minmax(320px, 0.9fr) minmax(400px, 1.5fr);
 
-  overflow: hidden;
+    gap: clamp(25px, 5vw, 70px);
+
+    align-items: stretch;
 }
 
 
-/* =====================================================
+/* =========================================
    COLUMNA IZQUIERDA
-   ===================================================== */
+========================================= */
 
 .left-column {
-  flex: 0 0 320px;
-  width: 320px;
-  min-width: 320px;
+    width: 100%;
 
-  display: flex;
-  flex-direction: column;
+    min-width: 0;
 
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  position: relative;
-  z-index: 10;
+    display: flex;
+    flex-direction: column;
 }
 
 
-
-/* Título */
+/* =========================================
+   TÍTULO
+========================================= */
 
 .title-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
 
-  margin-bottom: 25px;
+    align-items: center;
+    justify-content: center;
 
-  font-size: 24px;
-  font-weight: 700;
+    gap: 12px;
 
-  color: black;
+    margin-bottom: 25px;
 }
 
-.title-section svg {
-  margin-left: 10px;
+.title-section h1 {
+    font-family: Georgia, "Times New Roman", serif;
 
-  width: 24px;
-  height: 24px;
+    font-size: clamp(25px, 3vw, 42px);
 
-  fill: #FF9B03;
+    font-weight: normal;
+
+    line-height: 1.1;
+
+    color: #111827;
+
+    text-align: center;
+}
+
+.location-icon {
+    width: clamp(25px, 3vw, 38px);
+
+    height: clamp(25px, 3vw, 38px);
+
+    flex-shrink: 0;
+
+    fill: #111827;
 }
 
 
-/* =====================================================
-   BUSCADOR Y LEYENDA
-   ===================================================== */
+/* =========================================
+   BUSCADOR + LEYENDA
+========================================= */
 
 .search-legend {
-  display: flex;
-  flex-direction: column;
+    width: 100%;
 
-  width: 100%;
+    display: flex;
 
-  margin-bottom: 25px;
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
 }
+
+
+/* =========================================
+   BUSCADOR
+========================================= */
 
 .search-bar {
-  width: 100%;
-  max-width: none;
+    width: 100%;
 
-  display: flex;
-  align-items: center;
+    height: 48px;
 
-  background: #f7f7f7;
+    display: flex;
 
-  border-radius: 8px;
+    align-items: center;
 
-  padding: 8px 12px;
+    background-color: #a6a6a6;
+
+    border-radius: 7px;
+
+    overflow: hidden;
+
+    transition: box-shadow 0.2s ease;
 }
 
+.search-bar:focus-within {
+    box-shadow: 0 0 0 3px #65c5d3;
+}
 
 .search-bar input {
-  border: none;
+    width: 100%;
+    height: 100%;
 
-  background: transparent;
+    padding: 0 15px;
 
-  flex-grow: 1;
+    border: none;
 
-  font-size: 14px;
+    outline: none;
 
-  outline: none;
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 16px;
 }
 
-.search-bar svg {
-  width: 18px;
-  height: 18px;
+.search-bar input::placeholder {
+    color: #ffffff;
 
-  fill: #8b8b8b;
+    opacity: 1;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 14px;
+
+    flex-shrink: 0;
+
+    fill: #ffffff;
 }
 
 
-/* =====================================================
-   ESTADOS
-   ===================================================== */
+/* =========================================
+   LEYENDA
+========================================= */
 
 .status-legend {
-  display: flex;
+    display: flex;
 
-  justify-content: flex-start;
-  align-items: center;
+    justify-content: flex-end;
 
-  gap: 18px;
+    align-items: center;
 
-  margin-left: 0;
-  margin-top: 10px;
-
-  font-weight: 600;
-  font-size: 14px;
-
-  user-select: none;
+    gap: 25px;
 }
 
+.legend-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #222222;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
 
 .legend-dot {
-  width: 14px;
-  height: 14px;
+    width: 12px;
+    height: 12px;
 
-  border-radius: 50%;
+    border-radius: 50%;
 
-  display: inline-block;
-
-  margin-right: 6px;
-
-  vertical-align: middle;
+    display: inline-block;
 }
 
 .legend-active {
-  background: #04AA02;
+    background-color: #25c45b;
 }
 
 .legend-delay {
-  background: #FFD129;
+    background-color: #ff8525;
 }
 
 
-/* =====================================================
+/* =========================================
    LISTA DE RUTAS
-   ===================================================== */
+========================================= */
 
 .route-list {
-  display: flex;
+    width: 100%;
 
-  flex-direction: column;
+    display: flex;
 
-  gap: 14px;
+    flex-direction: column;
+
+    gap: 12px;
+
+    overflow-y: auto;
+
+    padding-right: 5px;
 }
 
+
+/* =========================================
+   TARJETAS DE RUTA
+========================================= */
+
 .route-card {
-  background: #e1e1e1;
+    width: 100%;
 
-  border-radius: 16px;
+    min-height: 65px;
 
-  padding: 14px 20px;
+    padding: 15px 45px 15px 18px;
 
-  font-size: 13px;
-  font-weight: 700;
+    position: relative;
 
-  color: #1f1f1f;
+    display: flex;
 
-  display: flex;
+    align-items: center;
 
-  justify-content: space-between;
-  align-items: center;
+    background-color: #e5e5e5;
 
-  cursor: pointer;
+    border-radius: 7px;
 
-  transition: 0.2s;
+    color: #222222;
+
+    font-size: clamp(13px, 1.4vw, 16px);
+
+    line-height: 1.35;
+
+    font-weight: bold;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .route-card:hover {
-  background: #d3d3d3;
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 }
 
+
+/* =========================================
+   ESTADO DE LA RUTA
+========================================= */
+
 .route-status {
-  width: 14px;
-  height: 14px;
+    position: absolute;
 
-  min-width: 14px;
+    right: 17px;
 
-  border-radius: 50%;
+    top: 50%;
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
 }
 
 .route-active {
-  background: #04AA02;
+    background-color: #25c45b;
 }
 
 .route-delay {
-  background: #FFD129;
+    background-color: #ff8525;
 }
 
 
-/* =====================================================
-   ÁREA DEL MAPA
-   ===================================================== */
+/* =========================================
+   MAPA
+========================================= */
 
 .map-area {
-  flex: 1;
-
-  min-width: 0;
-  min-height: 0;
-
-  height: 100%;
-
-  position: relative;
-
-  background: #d3e4f3;
-
-  border-radius: 24px 0 0 24px;
-
-  overflow: hidden;
-
-  z-index: 2;
-}
-
-
-
-/* =====================================================
-   IFRAME DEL MAPA
-   ===================================================== */
-
-.map-frame {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  border: none;
-
-  margin: 0;
-  padding: 0;
-
-  overflow: hidden;
-}
-
-
-/* =====================================================
-   FORMA NARANJA INFERIOR
-   ===================================================== */
-
-.bottom-shape {
-  position: fixed;
-
-  bottom: 0;
-  left: 0;
-
-  width: 100vw;
-  height: 150px;
-
-  background: #FF9B03;
-
-  border-radius: 80% 80% 0 0 / 100% 100% 0 0;
-
-  z-index: 1;
-
-  pointer-events: none;
-}
-
-
-/* =====================================================
-   FLECHA VOLVER
-   ===================================================== */
-
-.back-arrow {
-  position: fixed;
-
-  bottom: 20px;
-  left: 20px;
-
-  width: 30px;
-  height: 30px;
-
-  cursor: pointer;
-
-  fill: #1f1f1f;
-
-  z-index: 20;
-}
-
-
-/* =====================================================
-   RESPONSIVE
-   ===================================================== */
-
-@media (max-width: 900px) {
-
-  main {
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .left-column {
-  width: 320px;
-  min-width: 320px;
-
-  display: flex;
-  flex-direction: column;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  position: relative;
-  z-index: 5;
-}
-
-
-  .title-section {
-    font-size: 20px;
-  }
-
-}
-
-
-@media (max-width: 700px) {
-
-  body {
-    overflow: auto;
-  }
-
- main {
-  width: 100%;
-  height: calc(100vh - 70px);
-
-  display: flex;
-
-  padding: 15px 30px;
-
-  gap: 30px;
-
-  position: relative;
-  z-index: 2;
-
-  overflow: hidden;
-}
-
-
-  .left-column {
     width: 100%;
+
     min-width: 0;
-
-    overflow: visible;
-  }
-
-  .map-area {
-    width: 100%;
-    height: 500px;
 
     min-height: 500px;
 
-    border-radius: 24px;
-  }
+    display: flex;
+}
 
-  .bottom-shape {
-    height: 100px;
-  }
+.map-frame {
+    width: 100%;
+    height: 100%;
+
+    min-height: 500px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #eeeeee;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   FORMA INFERIOR
+========================================= */
+
+.bottom-shape {
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 75px;
+
+    background-color: #65c5d3;
+
+    clip-path: polygon(
+        0 45%,
+        20% 20%,
+        40% 50%,
+        60% 20%,
+        80% 45%,
+        100% 15%,
+        100% 100%,
+        0 100%
+    );
+
+    z-index: 2;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BOTÓN VOLVER
+========================================= */
+
+.back-button {
+    position: fixed;
+
+    left: 25px;
+    bottom: 20px;
+
+    width: 45px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 10;
+}
+
+.back-arrow {
+    width: 32px;
+    height: 32px;
+
+    fill: #111111;
+
+    transition: transform 0.2s ease;
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-4px);
+}
+
+
+/* =========================================
+   TABLET
+   1000px
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .main-content {
+        grid-template-columns: minmax(280px, 0.85fr) minmax(350px, 1.15fr);
+
+        gap: 30px;
+
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .login-btn {
+        margin-right: 25px;
+    }
+
+    .route-card {
+        font-size: 14px;
+    }
+
+    .map-frame {
+        min-height: 450px;
+    }
+}
+
+
+/* =========================================
+   TABLET PEQUEÑA
+   800px
+========================================= */
+
+@media (max-width: 800px) {
+
+    .header {
+        height: 85px;
+        min-height: 85px;
+    }
+
+    .logo {
+        width: 130px;
+        height: 68px;
+
+        border-radius: 0 0 65px 65px;
+    }
+
+    .logo img {
+        width: 75px;
+    }
+
+    .login-btn {
+        margin-top: 20px;
+        margin-right: 20px;
+
+        padding: 10px 18px;
+
+        font-size: 14px;
+    }
+
+
+    .main-content {
+        padding: 25px 20px 110px;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    .left-column {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+
+    .title-section {
+        margin-bottom: 20px;
+    }
+
+
+    .title-section h1 {
+        font-size: 34px;
+    }
+
+
+    .search-legend {
+        margin-bottom: 18px;
+    }
+
+
+    .route-list {
+        max-height: 360px;
+    }
+
+
+    .map-area {
+        width: 100%;
+
+        min-height: 400px;
+    }
+
+
+    .map-frame {
+        width: 100%;
+
+        height: 400px;
+
+        min-height: 400px;
+    }
+
+
+    .bottom-shape {
+        height: 70px;
+    }
+}
+
+
+/* =========================================
+   CELULAR
+   600px
+========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        height: 75px;
+        min-height: 75px;
+
+        align-items: flex-start;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        width: 105px;
+        height: 60px;
+
+        border-radius: 0 0 55px 55px;
+    }
+
+    .logo img {
+        width: 65px;
+    }
+
+
+    /* LOGIN */
+
+    .login-btn {
+        margin-top: 17px;
+        margin-right: 15px;
+
+        padding: 9px 13px;
+
+        border-radius: 6px;
+
+        font-size: 13px;
+    }
+
+
+    /* MAIN */
+
+    .main-content {
+        padding: 22px 15px 100px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+
+    /* TITLE */
+
+    .title-section {
+        gap: 7px;
+
+        margin-bottom: 18px;
+    }
+
+    .title-section h1 {
+        font-size: clamp(24px, 7vw, 32px);
+    }
+
+    .location-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    /* SEARCH */
+
+    .search-bar {
+        height: 45px;
+    }
+
+    .search-bar input {
+        font-size: 14px;
+
+        padding: 0 12px;
+    }
+
+    .search-icon {
+        width: 21px;
+        height: 21px;
+
+        margin-right: 12px;
+    }
+
+
+    /* LEGEND */
+
+    .status-legend {
+        justify-content: center;
+
+        gap: 20px;
+    }
+
+    .legend-item {
+        font-size: 12px;
+    }
+
+    .legend-dot {
+        width: 10px;
+        height: 10px;
+    }
+
+
+    /* ROUTES */
+
+    .route-list {
+        max-height: none;
+
+        overflow: visible;
+
+        gap: 10px;
+    }
+
+    .route-card {
+        min-height: 58px;
+
+        padding: 13px 40px 13px 14px;
+
+        font-size: 13px;
+    }
+
+    .route-status {
+        right: 13px;
+
+        width: 12px;
+        height: 12px;
+    }
+
+
+    /* MAP */
+
+    .map-area {
+        min-height: 350px;
+    }
+
+    .map-frame {
+        height: 350px;
+
+        min-height: 350px;
+
+        border-radius: 8px;
+    }
+
+
+    /* FOOTER */
+
+    .bottom-shape {
+        height: 65px;
+    }
+
+
+    /* BACK */
+
+    .back-button {
+        left: 12px;
+        bottom: 14px;
+
+        width: 40px;
+        height: 35px;
+    }
+
+    .back-arrow {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+
+/* =========================================
+   CELULAR PEQUEÑO
+   390px
+========================================= */
+
+@media (max-width: 390px) {
+
+    .header {
+        height: 68px;
+        min-height: 68px;
+    }
+
+
+    .logo {
+        width: 92px;
+        height: 55px;
+
+        border-radius: 0 0 48px 48px;
+    }
+
+    .logo img {
+        width: 58px;
+    }
+
+
+    .login-btn {
+        margin-top: 15px;
+        margin-right: 10px;
+
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+
+    .main-content {
+        padding: 20px 12px 90px;
+
+        gap: 20px;
+    }
+
+
+    .title-section {
+        gap: 5px;
+    }
+
+
+    .title-section h1 {
+        font-size: 22px;
+    }
+
+
+    .location-icon {
+        width: 21px;
+        height: 21px;
+    }
+
+
+    .search-bar {
+        height: 42px;
+    }
+
+
+    .search-bar input {
+        font-size: 13px;
+    }
+
+
+    .status-legend {
+        gap: 15px;
+    }
+
+
+    .legend-item {
+        font-size: 11px;
+    }
+
+
+    .route-card {
+        min-height: 55px;
+
+        padding: 12px 36px 12px 12px;
+
+        font-size: 12px;
+    }
+
+
+    .route-status {
+        right: 12px;
+
+        width: 11px;
+        height: 11px;
+    }
+
+
+    .map-area {
+        min-height: 300px;
+    }
+
+
+    .map-frame {
+        height: 300px;
+
+        min-height: 300px;
+    }
+
+
+    .bottom-shape {
+        height: 58px;
+    }
+
+
+    .back-button {
+        left: 8px;
+        bottom: 10px;
+    }
+}
+
+
+/* =========================================
+   CELULAR MUY PEQUEÑO
+   330px
+========================================= */
+
+@media (max-width: 330px) {
+
+    .logo {
+        width: 82px;
+        height: 50px;
+    }
+
+    .logo img {
+        width: 52px;
+    }
+
+
+    .login-btn {
+        margin-right: 8px;
+
+        padding: 7px 8px;
+
+        font-size: 11px;
+    }
+
+
+    .main-content {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    .title-section h1 {
+        font-size: 19px;
+    }
+
+
+    .location-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    .route-card {
+        font-size: 11px;
+
+        padding-left: 10px;
+        padding-right: 32px;
+    }
+
+
+    .map-frame {
+        height: 270px;
+
+        min-height: 270px;
+    }
+
+
+    .bottom-shape {
+        height: 52px;
+    }
 }
