@@ -243,25 +243,6 @@ position: relative;
 display: flex;
 align-items: center;
 justify-content: center;
-
-}
-
-/* =========================================
-DECORACIONES
-========================================= */
-
-.decoracion {
-position: absolute;
-
-left: 30px;
-
-width: 45px;
-height: 45px;
-
-border-radius: 50%;
-
-background: #1689b2;
-
 }
 
 .decoracion.derecha {

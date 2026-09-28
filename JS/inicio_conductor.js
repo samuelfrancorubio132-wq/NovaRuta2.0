@@ -1,104 +1,95 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-
-
-    const cedula = document.getElementById("cedula");
+    const cedula = document.getElementById("Cedula");
     const placa = document.getElementById("placa");
     const password = document.getElementById("password");
-    const boton = document.querySelector("button");
+    const boton = document.getElementById("btnguardar");
 
-    boton.addEventListener("click", function (event ) { 
+    // Validar que los elementos existan
+    if (!cedula || !placa || !password || !boton) {
+        console.error("Faltan elementos en el HTML");
+        return;
+    }
 
+    boton.addEventListener("click", function (event) { 
         event.preventDefault();
-
 
         const valorCedula = cedula.value.trim();
         const valorPlaca = placa.value.trim();
         const valorPassword = password.value.trim();
 
-
         if (valorCedula === "") {
-
             cedula.focus();
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Por favor ingrese un número de cédula válido"
+            });
             return;
         }
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "el valor de la cedula ingresada es incorrecta, por favor ingrese un valor valido",
-            footer: "<a href=\"#\">Why do I have this issue?</a>"
-        });
-
-        if (valorPlaca === "") {
-
-            placa.focus();
-            return;
-        }
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "el valor de la placa ingresado no existe en la base de dartos, por favor ingrese un valor valido",
-            footer: "<a href=\"#\">Why do I have this issue?</a>"
-        });
-
-        if (valorPassword === "") {
-
-            password.focus();
-            return;
-        }
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "el valor de la contraseña ingresada es incorrecta, por favor ingrese una contraseña correcta",
-            footer: "<a href=\"#\">Why do I have this issue?</a>"
-        });
-
 
         if (!/^\d+$/.test(valorCedula)) {
-
             cedula.focus();
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "La cédula solo debe contener números"
+            });
             return;
         }
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "el valor de la cedula ingresada es incorrecta, por favor ingrese un valor valido",
-            footer: "<a href=\"#\">Why do I have this issue?</a>"
-        });
+
+        if (valorPlaca === "") {
+            placa.focus();
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Por favor ingrese la placa del vehículo"
+            });
+            return;
+        }
 
         if (!/^[A-Za-z0-9-]+$/.test(valorPlaca)) {
-
             placa.focus();
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "La placa ingresada no es válida"
+            });
             return;
         }
-        Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "El valor de la placa ingresada es incorrecto. Por favor ingrese un valor valido",
-            footer: "<a href=\"#\">Why do I have this issue?</a>"
-        });
+
+        if (valorPassword === "") {
+            password.focus();
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Por favor ingrese una contraseña"
+            });
+            return;
+        }
 
         if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(valorPassword)) {
             password.focus();
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "La contraseña debe tener mínimo 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial"
+            });
             return;
         }
 
         placa.value = valorPlaca.toUpperCase();
 
-
         Swal.fire({
-            title: "Good job!",
-            text: "ingresaste todos los datos correctamente",
-            icon: "success"
-            
+            title: "¡Buen trabajo!",
+            text: "Ingresaste todos los datos correctamente.",
+            icon: "success",
+            confirmButtonText: "Continuar"
+        }).then(function () {
+            window.location.href = "rutas_asignadas.html";
         });
 
         console.log("Cédula:", valorCedula);
         console.log("Placa:", valorPlaca.toUpperCase());
         console.log("Contraseña:", valorPassword);
-    
     });
-
-
-
 });

@@ -72,7 +72,6 @@ height: 82px;
 display: flex;
 align-items: center;
 
-background-color: #ff8525;
 
 border-bottom-right-radius: 80px;
 
@@ -356,6 +355,46 @@ flex-shrink: 0;
 }
 
 /* =========================================
+BOTÓN VOLVER
+========================================= */
+
+.volver{
+position: absolute;
+
+right: 30px;
+
+width: 45px;
+height: 45px;
+
+border-radius: 50%;
+
+border: none;
+
+background: #27272e;
+
+cursor: pointer;
+
+}
+
+/* FLECHA */
+
+.volver span {
+position: absolute;
+
+width: 13px;
+height: 13px;
+
+border-left: 3px solid #ffffff;
+border-bottom: 3px solid #ffffff;
+
+transform: rotate(45deg);
+
+left: 17px;
+top: 14px;
+
+}
+
+/* =========================================
 DECORACIONES
 ========================================= */
 
@@ -368,7 +407,6 @@ height: 260px;
 left: 63%;
 top: -45px;
 
-background-color: #ff8525;
 
 border-radius: 50%;
 

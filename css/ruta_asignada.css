@@ -61,26 +61,6 @@ body {
 }
 
 
-/* =========================================
-   CÍRCULO LOGO
-========================================= */
-
-.circulo-logo {
-    position: absolute;
-
-    width: 150px;
-    height: 150px;
-
-    left: -71px;
-    top: -48px;
-
-    background: #ff8627;
-
-    border-radius: 50%;
-
-    z-index: 1;
-}
-
 
 /* =========================================
    LOGO
@@ -589,47 +569,6 @@ body {
 
     z-index: 5;
 }
-
-
-/* =========================================
-   CÍRCULO IZQUIERDO
-========================================= */
-
-.naranja-izquierda {
-    position: absolute;
-
-    width: 225px;
-    height: 225px;
-
-    left: 43%;
-
-    top: -10px;
-
-    background: #ff8627;
-
-    border-radius: 50%;
-}
-
-
-/* =========================================
-   CÍRCULO DERECHO
-========================================= */
-
-.naranja-derecha {
-    position: absolute;
-
-    width: 225px;
-    height: 225px;
-
-    right: -40px;
-
-    top: -63px;
-
-    background: #ff8627;
-
-    border-radius: 50%;
-}
-
 
 /* =================================================
    TABLET

@@ -89,7 +89,7 @@ body {
 
     border-radius: 50%;
 
-    background: #FF8625;
+    
 
     display: flex;
     justify-content: center;
@@ -248,81 +248,49 @@ body {
 /* =========================================
    FLECHA DE REGRESO
 ========================================= */
+.back{
+width: 45px;
+height: 45px;
 
-.back {
-    position: absolute;
+border: none;
 
-    left: 20px;
-    top: 50%;
+border-radius: 50%;
 
-    transform: translateY(-50%);
+background: #27272e;
 
-    width: 45px;
-    height: 45px;
+position: absolute;
 
-    border: none;
+right: 30px;
 
-    background: transparent;
+cursor: pointer;
 
-    color: #195965;
-
-    font-size: 34px;
-
-    line-height: 1;
-
-    padding: 0;
-
-    cursor: pointer;
-
-    z-index: 10;
 }
 
-.back:hover {
-    color: #0c3d46;
-}
+/* FLECHA */
 
+.back::before {
+content: "";
+
+position: absolute;
+
+width: 12px;
+height: 12px;
+
+border-left: 3px solid #ffffff;
+border-bottom: 3px solid #ffffff;
+
+transform: rotate(45deg);
+
+left: 17px;
+top: 14px;
+
+}
 
 /* =========================================
    CÍRCULOS NARANJAS
 ========================================= */
 
-.bubble {
-    position: absolute;
 
-    background: #FF8625;
-
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-
-/* =========================================
-   CÍRCULO IZQUIERDO
-========================================= */
-
-.bubble-1 {
-    width: 230px;
-    height: 230px;
-
-    left: 45%;
-
-    bottom: -175px;
-}
-
-
-/* =========================================
-   CÍRCULO DERECHO
-========================================= */
-
-.bubble-2 {
-    width: 200px;
-    height: 200px;
-
-    right: -55px;
-
-    bottom: -105px;
-}
 
 
 /* =========================================

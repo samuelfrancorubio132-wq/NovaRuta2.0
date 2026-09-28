@@ -261,32 +261,7 @@ font-weight: bold;
 CÍRCULOS DECORATIVOS
 ========================================= */
 
-.circulo {
-position: absolute;
 
-border-radius: 50%;
-
-}
-
-.circulo-1 {
-width: 45px;
-height: 45px;
-
-left: 30px;
-
-background: #ff8828;
-
-}
-
-.circulo-2 {
-width: 45px;
-height: 45px;
-
-right: 30px;
-
-background: #ff8828;
-
-}
 
 /* =========================================
 RESPONSIVE

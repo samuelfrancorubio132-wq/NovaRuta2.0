@@ -87,11 +87,9 @@ body {
 
 
 
-    background: #ff8828;
+    
 
-    border-right: 3px solid #7835f0;
-    border-bottom: 3px solid #7835f0;
-
+   
     overflow: hidden;
 
     z-index: 5;
@@ -452,37 +450,7 @@ body {
    CÍRCULOS
 ========================================================= */
 
-.circulo {
-    position: absolute;
 
-    z-index: 3;
-
-    background: #ff8828;
-
-    border-radius: 50%;
-}
-
-
-/* Círculo derecho */
-
-.circulo-1 {
-    width: 155px;
-    height: 155px;
-
-    right: -35px;
-    top: -105px;
-}
-
-
-/* Círculo central */
-
-.circulo-2 {
-    width: 155px;
-    height: 155px;
-
-    left: 43.5%;
-    top: -25px;
-}
 
 
 /* =========================================================
@@ -945,21 +913,7 @@ body {
         font-size: 32px;
     }
 
-    .circulo-1 {
-        width: 125px;
-        height: 125px;
-
-        right: -42px;
-        top: -65px;
-    }
-
-    .circulo-2 {
-        width: 125px;
-        height: 125px;
-
-        left: 43%;
-        top: -16px;
-    }
+   
 }
 
 

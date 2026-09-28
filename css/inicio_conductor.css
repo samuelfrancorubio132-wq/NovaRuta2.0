@@ -59,8 +59,6 @@ header {
     width: 165px;
     height: 75px;
 
-    background-color: #ff8525;
-
     border-radius: 0 0 75px 75px;
 
     display: flex;
@@ -325,8 +323,6 @@ footer {
     left: 63%;
     top: -45px;
 
-    background-color: #ff8525;
-
     border-radius: 50%;
 
     pointer-events: none;
@@ -346,66 +342,43 @@ footer {
 /* =========================================
    BOTÓN VOLVER
 ========================================= */
+.volver{
+width: 45px;
+height: 45px;
 
-.volver {
-    position: absolute;
+border: none;
 
-    left: 25px;
-    top: 50%;
+border-radius: 50%;
 
-    width: 45px;
-    height: 35px;
+background: #27272e;
 
-    padding: 0;
+position: absolute;
 
-    border: none;
+right: 30px;
 
-    background: transparent;
+cursor: pointer;
 
-    cursor: pointer;
-
-    transform: translateY(-50%);
-
-    z-index: 20;
 }
 
-
-/* Línea de la flecha */
+/* FLECHA */
 
 .volver::before {
-    content: "";
+content: "";
 
-    position: absolute;
+position: absolute;
 
-    left: 2px;
-    top: 16px;
+width: 12px;
+height: 12px;
 
-    width: 35px;
-    height: 2px;
+border-left: 3px solid #ffffff;
+border-bottom: 3px solid #ffffff;
 
-    background-color: #111111;
+transform: rotate(45deg);
+
+left: 17px;
+top: 14px;
+
 }
-
-
-/* Punta de la flecha */
-
-.volver::after {
-    content: "";
-
-    position: absolute;
-
-    left: 2px;
-    top: 8px;
-
-    width: 15px;
-    height: 15px;
-
-    border-left: 2px solid #111111;
-    border-bottom: 2px solid #111111;
-
-    transform: rotate(45deg);
-}
-
 
 /* =========================================
    TABLET
