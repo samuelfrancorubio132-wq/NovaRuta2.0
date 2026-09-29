@@ -18,10 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const valorPassword = password.value.trim();
 
 
-        // ==========================================
-        // VALIDAR CORREO VACÍO
-        // ==========================================
-
         if (valorCorreo === "") {
 
             correo.focus();
@@ -36,10 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-
-        // ==========================================
-        // VALIDAR CORREO
-        // ==========================================
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valorCorreo)) {
 
@@ -56,10 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // VALIDAR CONTRASEÑA VACÍA
-        // ==========================================
-
         if (valorContrasena === "") {
 
             contrasena.focus();
@@ -75,9 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // VALIDAR CONTRASEÑA
-        // ==========================================
 
         if (valorContrasena.length < 6) {
 
@@ -94,9 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // VALIDAR LLAVE DE ACCESO VACÍA
-        // ==========================================
 
         if (valorPassword === "") {
 
@@ -113,9 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // VALIDACIÓN CORRECTA
-        // ==========================================
 
         Swal.fire({
             title: "¡Buen trabajo!",
@@ -124,16 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
             confirmButtonText: "Continuar"
         }).then(function () {
 
-            // ==========================================
-            // REDIRECCIÓN
-            // ==========================================
 
             window.location.href = "bienvenido_administrador.html";
 
         });
 
 
-        // Mostrar datos en consola
         console.log("Correo:", valorCorreo);
         console.log("Contraseña:", valorContrasena);
         console.log("Llave de acceso:", valorPassword);

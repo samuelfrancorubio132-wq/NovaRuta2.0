@@ -1,8 +1,6 @@
 
-// Esperar a que cargue completamente la página
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Obtener los elementos de la página
     const rutas = document.querySelectorAll(".ruta");
     const botonesAceptar = document.querySelectorAll(".aceptar");
     const botonesEsperar = document.querySelectorAll(".esperar");
@@ -14,13 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const campoNovedad = document.querySelector(".novedad textarea");
 
 
-    // Variable para saber qué ruta está activa
     let rutaSeleccionada = null;
 
 
-    // ==========================================
-    // ACEPTAR RUTA
-    // ==========================================
 
     botonesAceptar.forEach(function (boton, index) {
 
@@ -29,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
             event.stopPropagation();
 
 
-            // Obtener información de la ruta
             const ruta = rutas[index];
 
             const nombre =
@@ -44,7 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     .trim();
 
 
-            // Confirmación
             Swal.fire({
                 icon: "question",
                 title: "¿Aceptar ruta?",
@@ -60,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (resultado.isConfirmed) {
 
-                    // Quitar estado anterior
                     rutas.forEach(function (otraRuta) {
 
                         otraRuta.classList.remove("ruta-activa");
@@ -68,13 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
 
 
-                    // Marcar ruta seleccionada
                     ruta.classList.add("ruta-activa");
 
                     rutaSeleccionada = index;
 
 
-                    // Mostrar mensaje
                     Swal.fire({
                         icon: "success",
                         title: "Ruta aceptada",
@@ -95,10 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
-    // ==========================================
-    // PONER RUTA EN ESPERA
-    // ==========================================
 
     botonesEsperar.forEach(function (boton, index) {
 
@@ -121,7 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-            // Quitar selección anterior
             rutas.forEach(function (otraRuta) {
 
                 otraRuta.classList.remove("ruta-activa");
@@ -129,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
 
-            // Marcar como espera
             ruta.classList.add("ruta-espera");
 
 
@@ -139,10 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
-    // ==========================================
-    // CANCELAR RUTA
-    // ==========================================
 
     botonesCancelar.forEach(function (boton, index) {
 
@@ -157,7 +136,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 ruta.querySelector(".nombre-ruta").textContent.trim();
 
 
-            // Preguntar antes de cancelar
             Swal.fire({
                 icon: "warning",
                 title: "¿Cancelar ruta?",
@@ -194,10 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // SELECCIONAR UNA RUTA
-    // ==========================================
-
     rutas.forEach(function (ruta, index) {
 
         ruta.addEventListener("click", function () {
@@ -212,7 +186,6 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Ruta seleccionada:", nombre);
 
 
-            // Mostrar información de la ruta
             Swal.fire({
                 icon: "info",
                 title: nombre,
@@ -227,16 +200,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // REPORTAR NOVEDAD
-    // ==========================================
-
     botonEnviar.addEventListener("click", function () {
 
         const novedad = campoNovedad.value.trim();
 
 
-        // Validar campo vacío
         if (novedad === "") {
 
             Swal.fire({
@@ -252,8 +220,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
 
-
-        // Mostrar confirmación
         Swal.fire({
             icon: "question",
             title: "¿Enviar novedad?",
@@ -268,7 +234,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log("Novedad reportada:", novedad);
 
 
-                // Mostrar mensaje de éxito
                 Swal.fire({
                     icon: "success",
                     title: "Novedad enviada",
@@ -277,7 +242,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
 
-                // Limpiar textarea
                 campoNovedad.value = "";
 
             }
@@ -286,10 +250,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
-    // ==========================================
-    // CERRAR SESIÓN
-    // ==========================================
 
     botonCerrar.addEventListener("click", function () {
 
@@ -311,10 +271,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     confirmButtonText: "Aceptar"
                 }).then(function () {
 
-                    // Aquí puedes colocar posteriormente
-                    // la página de inicio de sesión.
-                    //
-                    // window.location.href = "inicio.html";
 
                     console.log("Sesión cerrada.");
 
@@ -327,9 +283,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // ESCRIBIR NOVEDAD
-    // ==========================================
 
     campoNovedad.addEventListener("input", function () {
 
@@ -341,9 +294,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // MENSAJE EN CONSOLA
-    // ==========================================
 
     console.log(
         "Página de rutas asignadas cargada correctamente."

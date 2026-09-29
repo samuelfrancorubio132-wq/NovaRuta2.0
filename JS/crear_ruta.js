@@ -1,5 +1,4 @@
 
-// Esperar a que cargue completamente la página
 document.addEventListener("DOMContentLoaded", function () {
 
     // Obtener los elementos del formulario
@@ -13,26 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const botonVolver = document.querySelector(".volver");
 
 
-    // ==========================================
-    // ACCIÓN AL PRESIONAR "CONTINUAR"
-    // ==========================================
 
     formulario.addEventListener("submit", function (event) {
 
-        // Evitar que el formulario se envíe
         event.preventDefault();
 
 
-        // Obtener los valores escritos
         const valorNumero = numero.value.trim();
         const valorParaderos = paraderos.value.trim();
         const valorDestinoInicial = destinoInicial.value.trim();
         const valorDestinoFinal = destinoFinal.value.trim();
 
-
-        // ==========================================
-        // VALIDAR NÚMERO DE RUTA
-        // ==========================================
 
         if (valorNumero === "") {
 
@@ -49,7 +39,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Validar que el número solamente tenga números
         if (!/^[0-9]+$/.test(valorNumero)) {
 
             Swal.fire({
@@ -65,9 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // VALIDAR PARADEROS
-        // ==========================================
 
         if (valorParaderos === "") {
 
@@ -84,10 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // VALIDAR DESTINO INICIAL
-        // ==========================================
-
         if (valorDestinoInicial === "") {
 
             Swal.fire({
@@ -102,10 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-
-        // ==========================================
-        // VALIDAR DESTINO FINAL
-        // ==========================================
 
         if (valorDestinoFinal === "") {
 
@@ -122,9 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // VALIDAR QUE LOS DESTINOS SEAN DIFERENTES
-        // ==========================================
 
         if (
             valorDestinoInicial.toLowerCase() ===
@@ -144,9 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // ==========================================
-        // CONVERTIR DATOS A MAYÚSCULAS
-        // ==========================================
 
         numero.value = valorNumero;
 
@@ -159,9 +131,6 @@ document.addEventListener("DOMContentLoaded", function () {
             valorDestinoFinal.toUpperCase();
 
 
-        // ==========================================
-        // CONFIRMACIÓN DE CREACIÓN
-        // ==========================================
 
         Swal.fire({
             icon: "question",
@@ -177,10 +146,8 @@ document.addEventListener("DOMContentLoaded", function () {
             cancelButtonText: "Cancelar"
         }).then(function (resultado) {
 
-            // Si el usuario confirma
             if (resultado.isConfirmed) {
 
-                // Mostrar mensaje de éxito
                 Swal.fire({
                     icon: "success",
                     title: "Ruta creada",
@@ -188,14 +155,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     confirmButtonText: "Aceptar"
                 }).then(function () {
 
-                    // Mostrar información en consola
                     console.log("Número de ruta:", numero.value);
                     console.log("Paraderos:", paraderos.value);
                     console.log("Destino inicial:", destinoInicial.value);
                     console.log("Destino final:", destinoFinal.value);
 
 
-                    // Limpiar formulario
                     formulario.reset();
 
                 });
@@ -207,9 +172,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // CONVERTIR PARADEROS A MAYÚSCULAS
-    // ==========================================
 
     paraderos.addEventListener("input", function () {
 
@@ -219,9 +181,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // CONVERTIR DESTINO INICIAL A MAYÚSCULAS
-    // ==========================================
 
     destinoInicial.addEventListener("input", function () {
 
@@ -231,9 +190,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // CONVERTIR DESTINO FINAL A MAYÚSCULAS
-    // ==========================================
 
     destinoFinal.addEventListener("input", function () {
 
@@ -243,9 +199,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // PERMITIR SOLAMENTE NÚMEROS EN RUTA
-    // ==========================================
 
     numero.addEventListener("input", function () {
 
@@ -255,9 +208,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // BOTÓN VOLVER
-    // ==========================================
 
     botonVolver.addEventListener("click", function () {
 
@@ -281,9 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // MENSAJES DE CONSOLA
-    // ==========================================
 
     numero.addEventListener("focus", function () {
 
@@ -313,9 +260,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // ==========================================
-    // MENSAJE DE CARGA
-    // ==========================================
 
     console.log("Página Crear ruta cargada correctamente.");
 

@@ -12,9 +12,6 @@
 
 <body>
 
-    <!-- =========================================
-         ENCABEZADO
-    ========================================== -->
     <header>
 
         <div class="logo">
@@ -27,97 +24,62 @@
     </header>
 
 
-    <!-- =========================================
-         CONTENIDO PRINCIPAL
-    ========================================== -->
     <main>
 
-        <!-- FORMULARIO -->
         <section class="formulario">
 
             <h1>Conductor</h1>
 
 
-            <!-- CÉDULA -->
             <div class="campo">
 
                 <label for="cedula">
                     Cédula
                 </label>
 
-                <input
-                    type="text"
-                    id="Cedula"
-                    name="cedula"
-                    placeholder="C.C."
-                    autocomplete="username"
-                >
+                <input type="text" id="Cedula" name="cedula" placeholder="C.C." autocomplete="username">
 
             </div>
 
 
-            <!-- PLACA -->
             <div class="campo">
 
                 <label for="placa">
                     Placa del Vehículo
                 </label>
 
-                <input
-                    type="text"
-                    id="placa"
-                    name="placa"
-                    placeholder="..."
-                    autocomplete="off"
-                >
+                <input type="text" id="placa" name="placa" placeholder="..." autocomplete="off">
 
             </div>
 
 
-            <!-- CONTRASEÑA -->
             <div class="campo">
 
                 <label for="Password">
                     Contraseña
                 </label>
 
-                <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="..."
-                    autocomplete="current-password"
-                >
+                <input type="password" id="password" name="password" placeholder="..." autocomplete="current-password">
 
             </div>
 
 
-            <!-- BOTÓN -->
             <button type="button" id="btnguardar">Continuar</button>
-               
-         
+
+
 
         </section>
 
 
-        <!-- =========================================
-             ICONO DEL BUS
-        ========================================== -->
         <div class="bus">
 
-            <img
-                src="../img/transporte-publico.png"
-                alt="Transporte público"
-            >
+            <img src="../img/transporte-publico.png" alt="Transporte público">
 
         </div>
 
     </main>
 
 
-    <!-- =========================================
-         PIE DE PÁGINA
-    ========================================== -->
     <footer>
 
         <div class="decoracion"></div>
@@ -125,24 +87,16 @@
         <div class="decoracion derecha"></div>
 
         <!-- Botón volver -->
-        <button
-            
-            type="button"
-            class="volver"
-            aria-label="Volver"
-            id="btnguardar"
+        <button type="button" class="volver" aria-label="Volver" id="btnguardar"
             onclick="window.location.href='comoinciar.html'">
-        
+
         </button>
 
     </footer>
 
 
-    <!-- =========================================
-         JAVASCRIPT
-    ========================================== -->
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/inicio_conductor.js"></script>

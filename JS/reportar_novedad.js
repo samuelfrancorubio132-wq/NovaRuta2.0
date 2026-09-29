@@ -1,5 +1,4 @@
 
-// Esperar a que cargue completamente la página
 document.addEventListener("DOMContentLoaded", function () {
 
     // Obtener los elementos del formulario
@@ -9,19 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const boton = document.querySelector("button");
 
 
-    // Acción al presionar "Continuar"
     boton.addEventListener("click", function (event) {
 
         event.preventDefault();
 
 
-        // Obtener los valores escritos
         const valorCedula = cedula.value.trim();
         const valorPlaca = placa.value.trim();
         const valorPassword = password.value.trim();
 
 
-        // Validar cédula vacía
         if (valorCedula === "") {
 
             Swal.fire({
@@ -37,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Validar placa vacía
         if (valorPlaca === "") {
 
             Swal.fire({
@@ -53,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Validar contraseña vacía
         if (valorPassword === "") {
 
             Swal.fire({
@@ -69,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Validar que la cédula solamente tenga números
         if (!/^[0-9]+$/.test(valorCedula)) {
 
             Swal.fire({
@@ -85,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Validar longitud de la cédula
         if (valorCedula.length < 6 || valorCedula.length > 10) {
 
             Swal.fire({
@@ -101,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Validar placa
         if (!/^[A-Za-z0-9-]+$/.test(valorPlaca)) {
 
             Swal.fire({
@@ -117,11 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Convertir placa a mayúsculas
         placa.value = valorPlaca.toUpperCase();
 
 
-        // Validar formato de placa
         if (placa.value.length < 5 || placa.value.length > 7) {
 
             Swal.fire({
@@ -137,7 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        // Si todos los datos son correctos
         Swal.fire({
             icon: "success",
             title: "Datos correctos",
@@ -147,21 +135,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (resultado.isConfirmed) {
 
-                // Mostrar los datos en consola
                 console.log("Cédula:", valorCedula);
                 console.log("Placa:", placa.value);
                 console.log("Contraseña:", valorPassword);
 
 
-                // Aquí posteriormente puedes enviar
-                // los datos a otra página o base de datos.
 
                 Swal.fire({
                     icon: "info",
                     title: "Bienvenido a NovaRuta",
                     text: "Puedes continuar con el proceso.",
                     confirmButtonText: "Aceptar"
-                    
+
                 });
 
             }
@@ -171,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Convertir automáticamente la placa a mayúsculas
     placa.addEventListener("input", function () {
 
         placa.value = placa.value.toUpperCase();
@@ -179,7 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Permitir solamente números en la cédula
     cedula.addEventListener("input", function () {
 
         cedula.value = cedula.value.replace(/[^0-9]/g, "");
@@ -187,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Mostrar mensaje cuando el usuario entra al campo de cédula
     cedula.addEventListener("focus", function () {
 
         console.log("Campo de cédula seleccionado.");
@@ -195,7 +177,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Mostrar mensaje cuando el usuario entra al campo de placa
     placa.addEventListener("focus", function () {
 
         console.log("Campo de placa seleccionado.");
@@ -203,7 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Mostrar mensaje cuando el usuario entra al campo de contraseña
     password.addEventListener("focus", function () {
 
         console.log("Campo de contraseña seleccionado.");
@@ -211,7 +191,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // Mostrar mensaje en consola cuando cargue la página
     console.log("Página NovaRuta - Conductor cargada correctamente.");
 
 });

@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // =========================================
-    // LISTAS DESPLEGABLES
-    // =========================================
 
     const botones = document.querySelectorAll(".titulo-desplegable");
 
@@ -19,9 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    // =========================================
-    // FECHA ACTUAL
-    // =========================================
 
     const fecha = new Date();
 

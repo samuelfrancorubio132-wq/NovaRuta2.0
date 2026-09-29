@@ -5,185 +5,134 @@
 <head>
 
 
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>NovaRuta - Crear ruta</title>
+    <title>NovaRuta - Crear ruta</title>
 
-<link rel="stylesheet" href="../css/Crear_ruta.css">
+    <link rel="stylesheet" href="../css/Crear_ruta.css">
 
 </head>
 
 <body>
 
 
-<!-- =================================
-     ENCABEZADO
-================================== -->
 
-<header>
+    <header>
 
-    <div class="logo">
+        <div class="logo">
 
-        <img
-            src="../img/Shape Set.png"
-            alt="Logo NovaRuta"
-        >
+            <img src="../img/Shape Set.png" alt="Logo NovaRuta">
 
-    </div>
+        </div>
 
-</header>
+    </header>
 
 
 
-<!-- =================================
-     CONTENIDO PRINCIPAL
-================================== -->
 
-<main>
+    <main>
 
 
-    <!-- =================================
-         FORMULARIO
-    ================================== -->
 
-    <form class="formulario">
+        <form class="formulario">
 
 
-        <h1>Crear ruta</h1>
+            <h1>Crear ruta</h1>
 
 
-        <!-- NÚMERO DE RUTA -->
 
-        <div class="campo">
+            <div class="campo">
 
-            <label for="numero">
-                Número de la ruta
-            </label>
+                <label for="numero">
+                    Número de la ruta
+                </label>
 
-            <input
-                type="text"
-                id="numero"
-                name="numero"
-                placeholder="..."
-            >
+                <input type="text" id="numero" name="numero" placeholder="...">
+
+            </div>
+
+
+
+            <div class="campo">
+
+                <label for="paraderos">
+                    Paraderos
+                </label>
+
+                <input type="text" id="paraderos" name="paraderos" placeholder="...">
+
+            </div>
+
+
+
+            <div class="campo">
+
+                <label for="destinoInicial">
+                    Destino inicial
+                </label>
+
+                <input type="text" id="destinoInicial" name="destinoInicial" placeholder="...">
+
+            </div>
+
+
+
+            <div class="campo">
+
+                <label for="destinoFinal">
+                    Destino final
+                </label>
+
+                <input type="text" id="destinoFinal" name="destinoFinal" placeholder="...">
+
+            </div>
+
+
+
+            <button type="submit">
+                Continuar
+            </button>
+
+
+        </form>
+
+
+
+
+        <div class="bus">
+
+            <img src="../img/transporte-publico.png" alt="Bus">
 
         </div>
 
 
-        <!-- PARADEROS -->
-
-        <div class="campo">
-
-            <label for="paraderos">
-                Paraderos
-            </label>
-
-            <input
-                type="text"
-                id="paraderos"
-                name="paraderos"
-                placeholder="..."
-            >
-
-        </div>
+    </main>
 
 
-        <!-- DESTINO INICIAL -->
-
-        <div class="campo">
-
-            <label for="destinoInicial">
-                Destino inicial
-            </label>
-
-            <input
-                type="text"
-                id="destinoInicial"
-                name="destinoInicial"
-                placeholder="..."
-            >
-
-        </div>
 
 
-        <!-- DESTINO FINAL -->
+    <footer>
 
-        <div class="campo">
+        <div class="decoracion"></div>
 
-            <label for="destinoFinal">
-                Destino final
-            </label>
+        <div class="decoracion derecha"></div>
 
-            <input
-                type="text"
-                id="destinoFinal"
-                name="destinoFinal"
-                placeholder="..."
-            >
-
-        </div>
+        <button class="volver" type="button" aria-label="Volver"
+            onclick="window.location.href='bienvenido_administrador.html'"></button>
 
 
-        <!-- BOTÓN -->
-
-        <button type="submit">
-            Continuar
         </button>
 
-
-    </form>
-
-
-
-    <!-- =================================
-         IMAGEN DEL BUS
-    ================================== -->
-
-    <div class="bus">
-
-        <img
-            src="../img/transporte-publico.png"
-            alt="Bus"
-        >
-
-    </div>
-
-
-</main>
+    </footer>
 
 
 
-<!-- =================================
-     PIE DE PÁGINA
-================================== -->
 
-<footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <div class="decoracion"></div>
-
-    <div class="decoracion derecha"></div>
-
-    <button
-        class="volver"
-        type="button"
-        aria-label="Volver"
-        onclick="window.location.href='bienvenido_administrador.html'"></button>
-
-    
-    </button>
-
-</footer>
-
-
-
-<!-- JAVASCRIPT -->
-
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<script src="../JS/crear_ruta.js"></script>
+    <script src="../JS/crear_ruta.js"></script>
 
 
 </body>

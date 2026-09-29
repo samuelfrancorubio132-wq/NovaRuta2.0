@@ -14,9 +14,6 @@ font-family: Arial, sans-serif;
 background: #000;
 }
 
-/* =========================================
-PÁGINA PRINCIPAL
-========================================= */
 
 .pagina {
 width: 100vw;
@@ -27,9 +24,6 @@ position: relative;
 overflow: hidden;
 }
 
-/* =========================================
-ENCABEZADO
-========================================= */
 
 .header {
 width: 100%;
@@ -44,7 +38,7 @@ position: relative;
 
 }
 
-/* LOGO */
+
 
 .logo {
 position: absolute;
@@ -60,12 +54,12 @@ justify-content: center;
 }
 
 .logo img {
- width: 90px; /* Cambia a tu medida deseada */
-  height: auto; /* Mantiene la proporción original */
+ width: 90px; 
+  height: auto;
   object-fit: contain;
 }
 
-/* TÍTULO */
+
 
 .header h1 {
 font-size: 38px;
@@ -74,7 +68,6 @@ font-weight: bold;
 text-align: center;
 }
 
-/* BOTÓN CERRAR SESIÓN */
 
 .cerrar-sesion {
 position: absolute;
@@ -102,9 +95,7 @@ background: #111111;
 transform: scale(1.03);
 }
 
-/* =========================================
-BARRA DE OPCIONES
-========================================= */
+
 
 .barra-opciones {
 width: 100%;
@@ -121,7 +112,7 @@ background: #ffffff;
 
 }
 
-/* CONTENEDOR DE LAS OPCIONES */
+
 
 .opciones {
 width: min(850px, 80%);
@@ -134,7 +125,7 @@ gap: 70px;
 
 }
 
-/* CADA OPCIÓN */
+
 
 .opcion {
 display: flex;
@@ -148,14 +139,14 @@ text-align: center;
 
 }
 
-/* ICONOS */
+
 
 .icono {
 font-size: 32px;
 line-height: 1;
 }
 
-/* BOTONES */
+
 
 .opcion button {
 min-width: 130px;
@@ -182,9 +173,7 @@ background: #100f0f;
 transform: translateY(-2px);
 }
 
-/* =========================================
-AVATAR
-========================================= */
+
 
 .avatar {
 position: absolute;
@@ -214,9 +203,7 @@ object-fit: cover;
 
 }
 
-/* =========================================
-CONTENIDO PRINCIPAL
-========================================= */
+
 
 .contenido {
 width: 100%;
@@ -226,9 +213,7 @@ background: #ffffff;
 
 }
 
-/* =========================================
-FOOTER
-========================================= */
+
 
 .footer {
 position: absolute;
@@ -247,7 +232,6 @@ justify-content: center;
 
 }
 
-/* TEXTO DEL FOOTER */
 
 .texto-footer {
 color: #050505;
@@ -257,15 +241,7 @@ font-weight: bold;
 
 }
 
-/* =========================================
-CÍRCULOS DECORATIVOS
-========================================= */
 
-
-
-/* =========================================
-RESPONSIVE
-========================================= */
 
 @media (max-width: 900px) {
 

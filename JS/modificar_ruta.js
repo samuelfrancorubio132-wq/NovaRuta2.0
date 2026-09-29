@@ -1,20 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Obtener los elementos de las rutas
     const rutas = document.querySelectorAll(".ruta");
     const botonesEditar = document.querySelectorAll(".editar");
     const botonesConfig = document.querySelectorAll(".config");
     const botonRegresar = document.querySelector(".flecha");
     const iconoEditar = document.querySelector(".icono-editar");
 
-    // --- Botón Editar ---
     botonesEditar.forEach(function (boton, index) {
         boton.addEventListener("click", function (event) {
             event.stopPropagation();
 
             const ruta = rutas[index];
-            const informacion = ruta.querySelector(".ruta-info"); // ✅ correcto
-            const nombre = informacion.querySelector("strong");   // nodo <strong>
+            const informacion = ruta.querySelector(".ruta-info");
+            const nombre = informacion.querySelector("strong");
             const datos = informacion.querySelectorAll("span");
 
             const nombreRuta = nombre.textContent;
@@ -39,12 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // ✅ Actualizar la información de la ruta
             nombre.textContent = nuevoNombre.toUpperCase();
             datos[0].textContent = nuevaCiudad.toUpperCase();
             datos[1].textContent = nuevoRecorrido.toUpperCase();
 
-            // Confirmación
             alert("La ruta se modificó correctamente.");
             console.log("Ruta:", nuevoNombre.toUpperCase());
             console.log("Ciudad:", nuevaCiudad.toUpperCase());
@@ -52,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // --- Botón Configuración ---
     botonesConfig.forEach(function (boton, index) {
         boton.addEventListener("click", function (event) {
             event.stopPropagation();
@@ -73,7 +68,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // --- Selección de rutas ---
     rutas.forEach(function (ruta) {
         ruta.addEventListener("click", function () {
             rutas.forEach(function (otraRuta) {
@@ -87,7 +81,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // --- Botón regresar ---
     botonRegresar.addEventListener("click", function () {
         const confirmar = confirm("¿Deseas regresar a la página anterior?");
         if (confirmar) {
@@ -95,11 +88,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // --- Icono editar ---
     iconoEditar.addEventListener("click", function () {
         alert("Selecciona una ruta y presiona el botón ✎ para modificarla.");
     });
 
     console.log("Página de modificar ruta cargada correctamente.");
-    
+
 });

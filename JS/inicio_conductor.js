@@ -4,13 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("password");
     const boton = document.getElementById("btnguardar");
 
-    // Validar que los elementos existan
     if (!cedula || !placa || !password || !boton) {
         console.error("Faltan elementos en el HTML");
         return;
     }
 
-    boton.addEventListener("click", function (event) { 
+    boton.addEventListener("click", function (event) {
         event.preventDefault();
 
         const valorCedula = cedula.value.trim();
