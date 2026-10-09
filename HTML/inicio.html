@@ -7,7 +7,7 @@
 
     <title>Rutas de Socobuses</title>
 
-    <link rel="stylesheet" href="../css/style inicio.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -18,13 +18,16 @@
         <div class="logo">
             <img src="../img/Shape Set.png" alt="Logo de NovaRuta">
 
-            <div class="logo-text">
-                <strong>NovaRuta</strong>
-            </div>
+        </div>
+        <div class="titulo-header">
+            <h1>BIENVENIDOS</h1>
+
+
         </div>
 
 
-        <a class="login-btn" href="comoinciar.html">
+
+        <a class="btn-login" href="comoinciar.html">
             Iniciar Sesión
         </a>
 
@@ -146,19 +149,52 @@
 
 
 
-    <div class="bottom-shape" aria-hidden="true"></div>
 
+    <!-- Forma decorativa naranja -->
+    
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-contenido">
 
-    <button type="button" class="back-button" aria-label="Volver atrás"
-        onclick="window.location.href='empresa_transporte.html'""
-    >
+            <!-- LOGO -->
+            <div class="footer-logo">
+                <img src="../img/Shape Set.png" alt="Logo NovaRuta">
 
-        <svg
-            class=" back-arrow" viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                <div>
+                    <h3>NovaRuta</h3>
+                    <p>Tu ruta, tu ciudad.</p>
+                </div>
+            </div>
+
+            <!-- ENLACES -->
+            <nav class="footer-enlaces">
+                <a href="empresa_transporte.html">Inicio</a>
+                <a href="empresa_transporte.html">Empresas</a>
+                <a href="#">Rutas</a>
+                <a href="#">Contacto</a>
+            </nav>
+
+            <!-- COPYRIGHT -->
+            <div class="footer-copy">
+                <p>© 2026 NovaRuta</p>
+                <p>Transporte público de Manizales</p>
+            </div>
+
+        </div>
+
+        <!-- DECORACIÓN -->
+        <div class="circulo circulo-1" aria-hidden="true"></div>
+        <div class="circulo circulo-2" aria-hidden="true"></div>
+    </footer>
+
+    <!-- BOTÓN PARA REGRESAR -->
+    <button type="button" class="back-button" aria-label="Volver a empresas de transporte"
+        onclick="window.location.href='empresa_transporte.html'">
+
+        <svg class="back-arrow" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
         </svg>
-
     </button>
 
 </body>

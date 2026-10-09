@@ -2,67 +2,692 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Empresas de Transporte</title>
+    <meta name="description"
+        content="NovaRuta - Consulta las empresas y rutas de transporte público de Manizales">
 
-    <link rel="stylesheet" href="../css/empresa_transporte.css">
+    <title>NovaRuta - Empresas de Transporte</title>
+
+    <link rel="stylesheet" href="/css/empresa_transporte.css">
+
 </head>
+
 
 <body>
 
     <div class="pagina">
 
+
+        <!-- =====================================================
+             HEADER
+        ====================================================== -->
+
         <header class="header">
 
+
+            <!-- LOGO -->
+
             <div class="logo">
-                <img src="../img/Shape Set.png" alt="Logo">
+
+                <img
+                    src="../img/Shape Set.png"
+                    alt="Logo NovaRuta">
+
             </div>
+
+
+
+            <!-- TÍTULO -->
 
             <div class="titulo-header">
 
                 <h1>BIENVENIDOS</h1>
 
                 <p>
-                    Aquí podrás averiguar rutas de transporte público
+
+                    Aquí podrás averiguar rutas de transporte
+                    público
+
                     <br class="salto-desktop">
+
                     de Manizales
+
                 </p>
 
             </div>
 
-            <button class="btn-login" type="button" onclick="window.location.href='comoinciar.html'">
+
+
+            <!-- BOTÓN INICIAR SESIÓN -->
+
+            <button
+                class="btn-login"
+                type="button"
+                onclick="window.location.href='comoinciar.html'">
+
                 Iniciar Sesión
+
             </button>
+
 
         </header>
 
 
+
+        <!-- =====================================================
+             CONTENIDO PRINCIPAL
+        ====================================================== -->
+
         <main class="contenido">
 
-            <h2>Empresas de Transporte</h2>
 
-            <div class="empresa">
 
-                <img src="../img/monito.webp" alt="Socobuses S.A" onclick="window.location.href='inicio.html'">
+            <!-- =================================================
+                 CARRUSEL PRINCIPAL
+            ================================================== -->
 
-                <p>Socobuses SA</p>
+            <section class="carrusel">
 
-            </div>
+
+                <div class="carrusel-contenedor">
+
+
+
+                    <!-- =================================================
+                         SLIDE 1
+                    ================================================== -->
+
+                    <article class="slide activo">
+
+
+                        <img
+                            src="/img/buses.jpg"
+                            alt="Panorámica de Manizales"
+                            loading="eager">
+
+
+                        <div class="overlay"></div>
+
+
+
+                        <div class="texto-slide">
+
+                            <span>
+                                BIENVENIDO A NOVARUTA
+                            </span>
+
+                            <h2>
+                                Muévete por Manizales
+                            </h2>
+
+                            <p>
+                                Descubre las rutas de transporte
+                                público de nuestra ciudad.
+                            </p>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         SLIDE 2
+                    ================================================== -->
+
+                    <article class="slide">
+
+
+                        <img
+                            src="/img/paisaje manil.jpg"
+                            alt="Ciudad de Manizales"
+                            loading="lazy">
+
+
+                        <div class="overlay"></div>
+
+
+
+                        <div class="texto-slide">
+
+                            <span>
+                                CONOCE MANIZALES
+                            </span>
+
+                            <h2>
+                                Tu ciudad, tus rutas
+                            </h2>
+
+                            <p>
+                                Explora diferentes lugares y
+                                recorridos de nuestra ciudad.
+                            </p>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         SLIDE 3
+                    ================================================== -->
+
+                    <article class="slide">
+
+
+                        <img
+                            src="/img/paisaje.jpg"
+                            alt="Transporte público de Manizales"
+                            loading="lazy">
+
+
+                        <div class="overlay"></div>
+
+
+
+                        <div class="texto-slide">
+
+                            <span>
+                                TRANSPORTE PÚBLICO
+                            </span>
+
+                            <h2>
+                                Encuentra tu ruta
+                            </h2>
+
+                            <p>
+                                Consulta las empresas y rutas
+                                disponibles en Manizales.
+                            </p>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         BOTÓN ANTERIOR
+                    ================================================== -->
+
+                    <button
+                        class="flecha anterior"
+                        type="button"
+                        aria-label="Imagen anterior">
+
+                        &#10094;
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         BOTÓN SIGUIENTE
+                    ================================================== -->
+
+                    <button
+                        class="flecha siguiente"
+                        type="button"
+                        aria-label="Imagen siguiente">
+
+                        &#10095;
+
+                    </button>
+
+
+
+                    <!-- =================================================
+                         INDICADORES
+                    ================================================== -->
+
+                    <div class="indicadores">
+
+
+                        <button
+                            class="indicador activo"
+                            type="button"
+                            aria-label="Ir a imagen 1">
+                        </button>
+
+
+                        <button
+                            class="indicador"
+                            type="button"
+                            aria-label="Ir a imagen 2">
+                        </button>
+
+
+                        <button
+                            class="indicador"
+                            type="button"
+                            aria-label="Ir a imagen 3">
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 EMPRESAS
+            ====================================================== -->
+
+            <section class="seccion-empresas">
+
+
+                <div class="titulo-seccion">
+
+                    <span class="linea"></span>
+
+
+                    <div>
+
+                        <span class="mini-titulo">
+                            NOVARUTA
+                        </span>
+
+                        <h2>
+                            Empresas de Transporte
+                        </h2>
+
+                        <p>
+                            Conoce las empresas disponibles
+                            para consultar sus rutas.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     TARJETAS
+                ================================================== -->
+
+                <div class="empresas">
+
+
+
+                    <!-- =================================================
+                         SOCOBUSES
+                    ================================================== -->
+
+                    <article class="empresa">
+
+
+                        <div class="empresa-imagen">
+
+
+                            <img
+                                src="/img/logo-azul.png"
+                                alt="Socobuses S.A.">
+
+
+                            <span class="etiqueta">
+
+                                Disponible
+
+                            </span>
+
+
+                        </div>
+
+
+
+                        <div class="empresa-info">
+
+
+                            <h3>
+                                Socobuses S.A.
+                            </h3>
+
+
+                            <p>
+                                Consulta información sobre las
+                                rutas de transporte público de
+                                Manizales.
+                            </p>
+
+
+
+                            <button
+                                class="btn-empresa"
+                                type="button"
+                                onclick="window.location.href='inicio.html'">
+
+                                <span>
+                                    Ver rutas
+                                </span>
+
+                                <strong>
+                                    →
+                                </strong>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         PRÓXIMAMENTE
+                    ================================================== -->
+
+                    <article
+                        class="empresa empresa-proximamente">
+
+
+                        <div class="icono-proximamente">
+
+                            +
+
+                        </div>
+
+
+
+                        <div class="empresa-info">
+
+
+                            <span class="mini-titulo">
+                                PRÓXIMAMENTE
+                            </span>
+
+
+                            <h3>
+                                Más empresas
+                            </h3>
+
+
+                            <p>
+                                Próximamente podrás consultar
+                                información de más empresas
+                                de transporte.
+                            </p>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 INFORMACIÓN NOVARUTA
+            ====================================================== -->
+
+            <section class="informacion">
+
+
+                <div class="informacion-texto">
+
+
+                    <span class="mini-titulo">
+                        NOVARUTA
+                    </span>
+
+
+                    <h2>
+                        Todo el transporte de Manizales
+                        en un solo lugar.
+                    </h2>
+
+
+                    <p>
+                        Encuentra información sobre empresas,
+                        rutas y recorridos del transporte público
+                        de nuestra ciudad de una manera sencilla,
+                        rápida y organizada.
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CARACTERÍSTICAS
+                ================================================== -->
+
+                <div class="caracteristicas">
+
+
+
+                    <div class="caracteristica">
+
+                        <div class="icono">
+                            🚌
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Empresas
+                            </strong>
+
+                            <p>
+                                Consulta empresas
+                                disponibles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="caracteristica">
+
+                        <div class="icono">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Rutas
+                            </strong>
+
+                            <p>
+                                Encuentra diferentes
+                                recorridos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="caracteristica">
+
+                        <div class="icono">
+                            🗺️
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Recorridos
+                            </strong>
+
+                            <p>
+                                Explora las rutas
+                                disponibles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="caracteristica">
+
+                        <div class="icono">
+                            🚏
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Transporte
+                            </strong>
+
+                            <p>
+                                Información del
+                                transporte público.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
 
         </main>
 
 
+
+        <!-- =====================================================
+             FOOTER
+        ====================================================== -->
+
         <footer class="footer">
+
+
+            <div class="footer-contenido">
+
+
+
+                <!-- LOGO -->
+
+                <div class="footer-logo">
+
+
+                    <img
+                        src="../img/Shape Set.png"
+                        alt="Logo NovaRuta">
+
+
+                    <div>
+
+                        <h3>
+                            NovaRuta
+                        </h3>
+
+                        <p>
+                            Tu ruta, tu ciudad.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- ENLACES -->
+
+                <nav class="footer-enlaces">
+
+
+                    <a href="#">
+                        Inicio
+                    </a>
+
+
+                    <a href="#">
+                        Empresas
+                    </a>
+
+
+                    <a href="#">
+                        Rutas
+                    </a>
+
+
+                    <a href="#">
+                        Contacto
+                    </a>
+
+
+                </nav>
+
+
+
+                <!-- COPYRIGHT -->
+
+                <div class="footer-copy">
+
+
+                    <p>
+                        © 2026 NovaRuta
+                    </p>
+
+
+                    <p>
+                        Transporte público de Manizales
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- DECORACIÓN -->
 
             <div class="circulo circulo-1"></div>
 
             <div class="circulo circulo-2"></div>
 
+
         </footer>
 
+
     </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../js/empresa_transporte.js"></script>
+
 
 </body>
 

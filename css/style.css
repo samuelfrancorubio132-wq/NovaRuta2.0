@@ -2,41 +2,195 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0; 
   background: white;
+  overflow: hidden;
 }
-header {
-  background: #B0D7F9;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 20px;
+.header {
+   position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 22px 6%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #dff3ff 0%,
+            #b9e2fa 50%,
+            #a7d8f4 100%
+        );
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 8px 30px
+        rgba(19, 88, 130, 0.10);
+
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
 .logo {
-  display: flex;
-  align-items: center;
+
+    width: 76px;
+
+    height: 76px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0875d1,
+            #0753a4
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 76, 150, 0.25);
+
 }
-.logo-circle {
-  width: 40px;
-  height: 40px;
-  background: #0B64C6; 
-  border-radius: 50%;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+.logo img {
+width: 90px;
+  height: auto; 
+  object-fit: contain;
+
 }
-.login-btn {
-  background: #27272E; 
-  color: white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  border: none;
-  font-weight: 600;
+
+
+/* =========================================================
+   TÍTULO HEADER
+========================================================= */
+
+.titulo-header {
+
+    flex: 1;
+
+    text-align: center;
+
 }
+
+
+.titulo-header h1 {
+
+    color: #063d72;
+
+    font-size: clamp(
+        1.5rem,
+        3vw,
+        2.2rem
+    );
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.titulo-header p {
+
+    color: #315c79;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   BOTÓN LOGIN
+========================================================= */
+
+.btn-login {
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17232f,
+            #293b4c
+        );
+
+    color: white;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(20, 35, 50, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.btn-login:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #0a5fa9,
+            #06487f
+        );
+
+    box-shadow:
+        0 12px 25px
+        rgba(5, 85, 145, 0.25);
+
+}
+
+
+.btn-login:active {
+
+    transform: translateY(0);
+
+}
+
+
 main {
   display: flex;
   padding: 15px 30px;
@@ -143,8 +297,17 @@ main {
   background: #d3e4f3;
   border-radius: 24px 0 0 24px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 50vw; 
+  height: 50vh;      
+}
+.map-frame{
+   width: 50vw; 
+   height: 50vh;
+  flex-grow: 1;
+  position: relative;
+  background: #d3e4f3;
+  border-radius: 24px 0 0 24px;
+  display: flex;
 }
 .map-placeholder {
   width: 100%;
@@ -154,23 +317,223 @@ main {
   border-radius: 24px 0 0 24px;
 }
 
-.bottom-shape {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 150px;
-  background: #FF9B03;
-  border-radius: 80% 80% 0 0 / 100% 100% 0 0;
-  z-index: -1;
+
+
+
+
+/* FOOTER */
+
+/* =========================================
+   FOOTER AZUL OSCURO
+========================================= */
+
+.footer {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 25px 6%;
+    background: linear-gradient(135deg, #081923, #0d2b3b);
+    color: white;
+}
+
+/* Contenido del footer */
+.footer-contenido {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1250px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.footer-logo h3 {
+    margin: 0 0 3px;
+    font-size: 1.2rem;
+}
+
+.footer-logo p {
+    margin: 0;
+    color: #92b7ca;
+    font-size: 0.85rem;
+}
+
+/* Enlaces */
+.footer-enlaces {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-enlaces a {
+    color: #c6dce8;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: color 0.25s ease;
+}
+
+.footer-enlaces a:hover {
+    color: #65d1ff;
+}
+
+/* Copyright */
+.footer-copy {
+    text-align: right;
+}
+
+.footer-copy p {
+    margin: 4px 0;
+    color: #8eafbf;
+    font-size: 0.78rem;
+    line-height: 1.6;
+}
+
+/* Decoración azul */
+.circulo {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.circulo-1 {
+    width: 220px;
+    height: 220px;
+    right: -100px;
+    bottom: -140px;
+    background: rgba(0, 154, 220, 0.13);
+}
+
+.circulo-2 {
+    width: 150px;
+    height: 150px;
+    left: -70px;
+    top: -90px;
+    background: rgba(87, 200, 245, 0.08);
+}
+
+/* =========================================
+   BOTÓN DE REGRESO
+========================================= */
+
+.back-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dff3ff;
+    border: 1px solid #65bde9;
+    border-radius: 50%;
+
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background: #ffffff;
+    transform: scale(1.08);
 }
 
 .back-arrow {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  fill: #1f1f1f;
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: #063d72;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVO
+========================================= */
+
+@media (max-width: 800px) {
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-enlaces {
+        gap: 14px;
+    }
+
+    .footer-copy {
+        text-align: center;
+    }
+
+    .footer {
+        padding: 25px 20px 75px;
+    }
+}
+
+
+
+/* ADAPTACIÓN A TABLET Y MÓVIL */
+@media (max-width: 800px) {
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 22px;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .footer-enlaces {
+        gap: 14px;
+    }
+
+    .footer-copy {
+        text-align: center;
+    }
+
+    .footer {
+        padding: 28px 20px 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-enlaces {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .back-button {
+        left: 14px;
+        bottom: 14px;
+    }
 }
