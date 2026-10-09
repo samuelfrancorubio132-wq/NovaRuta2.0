@@ -2,134 +2,56 @@ body {
   font-family: 'Arial', sans-serif;
   margin: 0; 
   background: white;
-  overflow: hidden;
+  overflow-y: auto;   /* scroll vertical natural */
+  overflow-x: hidden; /* evita scroll horizontal */
 }
+
 .header {
    position: relative;
-
-    z-index: 10;
-
-    width: 100%;
-
-    min-height: 120px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 30px;
-
-    padding: 22px 6%;
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #dff3ff 0%,
-            #b9e2fa 50%,
-            #a7d8f4 100%
-        );
-
-    border-bottom: 1px solid
-        rgba(255, 255, 255, 0.7);
-
-    box-shadow:
-        0 8px 30px
-        rgba(19, 88, 130, 0.10);
-
+   z-index: 10;
+   
+   min-height: 100px;   /* más compacto */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+   padding: 18px 5%;
+   background: linear-gradient(135deg,#dff3ff 0%,#b9e2fa 50%,#a7d8f4 100%);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+   box-shadow: 0 6px 20px rgba(19, 88, 130, 0.10);
 }
-
-
-/* =========================================================
-   LOGO
-========================================================= */
 
 .logo {
-
-    width: 76px;
-
-    height: 76px;
-
-    flex-shrink: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0875d1,
-            #0753a4
-        );
-
-    box-shadow:
-        0 10px 25px
-        rgba(0, 76, 150, 0.25);
-
+   width: 60px;   /* más pequeño */
+   height: 60px;
+   flex-shrink: 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   background: linear-gradient(145deg,#0875d1,#0753a4);
+   box-shadow: 0 8px 20px rgba(0, 76, 150, 0.25);
 }
-
 
 .logo img {
-width: 90px;
-  height: auto; 
-  object-fit: contain;
-
+   width: 70px;   /* reducido */
+   height: auto; 
+   object-fit: contain;
 }
-
-
-/* =========================================================
-   TÍTULO HEADER
-========================================================= */
-
-.titulo-header {
-
-    flex: 1;
-
-    text-align: center;
-
-}
-
 
 .titulo-header h1 {
-
-    color: #063d72;
-
-    font-size: clamp(
-        1.5rem,
-        3vw,
-        2.2rem
-    );
-
-    font-weight: 800;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 6px;
-
+   color: #063d72;
+   font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* más compacto */
+   font-weight: 800;
+   letter-spacing: 1px;
+   margin-bottom: 4px;
 }
-
 
 .titulo-header p {
-
-    color: #315c79;
-
-    font-size: 1rem;
-
-    line-height: 1.5;
-
+   color: #315c79;
+   font-size: 0.9rem;
+   line-height: 1.4;
 }
-
-
-/* =========================================================
-   BOTÓN LOGIN
-========================================================= */
 
 .btn-login {
 
@@ -249,8 +171,9 @@ main {
 
 .status-legend {
   display: flex;
+    flex-wrap: wrap;
   gap: 18px;
-  margin-left: 20px;
+ 
   font-weight: 600;
   font-size: 14px;
   user-select: none;
@@ -291,42 +214,28 @@ main {
 .route-active { background: #04AA02; }
 .route-delay { background: #FFD129; }
 
-.map-area {
+.map-area,
+.map-frame {
   flex-grow: 1;
   position: relative;
   background: #d3e4f3;
-  border-radius: 24px 0 0 24px;
+  border-radius: 16px;   /* más compacto */
   display: flex;
-  width: 50vw; 
-  height: 50vh;      
+  width: 100%;           /* ocupa todo el ancho */
+  min-height: 300px;     /* altura mínima razonable */
+  height: auto;          /* se adapta al contenido */
 }
-.map-frame{
-   width: 50vw; 
-   height: 50vh;
-  flex-grow: 1;
-  position: relative;
-  background: #d3e4f3;
-  border-radius: 24px 0 0 24px;
-  display: flex;
-}
+
 .map-placeholder {
   width: 100%;
-  height: 500px;
+  min-height: 250px;   /* más compacto */
+  height: auto;
   background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Map_of_Manizales_with_labels.svg/1200px-Map_of_Manizales_with_labels.svg.png') no-repeat center;
   background-size: contain;
-  border-radius: 24px 0 0 24px;
+  border-radius: 16px;
 }
 
-
-
-
-
 /* FOOTER */
-
-/* =========================================
-   FOOTER AZUL OSCURO
-========================================= */
-
 .footer {
     position: relative;
     z-index: 5;
@@ -536,4 +445,4 @@ main {
         left: 14px;
         bottom: 14px;
     }
-}
+  }
