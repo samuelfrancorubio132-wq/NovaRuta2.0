@@ -25,48 +25,195 @@ body {
 }
 
 
+.header{
+     position: relative;
 
-header {
-    position: relative;
+    z-index: 10;
 
     width: 100%;
-    height: 100px;
 
-    background-color: #65c5d3;
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 22px 6%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #dff3ff 0%,
+            #b9e2fa 50%,
+            #a7d8f4 100%
+        );
+
+    border-bottom: 1px solid
+        rgba(255, 255, 255, 0.7);
+
+    box-shadow:
+        0 8px 30px
+        rgba(19, 88, 130, 0.10);
+
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo {
+
+    width: 76px;
+
+    height: 76px;
 
     flex-shrink: 0;
 
-    overflow: hidden;
-}
-
-
-
-.logo {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 165px;
-    height: 75px;
-
-    border-radius: 0 0 75px 75px;
-
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
-    z-index: 10;
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0875d1,
+            #0753a4
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 76, 150, 0.25);
+
 }
+
 
 .logo img {
-    display: block;
 
-    width: 105px;
-    height: auto;
-
-    object-fit: contain;
+   width: 90px;
+  height: auto; 
+  object-fit: contain;
 }
+
+
+/* =========================================================
+   TÍTULO HEADER
+========================================================= */
+
+.titulo-header {
+
+    flex: 1;
+
+    text-align: center;
+
+}
+
+
+.titulo-header h1 {
+
+    color: #063d72;
+
+    font-size: clamp(
+        1.5rem,
+        3vw,
+        2.2rem
+    );
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.titulo-header p {
+
+    color: #315c79;
+
+    font-size: 1rem;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================================
+   BOTÓN LOGIN
+========================================================= */
+
+.btn-login {
+
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17232f,
+            #293b4c
+        );
+
+    color: white;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px
+        rgba(20, 35, 50, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.btn-login:hover {
+
+    transform: translateY(-2px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #0a5fa9,
+            #06487f
+        );
+
+    box-shadow:
+        0 12px 25px
+        rgba(5, 85, 145, 0.25);
+
+}
+
+
+.btn-login:active {
+
+    transform: translateY(0);
+
+}
+
+
+
+
 
 
 
@@ -259,50 +406,21 @@ main {
     object-fit: contain;
 }
 
-
-
-footer {
+.bottom-bar {
     position: relative;
 
     width: 100%;
+    height: 100px;
+    min-height: 100px;
 
-    height: 115px;
-
-    background-color: #65c5d3;
-
-    flex-shrink: 0;
+    background: #0d2b3b;
 
     overflow: hidden;
+
+    z-index: 3;
 }
 
-
-
-.decoracion {
-    position: absolute;
-
-    width: 260px;
-    height: 260px;
-
-    left: 63%;
-    top: -45px;
-
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-.decoracion.derecha {
-    width: 285px;
-    height: 285px;
-
-    left: auto;
-
-    right: -45px;
-    top: -120px;
-}
-
-
-.volver{
+.back{
 width: 45px;
 height: 45px;
 
@@ -321,7 +439,7 @@ cursor: pointer;
 }
 
 
-.volver::before {
+.back::before {
 content: "";
 
 position: absolute;
@@ -338,115 +456,236 @@ left: 17px;
 top: 14px;
 
 }
+.footer {
 
+    position: relative;
 
-@media (max-width: 1000px) {
+    overflow: hidden;
 
-    .contenido {
-        max-width: 850px;
+    padding: 42px 6%;
 
-        gap: 40px;
-    }
+    background:
+        linear-gradient(
+            135deg,
+            #081923,
+            #0d2b3b
+        );
 
-    .formulario {
-        max-width: 560px;
-    }
+    color: white;
 
-    .bus {
-        width: 190px;
-
-        min-width: 150px;
-
-        margin-top: 90px;
-    }
-
-    .bus img {
-        width: 180px;
-
-        max-height: 220px;
-    }
-
-    .decoracion {
-        left: 55%;
-    }
 }
 
 
+.footer-contenido {
 
-@media (max-width: 800px) {
+    position: relative;
 
-    header {
-        height: 85px;
-    }
+    z-index: 2;
 
-    .logo {
-        width: 130px;
-        height: 68px;
+    max-width: 1250px;
 
-        border-radius: 0 0 65px 65px;
-    }
+    margin: auto;
 
-    .logo img {
-        width: 90px;
-    }
+    display: grid;
 
+    grid-template-columns:
+        1.3fr 1fr 1fr;
 
-    main {
-        padding: 35px 25px;
-    }
+    align-items: center;
 
+    gap: 40px;
 
-    .contenido {
-        max-width: 650px;
-
-        gap: 25px;
-    }
-
-
-    .formulario {
-        max-width: 500px;
-    }
-
-
-    .formulario h1 {
-        font-size: 40px;
-    }
-
-
-    .campo {
-        margin-bottom: 15px;
-    }
-
-
-    .campo input {
-        height: 46px;
-
-        font-size: 16px;
-    }
-
-
-    .bus {
-        width: 150px;
-
-        min-width: 120px;
-
-        height: 220px;
-
-        margin-top: 80px;
-    }
-
-
-    .bus img {
-        width: 140px;
-
-        max-height: 190px;
-    }
-
-
-    footer {
-        height: 105px;
-    }
 }
+
+
+/* =========================================================
+   FOOTER LOGO
+========================================================= */
+
+.footer-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.footer-logo img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+}
+
+
+.footer-logo h3 {
+
+    margin-bottom: 3px;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+
+.footer-logo p {
+
+    color: #92b7ca;
+
+    font-size: 0.85rem;
+
+}
+
+
+/* =========================================================
+   ENLACES
+========================================================= */
+
+.footer-enlaces {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+}
+
+
+.footer-enlaces a {
+
+    color: #c6dce8;
+
+    text-decoration: none;
+
+    font-size: 0.88rem;
+
+    transition:
+        color 0.25s ease;
+
+}
+
+
+.footer-enlaces a:hover {
+
+    color: #65d1ff;
+
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footer-copy {
+
+    text-align: right;
+
+}
+
+
+.footer-copy p {
+
+    color: #8eafbf;
+
+    font-size: 0.78rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   CÍRCULOS DECORATIVOS
+========================================================= */
+
+.circulo {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+}
+
+
+.circulo-1 {
+
+    width: 220px;
+
+    height: 220px;
+
+    right: -100px;
+
+    bottom: -140px;
+
+    background:
+        rgba(0, 154, 220, 0.13);
+
+}
+
+
+.circulo-2 {
+
+    width: 150px;
+
+    height: 150px;
+
+    left: -70px;
+
+    top: -90px;
+
+    background:
+        rgba(87, 200, 245, 0.08);
+
+}
+
+.back-button{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 1000;
+
+    width: 42px;
+    height: 42px;
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dff3ff;
+    border: 1px solid #65bde9;
+    border-radius: 50%;
+
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+    background: #ffffff;
+    transform: scale(1.08);
+}
+
+.back-arrow {
+    display: block;
+    width: 25px;
+    height: 25px;
+    fill: #063d72;
+
+}
+
+
 
 
 

@@ -45,8 +45,8 @@ position: relative;
 
 
 .logo img {
-    width: 90px; /* Cambia a tu medida deseada */
-  height: auto; /* Mantiene la proporción original */
+    width: 90px;
+  height: auto; 
   object-fit: contain;
 }
 

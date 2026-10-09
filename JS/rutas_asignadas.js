@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             Swal.fire({
                 icon: "question",
-                title: "¿Aceptar ruta?",
+                title: "¿Empezar ruta?",
                 html: `
                     <p><strong>${nombre}</strong></p>
                     <p>${horario}</p>
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     Swal.fire({
                         icon: "success",
-                        title: "Ruta aceptada",
+                        title: "Ruta empezada",
                         text: `${nombre} ha sido asignada correctamente.`,
                         confirmButtonText: "Aceptar"
                     });
@@ -138,10 +138,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
             Swal.fire({
                 icon: "warning",
-                title: "¿Cancelar ruta?",
+                title: "¿Finalizar ruta?",
                 text: `¿Estás seguro de cancelar ${nombre}?`,
                 showCancelButton: true,
-                confirmButtonText: "Sí, cancelar",
+                confirmButtonText: "Sí, finalizar",
                 cancelButtonText: "No, conservar"
             }).then(function (resultado) {
 
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     Swal.fire({
                         icon: "success",
-                        title: "Ruta cancelada",
+                        title: "Ruta finalizada",
                         text: `${nombre} fue cancelada correctamente.`,
                         confirmButtonText: "Aceptar"
                     });

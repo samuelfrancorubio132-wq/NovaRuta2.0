@@ -1,35 +1,68 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bienvenido</title>
+    <title>Bienvenido - NovaRuta</title>
 
     <link rel="stylesheet" href="../css/bienvenido_administrador.css">
-    ```
-
 </head>
 
 <body>
 
     <div class="pagina">
 
-        <header class="header">
+       <header class="header">
+
+
+            <!-- LOGO -->
 
             <div class="logo">
-                <img src="../img/Shape Set.png" alt="Logo NovaRuta">
+
+                <img
+                    src="../img/Shape Set.png"
+                    alt="Logo NovaRuta">
+
             </div>
 
-            <h1>Bienvenido</h1>
 
-            <button class="cerrar-sesion" type="button" onclick="window.location.href='empresa_transporte.html'">
-                Cerrar Sesión
+
+
+            <div class="titulo-header">
+
+                <h1>BIENVENIDOS</h1>
+
+                <p>
+
+                    Aquí podrás averiguar rutas de transporte
+                    público
+
+                    <br class="salto-desktop">
+
+                    de Manizales
+
+                </p>
+
+            </div>
+
+
+
+
+            <button
+                class="btn-login"
+                type="button"
+                onclick="window.location.href='empresa_transporte.html'">
+
+                    Cerrar Sesión
+
             </button>
 
+
         </header>
+
 
 
         <section class="barra-opciones">
@@ -39,7 +72,9 @@
                 <div class="opcion">
                     <span class="icono">🛠️</span>
 
-                    <button type="button" onclick="window.location.href='crear_ruta.html'">
+                    <button
+                        type="button"
+                        onclick="window.location.href='crear_ruta.html'">
                         Crear
                     </button>
                 </div>
@@ -48,7 +83,9 @@
                 <div class="opcion">
                     <span class="icono">👤</span>
 
-                    <button type="button" onclick="window.location.href='conductores_disponibles.html'">
+                    <button
+                        type="button"
+                        onclick="window.location.href='conductores_disponibles.html'">
                         Asignar ruta
                     </button>
                 </div>
@@ -57,7 +94,9 @@
                 <div class="opcion">
                     <span class="icono">🛠️</span>
 
-                    <button type="button" onclick="window.location.href='modificar_ruta.html'">
+                    <button
+                        type="button"
+                        onclick="window.location.href='modificar_ruta.html'">
                         Modificar ruta
                     </button>
                 </div>
@@ -66,25 +105,209 @@
                 <div class="opcion">
                     <span class="icono">👥</span>
 
-                    <button type="button" onclick="window.location.href='novedades.html'">
-                        Actividad
+                    <button
+                        type="button"
+                        onclick="window.location.href='novedades.html'">
+                        Novedades
                     </button>
                 </div>
 
             </div>
 
-
-
-
         </section>
 
 
         <main class="contenido">
-            <img src="../img/gerente.png" alt="NovaRuta Manizales">
+
+            <div class="imagen-contenedor">
+                <img
+                    src="../img/gerente.png"
+                    alt="Administrador de NovaRuta"
+                    class="imagen-gerente">
+            </div>
+
+
+            <section class="panel-admin">
+
+                <div class="titulo-panel">
+                    <h2>Resumen de rutas</h2>
+
+                    <p>
+                        Consulta el estado general de tu operación de transporte.
+                    </p>
+                </div>
+
+
+                <div class="tarjetas-resumen">
+
+                    <article class="tarjeta tarjeta-rutas">
+
+                        <div class="tarjeta-icono">
+                            🚌
+                        </div>
+
+                        <div class="tarjeta-info">
+                            <h3>Rutas activas</h3>
+
+                            <p class="cantidad">--</p>
+
+                            <p class="descripcion">
+                                Rutas registradas en el sistema.
+                            </p>
+                        </div>
+
+                        
+
+                    </article>
+
+
+                    <article class="tarjeta tarjeta-conductores">
+
+                        <div class="tarjeta-icono">
+                            👨‍✈️
+                        </div>
+
+                        <div class="tarjeta-info">
+                            <h3>Conductores</h3>
+
+                            <p class="cantidad">--</p>
+
+                            <p class="descripcion">
+                                Consulta los conductores disponibles.
+                            </p>
+                        </div>
+
+                        
+
+                    </article>
+
+
+                    <article class="tarjeta tarjeta-novedades">
+
+                        <div class="tarjeta-icono">
+                            📋
+                        </div>
+
+                        <div class="tarjeta-info">
+                            <h3>Novedades</h3>
+
+                            <p class="cantidad">--</p>
+
+                            <p class="descripcion">
+                                Revisa las actividades registradas.
+                            </p>
+                        </div>
+
+                       
+
+                    </article>
+
+                </div>
+
+
+                <div class="mensaje-bienvenida">
+
+                    <div class="mensaje-icono">
+                        📍
+                    </div>
+
+                    <div>
+                        <h3>¡Bienvenido a NovaRuta!</h3>
+
+                        <p>
+                            Administra tus rutas, organiza la asignación
+                            de conductores y consulta las novedades de
+                            tu empresa de transporte desde un solo lugar.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
         </main>
 
 
         <footer class="footer">
+
+
+            <div class="footer-contenido">
+
+
+
+
+                <div class="footer-logo">
+
+
+                    <img
+                        src="../img/Shape Set.png"
+                        alt="Logo NovaRuta">
+
+
+                    <div>
+
+                        <h3>
+                            NovaRuta
+                        </h3>
+
+                        <p>
+                            Tu ruta, tu ciudad.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <nav class="footer-enlaces">
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                </nav>
+
+
+
+
+                <div class="footer-copy">
+
+
+                    <p>
+                        © 2026 NovaRuta
+                    </p>
+
+
+                    <p>
+                        Transporte público de Manizales
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
 
 
 
@@ -92,7 +315,13 @@
 
             <div class="circulo circulo-2"></div>
 
+
         </footer>
+
+
+    </div>
+
+
 
     </div>
 

@@ -12,16 +12,33 @@
 
 <body>
 
-    <header>
-
-        <div class="logo">
-
-            <span><img src="../img/Shape Set.png" alt=""></span>
+     <header class="header">
 
 
-        </div>
 
-    </header>
+            <div class="logo">
+
+                <img src="../img/Shape Set.png" alt="Logo NovaRuta">
+
+            </div>
+
+
+
+
+            <div class="titulo-header">
+
+                <h1>BIENVENIDOS</h1>
+
+
+            </div>
+
+
+
+
+
+
+
+        </header>
 
 
     <main>
@@ -57,6 +74,12 @@
 
                 <label for="Password">
                     Contraseña
+                    <strong><p>Debe tener...
+                        "Mayuscula-
+                        -Caracteres Especiales-
+                       - Minusculas-
+                        -Numeros"
+                    </p></strong>
                 </label>
 
                 <input type="password" id="password" name="password" placeholder="..." autocomplete="current-password">
@@ -77,25 +100,105 @@
 
         </div>
 
+        
     </main>
 
-
-    <footer>
-
-        <div class="decoracion"></div>
-
-        <div class="decoracion derecha"></div>
-
-        <!-- Botón volver -->
-        <button type="button" class="volver" aria-label="Volver" id="btnguardar"
-            onclick="window.location.href='comoinciar.html'">
-
-        </button>
-
-    </footer>
+ <footer class="bottom-bar">
+            <div class="footer-contenido">
 
 
 
+                <button type="button" class="back-button" aria-label="Volver a empresas de transporte"
+                    onclick="window.location.href='empresa_transporte.html'">
+
+                    <svg class="back-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                    </svg>
+                </button>
+                <div class="footer-logo">
+
+
+                    <img src="../img/Shape Set.png" alt="Logo NovaRuta">
+
+
+                    <div>
+
+                        <h3>
+                            NovaRuta
+                        </h3>
+
+                        <p>
+                            Tu ruta, tu ciudad.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+                <nav class="footer-enlaces">
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                    <a href="#">
+                        
+                    </a>
+
+
+                </nav>
+
+
+
+
+                <div class="footer-copy">
+
+
+                    <p>
+                        © 2026 NovaRuta
+                    </p>
+
+
+                    <p>
+                        Transporte público de Manizales
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <div class="circulo circulo-1"></div>
+
+            <div class="circulo circulo-2"></div>
+
+
+        </footer>
+
+
+        </div>
+
+        </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
