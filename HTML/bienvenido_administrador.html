@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,6 +10,116 @@
     <title>Bienvenido - NovaRuta</title>
 
     <link rel="stylesheet" href="../css/bienvenido_administrador.css">
+
+    <!-- Estilos del modal "Añadir buseta" (solo afectan al modal) -->
+    <style>
+        .modal-buseta-fondo {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .55);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        .modal-buseta-fondo.abierto {
+            display: flex;
+        }
+
+        .modal-buseta {
+            background: #ffffff;
+            color: #1a1a1a;
+            width: min(100%, 380px);
+            border-radius: 14px;
+            padding: 22px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .3);
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            animation: modal-buseta-pop .16s ease-out;
+        }
+
+        @keyframes modal-buseta-pop {
+            from { transform: scale(.96); opacity: 0; }
+            to { transform: none; opacity: 1; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .modal-buseta { animation: none; }
+        }
+
+        .modal-buseta h2 {
+            margin: 0 0 4px;
+            font-size: 20px;
+        }
+
+        .modal-buseta p {
+            margin: 0 0 16px;
+            color: #6b6b6b;
+            font-size: 14px;
+        }
+
+        .modal-buseta label {
+            display: block;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 12px 0 5px;
+        }
+
+        .modal-buseta input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 11px 12px;
+            font: inherit;
+            font-size: 16px;
+            color: #1a1a1a;
+            background: #ffffff;
+            border: 1.5px solid #d9d9d9;
+            border-radius: 8px;
+        }
+
+        .modal-buseta input[aria-invalid="true"] {
+            border-color: #c62828;
+        }
+
+        .modal-buseta input:focus-visible,
+        .modal-buseta .mb-btn:focus-visible {
+            outline: 3px solid #1e6fd9;
+            outline-offset: 2px;
+        }
+
+        .modal-buseta .mb-err {
+            color: #c62828;
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        .modal-buseta .mb-acciones {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            margin-top: 22px;
+        }
+
+        .modal-buseta .mb-btn {
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 11px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 1.5px solid #d9d9d9;
+            background: transparent;
+            color: #1a1a1a;
+        }
+
+        .modal-buseta .mb-btn.principal {
+            background: #141414;
+            color: #ffffff;
+            border-color: #141414;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -111,6 +222,19 @@
                         Novedades
                     </button>
                 </div>
+
+                 <div class="opcion">
+                    <span class="icono">🚌</span>
+
+                    <button
+                        type="button"
+                        id="btnAnadirBuseta">
+                        Añadir buseta
+                    </button>
+
+
+                </div>
+
 
             </div>
 
@@ -324,6 +448,100 @@
 
 
     </div>
+
+
+    <!-- MODAL AÑADIR BUSETA -->
+    <div class="modal-buseta-fondo" id="fondoBuseta">
+        <div class="modal-buseta" role="dialog" aria-modal="true" aria-labelledby="tituloBuseta">
+            <h2 id="tituloBuseta">Añadir buseta</h2>
+            <p>Completa los datos de la buseta nueva.</p>
+
+            <div>
+                <label for="marca">Marca</label>
+                <input id="marca" autocomplete="off" placeholder="Ej: Chevrolet">
+                <div class="mb-err" id="e-marca"></div>
+
+                <label for="carroceria">Carrocería</label>
+                <input id="carroceria" autocomplete="off" placeholder="Ej: Busscar">
+                <div class="mb-err" id="e-carroceria"></div>
+
+                <label for="modelo">Modelo</label>
+                <input id="modelo" autocomplete="off" placeholder="Ej: 2024">
+                <div class="mb-err" id="e-modelo"></div>
+
+                <div class="mb-acciones">
+                    <button class="mb-btn" id="cancelarBuseta" type="button">Cancelar</button>
+                    <button class="mb-btn principal" id="guardarBuseta" type="button">Guardar buseta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        var fondo = document.getElementById('fondoBuseta'),
+            campos = ['marca', 'carroceria', 'modelo'],
+            busetas = [],
+            abridor = document.getElementById('btnAnadirBuseta');
+
+        function limpiarError(k) {
+            document.getElementById('e-' + k).textContent = '';
+            document.getElementById(k).removeAttribute('aria-invalid');
+        }
+
+        function abrir() {
+            campos.forEach(function (k) {
+                document.getElementById(k).value = '';
+                limpiarError(k);
+            });
+            fondo.classList.add('abierto');
+            document.getElementById('marca').focus();
+        }
+
+        function cerrar() {
+            fondo.classList.remove('abierto');
+            abridor.focus();
+        }
+
+        function guardar() {
+            var ok = true, datos = {};
+            campos.forEach(function (k) {
+                var el = document.getElementById(k), v = el.value.trim();
+                if (!v) {
+                    ok = false;
+                    el.setAttribute('aria-invalid', 'true');
+                    document.getElementById('e-' + k).textContent = 'Este campo es obligatorio.';
+                } else {
+                    limpiarError(k);
+                    datos[k] = v;
+                }
+            });
+            if (!ok) {
+                var primero = campos.find(function (k) {
+                    return !document.getElementById(k).value.trim();
+                });
+                document.getElementById(primero).focus();
+                return;
+            }
+            busetas.push(datos);
+            console.log('Nueva buseta:', datos, 'Total:', busetas); // aquí la envías a tu backend / base de datos
+            cerrar();
+        }
+
+        abridor.addEventListener('click', abrir);
+        document.getElementById('cancelarBuseta').addEventListener('click', cerrar);
+        document.getElementById('guardarBuseta').addEventListener('click', guardar);
+        fondo.addEventListener('click', function (e) { if (e.target === fondo) cerrar(); });
+        document.addEventListener('keydown', function (e) {
+            if (!fondo.classList.contains('abierto')) return;
+            if (e.key === 'Escape') cerrar();
+            if (e.key === 'Enter') guardar();
+        });
+        campos.forEach(function (k) {
+            document.getElementById(k).addEventListener('input', function () { limpiarError(k); });
+        });
+    })();
+    </script>
 
 </body>
 
