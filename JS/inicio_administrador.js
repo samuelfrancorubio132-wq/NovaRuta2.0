@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: "error",
                 title: "Oops...",
                 text: "Por favor ingrese el correo de administrador.",
-                footer: "<a href=\"#\">¿Por qué aparece este mensaje?</a>"
+                
             });
 
             return;
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: "error",
                 title: "Correo inválido",
                 text: "El correo ingresado no es válido. Por favor ingrese un correo correcto.",
-                footer: "<a href=\"#\">¿Por qué aparece este mensaje?</a>"
+                
             });
 
             return;
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: "error",
                 title: "Oops...",
                 text: "Por favor ingrese la contraseña.",
-                footer: "<a href=\"#\">¿Por qué aparece este mensaje?</a>"
+                
             });
 
             return;
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: "error",
                 title: "Contraseña incorrecta",
                 text: "La contraseña debe tener mínimo 6 caracteres.",
-                footer: "<a href=\"#\">¿Por qué aparece este mensaje?</a>"
+                
             });
 
             return;
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 icon: "error",
                 title: "Oops...",
                 text: "Por favor ingrese la llave de acceso.",
-                footer: "<a href=\"#\">¿Por qué aparece este mensaje?</a>"
+                
             });
 
             return;
