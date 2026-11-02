@@ -1,27 +1,10 @@
+<div class="novedad-panel" id="novedades-contenido">
 <?php
-requiere("conexion.php");
+$pdo = new PDO("mysql:host=localhost;dbname=novaruta;charset=utf8mb4", "root", "");
 
-
-if($_SERVER["REQUEST_METHOD"] == "post") {
-    $primera = $_POST['primera'];
-    $segundo = $_POST['segundo'];
-    $tercera = $_POST['tercera'];
-    $cuarta = $_POST['cuarta'];
+foreach ($pdo->query("SELECT titulo, descripcion FROM novedades ORDER BY id DESC") as $n) {
+    echo "<h2>" . htmlspecialchars($n['titulo']) . "</h2>";
+    echo "<p>"  . htmlspecialchars($n['descripcion']) . "</p>";
 }
 ?>
-
- // ==== Sentencia con INSERT INTO =====
-  // Columnas (nombres.de.phpmyAdmin) VALUE ( variable.PHP), en el mismo orden====
-  <?php
-  $sql = "INSERT INTO novedades(primera,segundo,tercera,cuarta)
-  VALUES('$primera','$segunda','$tercera', '$cuarta')";
-
-  // Env iar la Sentencia a MYSQL
-  if ($conn->query($sql)=== TRUE) {
-    $mensaje = "Resgistro Guardado correctamente";
-    $clase = "msg";
-    } else {
-        $mensaje = "Error:". $conn->error; // ej. codigo duplicado
-    $clase = "msg err";
-}
-?>
+</div>
