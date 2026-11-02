@@ -9,3 +9,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 }
 
+$sql ="INSERT INTO rutas (numero, paraderos, destino_inicial, destino_final)
+                VALUES (:numero, :paraderos, :destino_inicial, :destino_final)";
+
+$stmt = $conecion->prepare($sql);
+
+$stmt->bindParam(":numero", $numero);
+$stmt->bindParam(":paraderos", $paraderos);
+$stmt->bindParam(":destino_inicial", $destino_inicial);
+$stmt->bindParam(":destino_final", $destino_final);
+
+$stmt->execute();
+
+echo "Registro insertado correctamente"
+?>
+
