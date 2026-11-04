@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   // Env iar la Sentencia a MYSQL
   if ($conn->query($sql)=== TRUE) {
-    $mensaje = "Resgistro Guardado correctamente";
+    $mensaje = "Registro Guardado correctamente";
     $clase = "msg";
     } else {
         $mensaje = "Error:". $conn->error; // ej. codigo duplicado

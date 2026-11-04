@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     formulario.addEventListener("submit", function (event) {
 
-        event.preventDefault();
+
 
 
         const valorNumero = numero.value.trim();

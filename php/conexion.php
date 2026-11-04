@@ -1,16 +1,14 @@
 <?php
-
-$servername = "localhsot";
+$servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "novaruta_manizales";
+$dbname = "novaruta2";
 
-#crear conexion
-$conn = new mysqli($servername, $username, $password, $dbname); #define los datos de conexion
-#conn es la variable que va a guardar todos los datos de conexion 
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-// verificar la conexion
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error); #el coneect_error es como algo mas especifico y el conn es mas gneral
+    die("Error de conexión: " . $conn->connect_error);
 }
+
+$conn->set_charset("utf8mb4");
 ?>
