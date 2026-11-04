@@ -117,7 +117,7 @@ botonesEditar.forEach(function (boton, index) {
                 const nuevoRecorrido =
                     resultado.value.nuevoRecorrido;
 
-
+                
                 nombre.textContent =
                     nuevoNombre.toUpperCase();
 
