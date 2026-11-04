@@ -1,11 +1,9 @@
 CREATE DATABASE NovaRuta_Manizales(
-    CREATE TABLE Administrador (
+ CREATE TABLE Administrador (
         id_administrador INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        Nombre TEXT(40) NOT NULL,
-        Apellido TEXT(40) NOT NULL,
-        Telefono VARCHAR(12) NOT NULL,
+        Llave_acceso VARCHAR(12) NOT NULL,
         Contraseña VARCHAR(33) NOT NULL,
-        Correo_Electronico TEXT(100) NOT NULL
+        Correo TEXT(100) NOT NULL
     
 
     );
@@ -20,9 +18,10 @@ CREATE DATABASE NovaRuta_Manizales(
 
     CREATE TABLE Rutas (
         id_ruta INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-        Numero_Ruta (3) NOT NULL,
-        Recorrido TEXT(200) NOT NULL,
-        Hora DATETIME NOT NULL
+        Numero_Ruta INT(3) NOT NULL,
+        paradero TEXT(200) NOT NULL,
+        Destino_inicial TEXT(200) NOT NULL,
+        Destino_final TEXT(200) NOT NULL
     );
 
 
@@ -30,9 +29,9 @@ CREATE DATABASE NovaRuta_Manizales(
         id_novedades INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
         Procedimiento TEXT(1000) NOT NULL,
         Revision TEXT(1000) NOT NULL,
-        Costo FLOAT(11) NOT NULL
+        Costo FLOAT(11) NOT NULL,
 
-        id_busetas INT
+        id_busetas INT,
 
         FOREIGN KEY (id_busetas)
             REFERENCES Rutas(id_rutas)
@@ -42,20 +41,17 @@ CREATE DATABASE NovaRuta_Manizales(
 CREATE TABLE Conductor (
     id_conductor INT AUTO_INCREMENT PRIMARY KEY,
     Cedula_conductor VARCHAR(20) NOT NULL UNIQUE,
-    Nombre_Completo VARCHAR(100) NOT NULL,
     Placa VARCHAR(20) NOT NULL,
-    Correo VARCHAR(100) NOT NULL UNIQUE,
-    Celular VARCHAR(20),
+    Contraseña VARCHAR(100) NOT NULL UNIQUE,
 
-    id_rutas INT,
+    id_ruta INT,
     id_busetas INT,
 
-    FOREIGN KEY (id_rutas) 
-        REFERENCES Rutas(id_rutas),
+    FOREIGN KEY (id_ruta)
+        REFERENCES Rutas(id_ruta),
 
-    FOREIGN KEY (id_busetas) 
+    FOREIGN KEY (id_busetas)
         REFERENCES Busetas(id_busetas)
-);
-
+) ENGINE=InnoDB;
 )
     
