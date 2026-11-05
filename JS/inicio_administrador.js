@@ -1,120 +1,57 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 
-
+    const formulario = document.querySelector(".formulario");
     const correo = document.getElementById("correo");
     const contrasena = document.getElementById("contrasena");
     const password = document.getElementById("password");
     const boton = document.getElementById("btnguardar");
 
-
-    boton.addEventListener("click", function () {
+    boton.addEventListener("click", function (event) {
 
         event.preventDefault();
-
 
         const valorCorreo = correo.value.trim();
         const valorContrasena = contrasena.value.trim();
         const valorPassword = password.value.trim();
 
-
         if (valorCorreo === "") {
-
-            correo.focus();
-
             Swal.fire({
                 icon: "error",
-                title: "Oops...",
-                text: "Por favor ingrese el correo de administrador.",
-                
+                title: "Error",
+                text: "Por favor ingrese el correo."
             });
-
             return;
         }
 
-
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valorCorreo)) {
-
-            correo.focus();
-
             Swal.fire({
                 icon: "error",
                 title: "Correo inválido",
-                text: "El correo ingresado no es válido. Por favor ingrese un correo correcto.",
-                
+                text: "Ingrese un correo válido."
             });
-
             return;
         }
-
 
         if (valorContrasena === "") {
-
-            contrasena.focus();
-
             Swal.fire({
                 icon: "error",
-                title: "Oops...",
-                text: "Por favor ingrese la contraseña.",
-                
+                title: "Error",
+                text: "Por favor ingrese la contraseña."
             });
-
             return;
         }
-
-
-
-        if (valorContrasena.length < 6) {
-
-            contrasena.focus();
-
-            Swal.fire({
-                icon: "error",
-                title: "Contraseña incorrecta",
-                text: "La contraseña debe tener mínimo 6 caracteres.",
-                
-            });
-
-            return;
-        }
-
-
 
         if (valorPassword === "") {
-
-            password.focus();
-
             Swal.fire({
                 icon: "error",
-                title: "Oops...",
-                text: "Por favor ingrese la llave de acceso.",
-                
+                title: "Error",
+                text: "Por favor ingrese la llave de acceso."
             });
-
             return;
         }
 
-
-
-        Swal.fire({
-            title: "¡Buen trabajo!",
-            text: "Ingresaste todos los datos correctamente.",
-            icon: "success",
-            confirmButtonText: "Continuar"
-        }).then(function () {
-
-
-            window.location.href = "bienvenido_administrador.html";
-
-        });
-
-
-        console.log("Correo:", valorCorreo);
-        console.log("Contraseña:", valorContrasena);
-        console.log("Llave de acceso:", valorPassword);
+        formulario.submit();
 
     });
 
-
 });
-
