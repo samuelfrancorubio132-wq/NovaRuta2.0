@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -40,12 +38,21 @@
         }
 
         @keyframes modal-buseta-pop {
-            from { transform: scale(.96); opacity: 0; }
-            to { transform: none; opacity: 1; }
+            from {
+                transform: scale(.96);
+                opacity: 0;
+            }
+
+            to {
+                transform: none;
+                opacity: 1;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
-            .modal-buseta { animation: none; }
+            .modal-buseta {
+                animation: none;
+            }
         }
 
         .modal-buseta h2 {
@@ -126,16 +133,14 @@
 
     <div class="pagina">
 
-       <header class="header">
+        <header class="header">
 
 
             <!-- LOGO -->
 
             <div class="logo">
 
-                <img
-                    src="../img/Shape Set.png"
-                    alt="Logo NovaRuta">
+                <img src="../img/Shape Set.png" alt="Logo NovaRuta">
 
             </div>
 
@@ -162,12 +167,9 @@
 
 
 
-            <button
-                class="btn-login"
-                type="button"
-                onclick="window.location.href='empresa_transporte.html'">
+            <button class="btn-login" type="button" onclick="window.location.href='empresa_transporte.html'">
 
-                    Cerrar Sesión
+                Cerrar Sesión
 
             </button>
 
@@ -183,9 +185,7 @@
                 <div class="opcion">
                     <span class="icono">🛠️</span>
 
-                    <button
-                        type="button"
-                        onclick="window.location.href='crear_ruta.html'">
+                    <button type="button" onclick="window.location.href='crear_ruta.html'">
                         Crear
                     </button>
                 </div>
@@ -194,9 +194,7 @@
                 <div class="opcion">
                     <span class="icono">👤</span>
 
-                    <button
-                        type="button"
-                        onclick="window.location.href='conductores_disponibles.html'">
+                    <button type="button" onclick="window.location.href='conductores_disponibles.html'">
                         Asignar ruta
                     </button>
                 </div>
@@ -205,9 +203,7 @@
                 <div class="opcion">
                     <span class="icono">🛠️</span>
 
-                    <button
-                        type="button"
-                        onclick="window.location.href='modificar_ruta.html'">
+                    <button type="button" onclick="window.location.href='modificar_ruta.html'">
                         Modificar ruta
                     </button>
                 </div>
@@ -216,19 +212,15 @@
                 <div class="opcion">
                     <span class="icono">👥</span>
 
-                    <button
-                        type="button"
-                        onclick="window.location.href='novedades.html'">
+                    <button type="button" onclick="window.location.href='novedades.html'">
                         Novedades
                     </button>
                 </div>
 
-                 <div class="opcion">
+                <div class="opcion">
                     <span class="icono">🚌</span>
 
-                    <button
-                        type="button"
-                        id="btnAnadirBuseta">
+                    <button type="button" id="btnAnadirBuseta">
                         Añadir buseta
                     </button>
 
@@ -244,10 +236,7 @@
         <main class="contenido">
 
             <div class="imagen-contenedor">
-                <img
-                    src="../img/gerente.png"
-                    alt="Administrador de NovaRuta"
-                    class="imagen-gerente">
+                <img src="../img/gerente.png" alt="Administrador de NovaRuta" class="imagen-gerente">
             </div>
 
 
@@ -280,7 +269,7 @@
                             </p>
                         </div>
 
-                        
+
 
                     </article>
 
@@ -301,7 +290,7 @@
                             </p>
                         </div>
 
-                        
+
 
                     </article>
 
@@ -322,7 +311,7 @@
                             </p>
                         </div>
 
-                       
+
 
                     </article>
 
@@ -363,9 +352,7 @@
                 <div class="footer-logo">
 
 
-                    <img
-                        src="../img/Shape Set.png"
-                        alt="Logo NovaRuta">
+                    <img src="../img/Shape Set.png" alt="Logo NovaRuta">
 
 
                     <div>
@@ -390,22 +377,22 @@
 
 
                     <a href="#">
-                        
+
                     </a>
 
 
                     <a href="#">
-                        
+
                     </a>
 
 
                     <a href="#">
-                        
+
                     </a>
 
 
                     <a href="#">
-                        
+
                     </a>
 
 
@@ -445,103 +432,91 @@
 
     </div>
 
-
-
-    </div>
-
-
     <!-- MODAL AÑADIR BUSETA -->
-    <div class="modal-buseta-fondo" id="fondoBuseta">
-        <div class="modal-buseta" role="dialog" aria-modal="true" aria-labelledby="tituloBuseta">
-            <h2 id="tituloBuseta">Añadir buseta</h2>
-            <p>Completa los datos de la buseta nueva.</p>
 
-            <div>
+    <div id="fondoBuseta" class="modal-buseta-fondo">
+
+        <form class="formulario" action="../php/crear_buseta.php" method="post">
+
+            <div class="modal-buseta" role="dialog" aria-modal="true" aria-labelledby="tituloBuseta">
+
+                <h2 id="tituloBuseta">Añadir buseta</h2>
+
+                <p>Completa los datos de la buseta nueva.</p>
+
                 <label for="marca">Marca</label>
-                <input id="marca" autocomplete="off" placeholder="Ej: Chevrolet">
+                <input id="marca" name="marca" placeholder="Ej: Chevrolet">
                 <div class="mb-err" id="e-marca"></div>
 
                 <label for="carroceria">Carrocería</label>
-                <input id="carroceria" autocomplete="off" placeholder="Ej: Busscar">
+                <input id="carroceria" name="carroceria" placeholder="Ej: Busscar">
                 <div class="mb-err" id="e-carroceria"></div>
 
                 <label for="modelo">Modelo</label>
-                <input id="modelo" autocomplete="off" placeholder="Ej: 2024">
+                <input id="modelo" name="modelo" placeholder="Ej: 2024">
                 <div class="mb-err" id="e-modelo"></div>
 
                 <div class="mb-acciones">
-                    <button class="mb-btn" id="cancelarBuseta" type="button">Cancelar</button>
-                    <button class="mb-btn principal" id="guardarBuseta" type="button">Guardar buseta</button>
+                    <button class="mb-btn" id="cancelarBuseta" type="button">
+                        Cancelar
+                    </button>
+
+                    <button class="mb-btn principal" id="guardarBuseta" type="submit">
+                        Guardar buseta
+                    </button>
                 </div>
+
             </div>
-        </div>
+
+        </form>
+
     </div>
-
     <script>
-    (function () {
-        var fondo = document.getElementById('fondoBuseta'),
-            campos = ['marca', 'carroceria', 'modelo'],
-            busetas = [],
-            abridor = document.getElementById('btnAnadirBuseta');
 
-        function limpiarError(k) {
-            document.getElementById('e-' + k).textContent = '';
-            document.getElementById(k).removeAttribute('aria-invalid');
-        }
+        document.addEventListener("DOMContentLoaded", function () {
 
-        function abrir() {
-            campos.forEach(function (k) {
-                document.getElementById(k).value = '';
-                limpiarError(k);
-            });
-            fondo.classList.add('abierto');
-            document.getElementById('marca').focus();
-        }
+            const fondo = document.getElementById("fondoBuseta");
+            const abridor = document.getElementById("btnAnadirBuseta");
+            const cancelar = document.getElementById("cancelarBuseta");
 
-        function cerrar() {
-            fondo.classList.remove('abierto');
-            abridor.focus();
-        }
-
-        function guardar() {
-            var ok = true, datos = {};
-            campos.forEach(function (k) {
-                var el = document.getElementById(k), v = el.value.trim();
-                if (!v) {
-                    ok = false;
-                    el.setAttribute('aria-invalid', 'true');
-                    document.getElementById('e-' + k).textContent = 'Este campo es obligatorio.';
-                } else {
-                    limpiarError(k);
-                    datos[k] = v;
-                }
-            });
-            if (!ok) {
-                var primero = campos.find(function (k) {
-                    return !document.getElementById(k).value.trim();
-                });
-                document.getElementById(primero).focus();
+            if (!fondo) {
+                console.error("No existe fondoBuseta");
                 return;
             }
-            busetas.push(datos);
-            console.log('Nueva buseta:', datos, 'Total:', busetas); // aquí la envías a tu backend / base de datos
-            cerrar();
-        }
 
-        abridor.addEventListener('click', abrir);
-        document.getElementById('cancelarBuseta').addEventListener('click', cerrar);
-        document.getElementById('guardarBuseta').addEventListener('click', guardar);
-        fondo.addEventListener('click', function (e) { if (e.target === fondo) cerrar(); });
-        document.addEventListener('keydown', function (e) {
-            if (!fondo.classList.contains('abierto')) return;
-            if (e.key === 'Escape') cerrar();
-            if (e.key === 'Enter') guardar();
+            function abrir() {
+                fondo.classList.add("abierto");
+            }
+
+            function cerrar() {
+                fondo.classList.remove("abierto");
+            }
+
+            abridor.addEventListener("click", abrir);
+
+            cancelar.addEventListener("click", cerrar);
+
+            fondo.addEventListener("click", function (e) {
+
+                if (e.target === fondo) {
+                    cerrar();
+                }
+
+            });
+
+            document.addEventListener("keydown", function (e) {
+
+                if (e.key === "Escape") {
+                    cerrar();
+                }
+
+            });
+
         });
-        campos.forEach(function (k) {
-            document.getElementById(k).addEventListener('input', function () { limpiarError(k); });
-        });
-    })();
+
     </script>
+
+
 
 </body>
 

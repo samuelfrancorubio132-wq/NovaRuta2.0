@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const cedula = document.getElementById("Cedula");
+    const cedula = document.getElementById("cedula");
     const placa = document.getElementById("placa");
     const password = document.getElementById("password");
     const boton = document.getElementById("btnguardar");
@@ -77,15 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         placa.value = valorPlaca.toUpperCase();
+        document.querySelector(".formulario").submit();
 
-        Swal.fire({
-            title: "¡Buen trabajo!",
-            text: "Ingresaste todos los datos correctamente.",
-            icon: "success",
-            confirmButtonText: "Continuar"
-        }).then(function () {
-            window.location.href = "rutas_asignadas.html";
-        });
+
 
         console.log("Cédula:", valorCedula);
         console.log("Placa:", valorPlaca.toUpperCase());
