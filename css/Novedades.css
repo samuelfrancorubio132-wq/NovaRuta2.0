@@ -201,7 +201,7 @@ body {
 /* Evita arrastrar imágenes dentro del cuadro */
 .novedad-panel img {
     -webkit-user-drag: none;
-    user-drag: none;
+    -user-drag: none;
     pointer-events: none;
 }
 

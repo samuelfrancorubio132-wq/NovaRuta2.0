@@ -125,7 +125,9 @@
             color: #ffffff;
             border-color: #141414;
         }
+        
     </style>
+
 
 </head>
 
@@ -203,7 +205,7 @@
                 <div class="opcion">
                     <span class="icono">🛠️</span>
 
-                    <button type="button" onclick="window.location.href='modificar_ruta.html'">
+                    <button type="button" onclick="window.location.href='../php/modificar_ruta.php'">
                         Modificar ruta
                     </button>
                 </div>
@@ -212,20 +214,30 @@
                 <div class="opcion">
                     <span class="icono">👥</span>
 
-                    <button type="button" onclick="window.location.href='novedades.html'">
+                    <button type="button" onclick="window.location.href='../php/ver_novedades.php'">
                         Novedades
                     </button>
                 </div>
+                
+                <form class="formulario" action="../php/rutas_asignadas.php" method="post">
+                    <button id="btnRutas" class="btn-menu">Ver rutas asignadas</button>
 
+                    <!-- FUERA de la fila del menú, por ejemplo antes de "Resumen de rutas" -->
+                    <section class="seccion-rutas">
+                        <div class="novedad-panel" id="panelRutas"></div>
+                    </section>
+                </form>
+               
                 <div class="opcion">
                     <span class="icono">🚌</span>
 
                     <button type="button" id="btnAnadirBuseta">
                         Añadir buseta
                     </button>
-
-
                 </div>
+
+
+
 
 
             </div>
@@ -314,6 +326,7 @@
 
 
                     </article>
+
 
                 </div>
 
@@ -513,6 +526,9 @@
             });
 
         });
+
+
+
 
     </script>
 
