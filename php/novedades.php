@@ -53,7 +53,7 @@ if(isset($_POST['Problema'])){
             confirmButtonColor: '#0b4f8a'
         }).then(() => {
 
-            window.location='../html/rutas_asignadas.html';;
+            window.location='../html/rutas_asignadas.php';;
 
         });
 
