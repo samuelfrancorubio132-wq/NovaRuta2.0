@@ -1,9 +1,6 @@
 <?php
-
-
-require_once "../php/conexion.php";
-
 session_start();
+require_once "../php/conexion.php";
 
 $cedula = $_POST['cedula'];
 $placa = $_POST['placa'];
@@ -15,39 +12,28 @@ $sql = "SELECT * FROM conductor
         AND password = ?";
 
 $stmt = $conn->prepare($sql);
-
-$stmt->bind_param(
-    "sss",
-    $cedula,
-    $placa,
-    $password
-);
-
+$stmt->bind_param("sss", $cedula, $placa, $password);
 $stmt->execute();
 
 $resultado = $stmt->get_result();
-
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
-    <title>Validación</title>
+    <title>Inicio de sesión</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 <body>
 
 <?php
 
 if ($resultado->num_rows > 0) {
 
-    // Obtener los datos del conductor
     $usuario = $resultado->fetch_assoc();
 
-    // Guardar el ID del conductor en la sesión
+    // Guardar sesión
     $_SESSION['id_conductor'] = $usuario['id_conductor'];
 
     echo "
@@ -57,8 +43,10 @@ if ($resultado->num_rows > 0) {
         title: 'Bienvenido',
         text: 'Inicio de sesión correcto',
         confirmButtonText: 'Continuar'
-    }).then(() => {
-        window.location.href='../html/rutas_asignadas.php';
+    }).then((result) => {
+        if(result.isConfirmed){
+            window.location.href='../html/rutas_asignadas.php';
+        }
     });
     </script>
     ";
@@ -71,15 +59,16 @@ if ($resultado->num_rows > 0) {
         icon: 'error',
         title: 'Acceso denegado',
         text: 'Cédula, placa o contraseña incorrectos',
-        confirmButtonText: 'Intentar de nuevo'
-    }).then(() => {
-        window.location.href='../html/rutas_asignadas.php';
+        confirmButtonText: 'Volver'
+    }).then((result) => {
+        if(result.isConfirmed){
+            window.location.href='../html/login_conductor.php';
+        }
     });
     </script>
     ";
 
 }
-
 ?>
 
 </body>

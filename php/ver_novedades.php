@@ -107,40 +107,49 @@ body{
 
 <?php
 
-$sql = "SELECT * FROM novedades";
 
-$resultado = $conexion->query($sql);
+$problema = $_POST['problema'];
+$hora = $_POST['hora'];
+$ubicacion = $_POST['ubicacion'];
+$id_ruta = $_POST['id_ruta'];
+$id_busetas = $_POST['id_busetas'];
 
-while($fila = $resultado->fetch_assoc()){
+$sql = "INSERT INTO novedades
+(
+Problema,
+Hora,
+Ubicacion,
+id_busetas,
+id_ruta
+)
 
-    echo "
+VALUES
 
-    <div class='tarjeta'>
+(
+?,
+?,
+?,
+?,
+?
+)";
 
-        <b>ID Buseta:</b> ".$fila['id_busetas']."<br>
+$stmt = $conn->prepare($sql);
 
-        <b>ID Ruta:</b> ".$fila['id_ruta']."<br>
+$stmt->bind_param(
+"sssii",
+$problema,
+$hora,
+$ubicacion,
+$id_busetas,
+$id_ruta
+);
 
-        <b>Problema:</b> ".$fila['Problema']."<br>
+$stmt->execute();
 
-        <b>Hora:</b> ".$fila['Hora']."<br>
-
-        <b>Ubicación:</b> ".$fila['Ubicaciion']."<br>
-
-    </div>
-
-    ";
-
-}
-
+echo "
+<script>
+alert('Novedad enviada correctamente');
+window.location='../html/rutas_asignadas.php';
+</script>
+";
 ?>
-<button
-type="button"
-class="btn-volver"
-onclick="window.location.href='../html/bienvenido_administrador.html'">
-
-    ← Volver al Administrador
-
-</button>
-</body>
-</html>
